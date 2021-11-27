@@ -39,3 +39,10 @@ nfs 0x32000000 192.168.10.10:/home/cyx/workspace/nfs_root/busybox_1.34.1.jffs2
 nand erase 260000 0xbb71d0
 nand write.jffs2 32000000 260000 0xbb71d0
 ```
+
+## 最新的交叉编译工具链：gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf编译后报错: 0x00000004
+    在网上找到问题，是因为arm官方提供的工具链只支持A系列，使用的架构是arm-v7a，其中包含一些新的指令无法在armv4上执行，所以出现非法指令集。
+
+解决方法：
+1、自己下载工具链源码重新编译制作适合的工具链
+2、使用旧工具链：gcc version 4.3.2 (Sourcery G++ Lite 2008q3-72)编译，在最新内核运行没有任何问题。但是无法编译最新的busybox。
