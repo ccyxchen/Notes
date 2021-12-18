@@ -7,6 +7,8 @@ freetype是用来显示矢量字体的图形库，它有字体缩放，旋转，
 ```Shell
 # 配置交叉编译器，安装路径等，因为arm-gcc的库文件路径和头文件路径不规范，这里选择先安装到临时目录再手动复制
 # 配置交叉编译器为arm-linux-gcc，build的选项只是说明编译系统的信息，不重要
+./autogen.sh
+
 ./configure \
           --build=x86_64-unknown-linux \
           --host=arm-linux
