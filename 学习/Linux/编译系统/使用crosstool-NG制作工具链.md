@@ -15,6 +15,7 @@ git clone <https://github.com/crosstool-ng/crosstool-ng>
 ```Shell
 mkdir crosstool-build crosstool-install src
 sudo apt-get install flex gperf bison  texinfo  gawk libtool automake libncurses5-dev help2man libtool-bin libtool
+./bootstrap
 ./configure --prefix=/home/cyx/workspace/open/crosstool-ng/crosstool-install/
 make
 make install
@@ -31,6 +32,7 @@ Paths and misc options  --->
 Target options  --->
     Architecture level->        armv4t
     Emit assembly for CPU ->    arm9tdmi
+    (arm920t) Tune for CPU 
 Toolchain options  --->
     Tuple's vendor string ->    S3C2440
 
