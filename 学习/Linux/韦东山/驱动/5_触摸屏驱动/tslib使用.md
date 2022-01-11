@@ -34,7 +34,7 @@ cp * -rf $(嵌入式系统根目录)
 
 3、设置环境变量
 ```shell
-export TSLIB_TSDEVICE=/dev/event1
+export TSLIB_TSDEVICE=/dev/input/event0
 export TSLIB_CALIBFILE=/etc/pointercal
 export TSLIB_CONFFILE=/etc/ts.conf
 export TSLIB_PLUGINDIR=/lib/ts
