@@ -1,6 +1,6 @@
 ## 手动设置log等级
 
-echo 1 4 1 7 > printk
+echo "1 4 1 7" > /proc/sys/kernel/printk
 
 /proc/sys/kernel/printk
 
