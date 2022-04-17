@@ -4,7 +4,7 @@ google的网页工具[perfetto](https://ui.perfetto.dev/#!/record)有相同作�
 
 ## 安装systrace
 
-可以在[systracex下载](https://android.googlesource.com/platform/external/chromium-trace/+archive/master/catapult.tar.gz)中下载，或者[platform-tools](https://chromium.googlesource.com/android_tools/+archive/881586ca84f2fb8e82faa9c8d645416d175d0f01/sdk/platform-tools.tar.gz)中有该工具的python版本。
+可以在[systrace](https://android.googlesource.com/platform/external/chromium-trace/+archive/master/catapult.tar.gz)下载,解压后运行`~/bin/catapult/systrace/bin/systrace`,这是一个python脚本，或者在[platform-tools](https://chromium.googlesource.com/android_tools/+archive/881586ca84f2fb8e82faa9c8d645416d175d0f01/sdk/platform-tools.tar.gz)下载。
 
 ## systrace的使用
 
@@ -12,21 +12,20 @@ google的网页工具[perfetto](https://ui.perfetto.dev/#!/record)有相同作�
 
 ```Shell
 # 官方
-python systrace.py -o mynewtrace.html sched freq idle am wm gfx view \
-        binder_driver hal dalvik camera input res
+systrace -o mynewtrace.html sched freq idle am wm gfx view binder_driver hal dalvik camera input res
 
 # atrace 指令
-./systrace sched freq idle am wm gfx view binder_driver irq workq ss sync -t 10 -b 96000 -o full_trace.html
+systrace sched freq idle am wm gfx view binder_driver irq workq ss sync -t 10 -b 96000 -o full_trace.html
 
 # 查看已连接设备支持的类别列表
-python systrace.py --list-categories
+systrace --list-categories
 ```
 
 ### 网页打开错误解决
 
 在[chrome trace网页](chrome://tracing/)中打开
 
-参考以下链接：
+参考：
 
 1. [在命令行上捕获系统跟踪记录](https://developer.android.com/topic/performance/tracing/command-line?hl=zh-cn)
 2. [系统跟踪概览](https://developer.android.com/topic/performance/tracing?hl=zh-cn)
