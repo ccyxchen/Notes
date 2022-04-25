@@ -19,6 +19,9 @@ systrace sched freq idle am wm gfx view binder_driver irq workq ss sync -t 10 -b
 
 # 查看已连接设备支持的类别列表
 systrace --list-categories
+
+# 简单的
+systrace -t 10 -o full_trace.html
 ```
 
 ### 网页打开错误解决
