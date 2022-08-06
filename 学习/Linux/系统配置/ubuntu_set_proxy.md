@@ -18,7 +18,7 @@
 ```shell
 
 {
-    "server":"c92s2.jamjams.net",
+    "server":"c92s1.jamjams3.net",
     "server_port":17517,
     "local_address": "127.0.0.1",
     "local_port":1080,
