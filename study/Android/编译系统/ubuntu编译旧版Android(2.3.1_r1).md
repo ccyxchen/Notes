@@ -34,7 +34,12 @@ sudo update-alternatives –install /usr/bin/javac javac /usr/java/jdk1.6.0_45/ 
 
 Ubuntu 14.04的依赖包可以执行以下命令进行安装。
 
-`USER@MACHINE:~$ sudo apt-get install git-core gnupg flex bison gperf build-essential \ zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 \ lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache \ libgl1-mesa-dev libxml2-utils xsltproc unzip`
+```Shell
+sudo apt-get install git-core gnupg flex bison gperf build-essential \
+zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 \
+lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache \
+libgl1-mesa-dev libxml2-utils xsltproc unzip lib32readline-gplv2-dev
+```
 
 ## 配置需要的环境
 
@@ -49,7 +54,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 # 指定编译库和头文件路径，否则会找不到某些库，头文件而报错
 export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
 export CPLUS_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
-export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu
+export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/lib32
 
 # 编译完安卓后，将Android虚拟机路径加入环境变量，方便运行，ANDROID_PRODUCT_OUT是Android虚拟机查找安卓镜像的路径
 export PATH=$PATH:/home/chenyx/workspace/opensource/Android-2.3.1_r1/out/host/linux-x86/bin
@@ -64,12 +69,12 @@ export ANDROID_PRODUCT_OUT=/home/chenyx/workspace/opensource/Android-2.3.1_r1/ou
 
 ```Shell
 # 安装 gcc4.4
-apt-get --install-suggests --yes install gcc-4.4:amd64 gcc-4.4-multilib:amd64 g++-4.4:amd64 g++-4.4-multilib:amd64
+sudo apt-get --install-suggests --yes install gcc-4.4:amd64 gcc-4.4-multilib:amd64 g++-4.4:amd64 g++-4.4-multilib:amd64
 
 # 设置多版本gcc共存，默认使用数字最高的
-update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.4 80 --slave /usr/bin/g++ g++ /usr/bin/g++-4.4
-update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
-update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.7
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.4 80 --slave /usr/bin/g++ g++ /usr/bin/g++-4.4
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.7
 ```
 
 ### 报错error: storage size of \'rlim\' isn't known
@@ -95,3 +100,11 @@ index bcc2313..a50c45d 100644
 ### 报错`Can't locate Switch.pm in @INC (you may need to install the Switch module)`
 
 `sudo apt-get install libswitch-perl`
+
+## 无法运行emulator
+
+```Shell
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install libsdl1.2debian:i386
+```

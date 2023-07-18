@@ -3,6 +3,16 @@
 这篇文章快速介绍docker使用最常用的命令和参数，以达到入门的目的。
 这篇文章以官方docker hub上的Ubuntu:14.04镜像的操作为例。
 
+## 不使用sudo运行docker
+
+```Shell
+# 将当前用户添加到 docker 组
+sudo gpasswd -a ${USER} docker
+
+# 重启服务
+sudo service docker restart
+```
+
 ## 基本命令
 
 ### 拉取下来的镜像的一些操作命令

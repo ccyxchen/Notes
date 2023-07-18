@@ -19,11 +19,12 @@
 # 安装软件
 sudo apt-get install \
     git gnupg flex bison gperf build-essential  \
-    zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
-    libx11-dev:i386 libreadline6-dev:i386 \
-    libgl1-mesa-dev:i386 libgl1-mesa-glx:i386 \
-    g++-multilib tofrodos libncurses5-dev:i386 \
-    python3-markdown libxml2-utils xsltproc zlib1g-dev:i386
+    zip curl libc6-dev libncurses5-dev x11proto-core-dev \
+    libx11-dev libreadline6-dev \
+    libgl1-mesa-dev libgl1-mesa-glx \
+    g++-multilib tofrodos libncurses5-dev \
+    python3-markdown libxml2-utils xsltproc zlib1g-dev \
+    python lib32z1 libx32z1 zlib1g
 
 # 下载openjdk7
 # 参考https://techoral.com/blog/java/install-openjdk-7-debian.html
