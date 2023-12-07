@@ -1,0 +1,16 @@
+    
+#Rpmb写的完整过程
+
+1、调用 ufs_mtk_rpmb_cmd_seq 处理cmq,写类型的cmd就调用 ufs_mtk_rpmb_security_out 处理写命令
+2、调用scsi_execute_req 下发命令到scsi 层处理，一路调用到 __scsi_execute，会从块设备的请求队列分配到req，并将rpmb写命令写入该req
+3、调用blk_execute_rq 下发req到对应的队列
+4、 blk_mq_sched_insert_request 中判断req是否需要直接插入队列，如果是，则调用blk_mq_request_bypass_insert直接插入，否则调用调度算法的插入函数，如果未指定调度算法或调度算法没有定义insert函数，则调用通用的__blk_mq_insert_request函数插入ctx队列
+5、下面看下块设备的队列初始化，在ufs初始化ufshcd_init 中会调用blk_mq_init_queue
+ 初始化cmd_queue, 其中会设置超时的工作项为blk_mq_timeout_work, 并设置 默认超时时间为30s
+6、在初始化队列时会设置一个定时器，在处理rq时会更新定时器超时时间，定时器回调函数为blk_rq_timed_out_timer,这里会启动前面的工作项 blk_mq_timeout_work。
+7、blk_mq_timeout_work 中调用blk_mq_check_expired 处理超时的tag
+8、blk_mq_rq_timed_out 函数调用块设备驱动中定义的timeout函数处理超时，然后更新请求队列的超时定时器的时间
+9、Scsi的超时函数是 scsi_timeout ， 其中 scsi_times_out 会调用scsi_abort_command 尝试about掉cmq， 该函数内部会执行 abort_work 工作项， 对应执行scmd_eh_abort_handler 函数
+10、scmd_eh_abort_handler调用scsi_try_to_abort_cmd 尝试abort 块设备的cmq,执行的host端 eh_abort_handler 函数，执行abort失败后会执行一次 scsi_eh_scmd_add
+11、回到 scsi_times_out 函数， 执行 scsi_abort_command 失败后会再次调用scsi_eh_scmd_add， scsi_eh_scmd_add 中 设置 shost 的status 为 SHOST_RECOVERY， 然后调用scsi_eh_inc_host_failed 增加 host_failed 计数，该计数记录了abort失败的tag 数量，然后与scsi中正在处理的tag数对比，如果2者相等说明所有下发的tag都失败且abort失败，这时就要唤醒scsi的error处理线程 shost->ehandler
+12、Scsi的 Error处理函数为 scsi_error_handler，其中判断条件成立会调用scsi_unjam_host 重启 scsi设备（包括ufs）.
