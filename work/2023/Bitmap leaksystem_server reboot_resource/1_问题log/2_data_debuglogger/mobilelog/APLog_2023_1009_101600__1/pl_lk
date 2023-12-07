@@ -1,0 +1,2260 @@
+<< /proc/pl_lk >>:
+show buff sig 0xcdab3412, size 0x40000,pl size 0x4e2c, lk size 0x17faa, last_boot step 0x0!
+PL_LOG_STORE:set ram_header->sig = 0xABCD1234
+[XT22] MP chip
+[XT22] : 0 0x24 0x24 done
+0:0x80000000, 1:0x1200, 2:0x1, 3:0x80002, 4:0x40000000, STA:0x0, S:0x24, FAB0:0x6765, FAB11:0x0
+A:0x0, B:0x3F, C:0x40, D:0x1F, E:0x1, F:0x3, G:0x2
+DATE_CODE_YY:1, DATE_CODE_WW:1A
+[SegCode] Segment Code:0x24, PROJECT_CODE:0x0, FAB_CODE:0x2, RW_STA:0x0, CTL:0x0, DCM:0x7
+Pll init start...
+Pll init Done!
+Enter mtk_kpd_gpio_set! 
+
+[USBD] USB PRB0 LineState: 0
+
+[USBD] USB cable/ No Cable inserted!
+[PWRAP] si_en_sel = 0, si_ck_sel = 0, si_sample_ctrl = 0, rdata = 96A9
+[PWRAP] si_en_sel = 0, si_ck_sel = 1, si_sample_ctrl = 20, rdata = 5AA5, Pass
+[PWRAP] InitSiStrobe (5, 5, 7BF7) Data Boundary Is Found !!
+[PWRAP] SI Strobe Calibration For PMIC 0 Done, (40, 5)
+[PWRAP] Read Test pass, return_value=0x0
+[PWRAP] Write Test pass
+[PWRAP] RECORD_CMD0:  0x5C2 (Last one command addr)
+[PWRAP] RECORD_WDATA0:0x1 (Last one command wdata)
+[PWRAP] RECORD_CMD1:  0x588 (Last second command addr)
+[PWRAP] RECORD_WDATA1:0x4318 (Last second command wdata)
+[PWRAP] RECORD_CMD2:  0x5C2 (Last third command addr)
+[PWRAP] RECORD_WDATA2:0x1 (Last third command wdata)
+[PWRAP] init pass, ret=0.
+
+[PMIC]Preloader Start
+[PMIC]MT6357 CHIP Code = 0x5721
+[PMIC]POWER_HOLD :0x1
+[PMIC]TOP_RST_STATUS[0x152]=0x49
+[PMIC]PONSTS[0xC]=0x0
+[PMIC]POFFSTS[0xE]=0x400
+[PMIC]PGSTATUS0[0x14]=0xFFFE
+[PMIC]PSOCSTATUS[0x16]=0x0
+[PMIC]BUCK_OC_SDN_STATUS[0x1434]=0x0
+[PMIC]BUCK_OC_SDN_EN[0x1444]=0x1F
+[PMIC]THERMALSTATUS[0x18]=0x0
+[PMIC]STRUP_CON4[0xA1C]=0x6000
+[PMIC]TOP_RST_MISC[0x14C]=0x1304
+[PMIC]TOP_CLK_TRIM[0x38E]=0x6CC0
+latch VPROC 1118750 uV
+latch VSRAM_PROC 1200000 uV
+latch VSRAM_OTHERS 900000 uV
+latch VCORE 700000 uV
+latch VMODEM 700000 uV
+[pmic_check_rst] DDLO_RSTB
+[pmic_check_rst] AP Watchdog
+[PMIC]just_rst = 1
+No EFUSE SW Load
+battery exists
+[PMIC]disable usbdl wo battery
+[chr_debug]MT6765 g_boot_mode=0
+[chr_debug][PMIC]CHR_CON0[0xB88]=0xFAC
+[chr_debug][PMIC]CHR_TOP_CON3[0xA8E]=0x344E
+[chr_debug][PMIC]CHR_TOP_CON5[0xA92]=0x15
+[PMIC]pmic_wdt_set Reg[0x14C]=0x1325
+[rt5738_driver_probe]
+[rt5738_hw_component_detect] exist = 0, Chip ID = A801
+[rt5738_driver_probe] PL rt5738_vdd2 is not exist
+[I2C] id=3,addr: 50, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[I2C] id=3,addr: 50, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[I2C] id=3,addr: 50, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[rt5738_hw_component_detect] exist = 0, Chip ID = 304
+[rt5738_driver_probe] PL rt5738_vddq is not exist
+[hl7593_driver_probe]
+[hl7593_read_interface] Reg[3]=0xA8
+[hl7593_read_interface] val=0xA8
+[hl7593_read_interface] Reg[4]=0x1
+[hl7593_read_interface] val=0x1
+[hl7593_read_interface] Reg[5]=0x81
+[hl7593_read_interface] val=0x1
+PGOOD = 1, chip_id = 43009
+[hl7593_hw_component_detect] exist = 1, Chip ID = A801
+hl7593_vdd2_hw_init
+[hl7593_read_interface] Reg[0]=0xD4
+[hl7593_read_interface] val=0xD4
+[0x0]=0xD4 [hl7593_read_interface] Reg[1]=0xD4
+[hl7593_read_interface] val=0xD4
+[0x1]=0xD4 [hl7593_read_interface] Reg[2]=0x80
+[hl7593_read_interface] val=0x80
+[0x2]=0x80 [hl7593_read_interface] Reg[3]=0xA8
+[hl7593_read_interface] val=0xA8
+[0x3]=0xA8 [hl7593_read_interface] Reg[4]=0x1
+[hl7593_read_interface] val=0x1
+[0x4]=0x1 [hl7593_read_interface] Reg[5]=0x81
+[hl7593_read_interface] val=0x81
+[0x5]=0x81 [hl7593_driver_probe] PL g_hl7593_0_hw_exist=1, g_hl7593_driver_ready=1
+[I2C] id=3,addr: 50, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[hl7593_read_interface] Reg[3]=0x3
+[hl7593_read_interface] val=0x3
+[I2C] id=3,addr: 50, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[hl7593_read_interface] Reg[4]=0x4
+[hl7593_read_interface] val=0x4
+[I2C] id=3,addr: 50, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[hl7593_read_interface] Reg[5]=0x5
+[hl7593_read_interface] val=0x0
+PGOOD = 0, chip_id = 772
+[hl7593_hw_component_detect] exist = 0, Chip ID = 304
+[hl7593_driver_probe] PL hl7593_vddq is not exist
+[hl7593_set_voltage] id = 0, set_val = 1125000 
+[hl7593_read_interface] Reg[0]=0xD4
+[hl7593_read_interface] val=0x54
+[hl7593_get_voltage] id = 0, get_val = 1125000 
+hl7593_vdd2=1125000 uV
+[fan53526_driver_probe]
+[I2C] id=3,addr: 60, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[I2C] id=3,addr: 60, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[I2C] id=3,addr: 60, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[fan53526_hw_component_detect] exist = 0, Chip ID = 304
+[fan53526_driver_probe] PL fan53526_vdd2 is not exist
+[I2C] id=3,addr: 50, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[I2C] id=3,addr: 50, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[I2C] id=3,addr: 50, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[fan53526_hw_component_detect] exist = 0, Chip ID = 304
+[fan53526_driver_probe] PL fan53526_vddq is not exist
+register vs1 OK
+register vmodem OK
+register vcore OK
+register vproc OK
+register vpa OK
+register vsram_others OK
+register vsram_proc OK
+register vdram OK
+[PMIC]Init done
+[MT6357] sgm41513d_detect_device, SGM41513D detected
+[I2C] id=5,addr: 6B, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+cx25601d_i2c_read_byte reg0x0000000B fail(-1)
+[SD0] SET_CLK(260kHz): SCLK(259kHz) MODE(0) DDR(0) DIV(385) DS(0) RS(0)
+[SD0] SET_CLK(260kHz): SCLK(259kHz) MODE(2) DDR(1) DIV(192) DS(0) RS(0)
+[SD0] Size: 118000 MB, Max.Speed: 52000 kHz, blklen(512), nblks(241664000)
+[SD0] Initialized, eMMC45
+[SD0] SET_CLK(52000kHz): SCLK(50000kHz) MODE(2) DDR(1) DIV(1) DS(0) RS(0)
+[PLFM] Init Boot Device: OK(0)
+[PLW] tran_plwriteemmc_record enter
+[PLW] 0 partitions are being writted 
+metadata.slot_info[0].priority = 15, 15
+metadata.slot_info[0].retry = 7, 7
+[PLFM] Init PWRAP: OK(0)
+[PLFM] Init PMIC: OK(0)
+[PLFM] chip_hw_ver[CA00], chip_sw_ver[0]
+clk_buf_dump_dts_log: PMIC_CLK_BUF?_STATUS=2 1 1 2 0 0 0
+clk_buf_dump_dts_log: PMIC_CLK_BUF?_DRV_CURR=1 1 1 1 1 1 1
+clk_buf_dump_clkbuf_log DCXO_CW00/02/11/13/14/15/16/20/top_spi_con1=0x6B6D 3AEE AD00 9829 82B5 A19A A8AA 11 1
+clk_buf_dump_clkbuf_log DCXO_CW00/02/11/13/14/15/16/20/top_spi_con1=0x4E1D 3AEE 8000 98E9 82B5 A2AA 9455 11 0
+clk_buf_init_pmic_wrap: DCXO_CONN_ADR0/WDATA0/ADR1/WDATA1=0x44A/0/44A/1
+clk_buf_init_pmic_wrap: DCXO_NFC_ADR0/WDATA0/ADR1/WDATA1/EN=0x78C/100/78A/100/3
+[RTC]rtc 2sec reboot is not enabled
+[PMIC] pmic_init_setting end. v180104
+[MT6357] 1 1,48
+[MT6357] get volt 6, 61, 900000
+vsram_proc = 900000 uV
+[MT6357] get volt 3, 45, 800000
+vproc = 800000 uV
+[MT6357] get volt 5, 61, 900000
+vsram_others = 900000 uV
+[MT6357] get volt 2, 45, 800000
+vcore = 800000 uV
+[MT6357] get volt 1, 48, 800000
+vmodem = 800000 uV
+[MT6357] 2 5,1
+[MT6357] 2 6,1
+[MT6357] 2 3,1
+[MT6357] 2 2,1
+[MT6357] 2 1,1
+[RGU] EMI_DCS_SUCCESS 0
+[RGU] DVFSRC_SUCCESS 0
+[RGU] rst from: ?
+[RGU] STA from reg:       0x40000000
+[RGU] MODE:               0x14
+[RGU] STA:                0x40000000
+[RGU] LENGTH:             0xFFE0
+[RGU] INTERVAL:           0xFFF
+[RGU] SWSYSRST:           0x9000
+[RGU] LATCH_CTL:          0x0
+[RGU] LATCH_CTL2:         0x0
+[RGU] NONRST_REG:         0x0
+[RGU] NONRST_REG2:        0x20002000
+[RGU] REQ_MODE:           0x3F003B
+[RGU] REQ_IRQ_EN:         0x3F003F
+[RGU] DEBUG_CTL:          0x200F1
+[RGU] parse g_rgu_status: 2 (0x2)
+[RGU] Set NONRST_REG to 0x40000000
+[RGU] mtk_wdt_mode_config mode value=34, tmp:22000034
+[RGU] mtk_wdt_mode_config mode value=7D, tmp:2200007D
+[RGU] mtk_wdt_reset_deglitch_enable: MTK_WDT_RSTDEG_EN1(8000A357), MTK_WDT_RSTDEG_EN2(800067D2)
+[RGU] rgu_update_reg: 0, bits: 0xC000, addr: 0x10007040, val: 0x200F1
+[RGU] rgu_update_reg: 0, bits: 0x300, addr: 0x100070A0, val: 0xFF
+[RGU] mtk_wdt_pre_init: MTK_WDT_DEBUG_CTL(0x200F1)
+[RGU] mtk_wdt_pre_init: MTK_WDT_DEBUG_CTL2(0xFF)
+[RGU] mtk_wdt_pre_init: MTK_WDT_LATCH_CTL(0x21E71)
+[RGU] mtk_wdt_pre_init: MTK_WDT_REQ_MODE(3F0032), MTK_WDT_REQ_IRQ_EN(3B0030)
+[RGU] g_rgu_status: 2 (0x2)
+[RGU] bypass pwrkey: set
+mtk_kpd_gpio_set Already!
+after set KP enable: KP_SEL = 0x1C70 !
+[PLFM] pmic: long power key press reboot!
+pl chr:1 monitor:1 plchr:1 gain:1037
+battery exists
+[pl_check_bat_protect_status]: check VBAT=4430mV with 0mV, VCHR=5043mV ,VCHR_HV=6500mv, start charging
+[pl_check_bat_protect_status]: check VBAT=4430mV with 0mV, stop charging
+[RGU] rgu_update_reg: 0, bits: 0x400, addr: 0x10007040, val: 0x200F1
+[RGU] WDT DDR reserve mode FAIL! 200F1
+[RGU] DDR RESERVE Success 0
+[RGU] rgu_update_reg: 0, bits: 0x200, addr: 0x10007040, val: 0x200F1
+[RGU] rgu_update_reg: 0, bits: 0x100, addr: 0x10007040, val: 0x200F1
+[MT6357] 4 2,1
+[MT6357] 2 7,0
+[hl7593_enable] id =0, en =1, ret =1 
+[hl7593_set_voltage] id = 0, set_val = 1125000 
+[MT6357] vp
+dvfsrc_opp_level_mapping: PTPOD0: 0x100090 (ct_enable:1, skip:1, ddr=0, info2=0x9)
+get_vb_volt: PTPOD10: 0xA5455
+dvfsrc_opp_level_mapping: default vcore_opp_uv: 800000, 700000, 700000, 650000
+dvfsrc_opp_level_mapping: final vcore_opp_uv: 800000, 700000, 700000, 650000
+dvfsrc_opp_level_mapping: OPP_2 and OPP_3 adj to 700000 and 700000
+[PLW] tran_plwriteemmc_record enter
+[PLW] 0 partitions are being writted 
+[PLW] tran_plwriteemmc_record enter
+[PLW] 0 partitions are being writted 
+[PLW] tran_plwriteemmc_record enter
+[PLW] 0 partitions are being writted 
+[MT6357] 1 2,29
+Read voltage for 800
+Vio18 = 1800000
+[MT6357] get volt 2, 29, 700000
+Vcore = 700000
+[hl7593_read_interface] Reg[0]=0xD4
+[hl7593_read_interface] val=0x54
+[hl7593_get_voltage] id = 0, get_val = 1125000 
+Vdram = 1125000
+Vddq = 0
+[PLW] tran_plwriteemmc_record enter
+[PLW] 0 partitions are being writted 
+eMMC cid: D6010341,33413536,32113FA7,972E6A25
+eMMC lifea: 1, lifeb:0
+[MT6357] 1 2,29
+Read voltage for 800
+Vio18 = 1800000
+[MT6357] get volt 2, 29, 700000
+Vcore = 700000
+[hl7593_read_interface] Reg[0]=0xD4
+[hl7593_read_interface] val=0x54
+[hl7593_get_voltage] id = 0, get_val = 1125000 
+Vdram = 1125000
+Vddq = 0
+[PLW] tran_plwriteemmc_record enter
+[PLW] 0 partitions are being writted 
+[PLW] tran_plwriteemmc_record enter
+[PLW] 0 partitions are being writted 
+[MT6357] 1 2,37
+Read voltage for 1200
+Vio18 = 1800000
+[MT6357] get volt 2, 37, 750000
+Vcore = 750000
+[hl7593_read_interface] Reg[0]=0xD4
+[hl7593_read_interface] val=0x54
+[hl7593_get_voltage] id = 0, get_val = 1125000 
+Vdram = 1125000
+Vddq = 0
+[PLW] tran_plwriteemmc_record enter
+[PLW] 0 partitions are being writted 
+[PLW] tran_plwriteemmc_record enter
+[PLW] 0 partitions are being writted 
+[MT6357] 1 2,45
+Read voltage for 1600
+Vio18 = 1800000
+[MT6357] get volt 2, 45, 800000
+Vcore = 800000
+[hl7593_read_interface] Reg[0]=0xD4
+[hl7593_read_interface] val=0x54
+[hl7593_get_voltage] id = 0, get_val = 1125000 
+Vdram = 1125000
+Vddq = 0
+[PLW] tran_plwriteemmc_record enter
+[PLW] 0 partitions are being writted 
+[PLW] tran_plwriteemmc_record enter
+[PLW] 0 partitions are being writted 
+[MT6357] 4 2,0
+[MT6357] 1 2,45
+[RGU] rgu_dram_reserved: MTK_WDT_MODE(2200007D)
+[MEM] 1st complex R/W mem test pass (start addr:0x48000000)
+[MEM] 2nd complex R/W mem test pass (start addr:0x80000000, 0x0 @Rank1)
+CUSTOM_CONFIG_MAX_DRAM_SIZE: 0x0000000100000000
+CUSTOM_CONFIG_MAX_DRAM_SIZE: 0x0000000100000000
+total_dram_size: 0x0000000100000000, max_dram_size: 0x0000000100000000
+dump mblock info 
+mblock[0] start=0000000040000000 size=0000000080000000
+mblock[1] start=00000000C0000000 size=0000000080000000
+CUSTOM_CONFIG_MAX_DRAM_SIZE: 0x0000000100000000
+mblock_alloc_range: start: 0x00000000BFFFF000, sz: 0x0000000000001000 lower_bound: 0x0000000000000000 limit: 0x00000000C0000000 map:0 name:dramc-rk0 align: 0x0000000000001000
+CUSTOM_CONFIG_MAX_DRAM_SIZE: 0x0000000100000000
+mblock_alloc_range: start: 0x000000013FFFF000, sz: 0x0000000000001000 lower_bound: 0x0000000000000000 limit: 0x0000000140000000 map:0 name:dramc-rk1 align: 0x0000000000001000
+mblock_alloc_range: start: 0x00000000D0200000, sz: 0x0000000000200000 lower_bound: 0x0000000000000000 limit: 0xFFFFFFFFFFFFFFFF map:1 name:RKP_NS align: 0x0000000000100000
+mblock_alloc_range: start: 0x00000000D0000000, sz: 0x0000000000200000 lower_bound: 0x0000000000000000 limit: 0xFFFFFFFFFFFFFFFF map:0 name:RKP align: 0x0000000000100000
+[I2C] id=5,addr: 34, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+mt6370_i2c_read_byte: I2CR[0x00000001] fail(-1)
+mtk_subpmic_init: en mrstb fail(-1)
+[I2C] id=5,addr: 34, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+mt6370_i2c_read_byte: I2CR[0x000000B1] fail(-1)
+mtk_subpmic_init: en db_vpos_gnd fail(-1)
+[I2C] id=5,addr: 34, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+mt6370_i2c_read_byte: I2CR[0x00000001] fail(-1)
+[I2C] id=5,addr: 34, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+mt6370_i2c_read_byte: I2CR[0x000000B1] fail(-1)
+[GPT_PL]Success to find valid GPT.
+metadata.slot_info[0].priority = 15, 15
+metadata.slot_info[0].retry = 7, 7
+mblock_alloc_range: start: 0x000000007FC00000, sz: 0x0000000000400000 lower_bound: 0x0000000000000000 limit: 0x0000000080000000 map:0 name:gz align: 0x0000000000200000
+mblock_alloc_range: start: 0x000000007FA00000, sz: 0x0000000000041000 lower_bound: 0x0000000000000000 limit: 0x000000007FC00000 map:1 name:gz-log align: 0x0000000000200000
+===== [Memory Test System v2.0] =====
+[DRAM TEST] read trigger type from proinfo: 0
+Detect fastmeta pin 27: mode 0, out 0, pull en 1, pull up 1, value 1.
+PL_LOG_STORE:expdb partition start addr 0x0000000000488000, end addr 0x0000000001888000, partition size 0x0000000001400000, nr_sects 0xA000, blksz 0x200!
+PL_LOG_STORE:read config error, sig 0x0, size 512, format them.
+[PLW] tran_plwriteemmc_record enter
+[PLW] 1 partitions are being writted 
+[PLW] expdb partition is writted in preloader stage but allowed skip record
+[PLW] tran_plwriteemmc_record enter
+[PLW] 1 partitions are being writted 
+[PLW] expdb partition is writted in preloader stage but allowed skip record
+PL_LOG_STORE:log_to_emmc function flag 0x0!
+PL_LOG_STORE:sram_dram_buff->buf_addr is NULL!
+mblock_alloc_range: start: 0x000000007FBC0000, sz: 0x0000000000040000 lower_bound: 0x0000000000000000 limit: 0x0000000080000000 map:1 name:log_store align: 0x0000000000001000
+PL_LOG_STORE:sram_header 0x10F200,sig 0xABCD1234, sram_dram_buff 0x10F20C, buf_addr 0x7FBC0000
+
+[SEC] Loading SEC config
+[SEC] Name = 
+[SEC] Config = 0x11, 0x11
+0x31,0x41,0x35,0x32
+[SEC] seclib_img_auth_load_sig [SEC] CFG read size '0x2000' '0x3C'
+[SEC] SEC CFG doesn't exist
+RPMB not program key
+[chr_debug]MT6765 g_boot_mode=0
+[PMIC]IsUsbCableIn 1
+[mt_charger_type_detection] CHARGER_IC_FLAG = 1
+[MT6357] [sgm41513d_ext_chgdet] REG08:3C chg_type:1
+[USBD] USB Full Speed
+[USBD] USB High Speed
+usbdl_flush timeout
+usbdl_flush timeout
+usbdl_flush timeout
+usbdl_flush timeout
+usbdl_flush timeout
+usbdl_flush timeout
+usbdl_flush timeout
+[TOOL] : usb listen timeout
+[TOOL] <USB> cannot detect tools!
+
+Device APC domain init setup:
+
+APC_CON: INFRA(0x0), MD(0x0), MM(0x0)
+mblock_alloc_range: start: 0x0000000047D80000, sz: 0x0000000000050000 lower_bound: 0x0000000000000000 limit: 0x0000000047DD0000 map:0 name:atf-reserved align: 0x0000000000010000
+mblock_alloc_range: start: 0x00000000BFF70000, sz: 0x0000000000080000 lower_bound: 0x0000000000000000 limit: 0x00000000C0000000 map:0 name:atf-ramdump-reserved align: 0x0000000000010000
+mblock_alloc_range: start: 0x00000000BFF30000, sz: 0x0000000000040000 lower_bound: 0x0000000000000000 limit: 0x00000000C0000000 map:0 name:atf-log-reserved align: 0x0000000000001000
+mblock_alloc_range: start: 0x000000007F800000, sz: 0x0000000000200000 lower_bound: 0x0000000000000000 limit: 0x0000000080000000 map:0 name:tee-secmem align: 0x0000000000200000
+mblock_alloc_range: start: 0x000000007FB00000, sz: 0x00000000000C0000 lower_bound: 0x0000000000000000 limit: 0x0000000080000000 map:0 name:SSPM-reserved align: 0x0000000000010000
+metadata.slot_info[0].priority = 15, 15
+metadata.slot_info[0].retry = 7, 7
+sbc_en = 1
+sbc_en = 1
+[SBC] cert verify, part = sspm_a, img = tinysys-sspm...ok
+[SBC] img auth ok
+metadata.slot_info[0].priority = 15, 15
+metadata.slot_info[0].retry = 7, 7
+sbc_en = 1
+sbc_en = 1
+[SBC] cert verify, part = lk_a, img = lk...ok
+[SBC] img auth ok
+sbc_en = 1
+sbc_en = 1
+[SBC] cert verify, part = tee_a, img = atf...ok
+[SBC] img auth ok
+sbc_en = 1
+sbc_en = 1
+[SBC] cert verify, part = tee_a, img = tee...ok
+mblock_alloc_range: start: 0x0000000079800000, sz: 0x0000000006000000 lower_bound: 0x0000000000000000 limit: 0x0000000080000000 map:0 name:tee-reserved align: 0x0000000000001000
+[SBC] img auth ok
+metadata.slot_info[0].priority = 15, 15
+metadata.slot_info[0].retry = 7, 7
+sbc_en = 1
+sbc_en = 1
+[SBC] cert verify, part = gz_a, img = gz...ok
+[SBC] img auth ok
+[GZINIT] load nebula failed, DISABLE mtee nebula
+[GZINIT] rkp get inactive part name failed!
+[GZINIT] ERROR, load RKP failed, *DISABLE* RKP feature
+mblock_free_with_size mblock start 00000000D0200000 size: 0000000000200000, name: RKP_NS
+mblock_free_with_size mblock start 00000000D0000000 size: 0000000000200000, name: RKP
+[PLW] tran_plwriteemmc_record enter
+[PLW] 1 partitions are being writted 
+[PLW] para partition is writted in preloader stage but allowed skip record
+battery exists
+mblock_alloc_range: start: 0x0000000047DD0000, sz: 0x0000000000200000 lower_bound: 0x0000000000000000 limit: 0x0000000047FD0000 map:1 name:pl-bootarg align: 0x0000000000001000
+mblock_alloc_range: start: 0x0000000047C80000, sz: 0x0000000000010000 lower_bound: 0x0000000000000000 limit: 0x0000000047C90000 map:0 name:aee_debug_kinfo align: 0x0000000000010000
+mblock_alloc_range: start: 0x0000000047C90000, sz: 0x00000000000E0000 lower_bound: 0x0000000000000000 limit: 0x0000000047D70000 map:0 name:pstore align: 0x0000000000010000
+mblock_alloc_range: start: 0x0000000047D70000, sz: 0x0000000000010000 lower_bound: 0x0000000000000000 limit: 0x0000000047D80000 map:0 name:minirdump align: 0x0000000000010000
+[PLFM] dram_type 6 ddr_vendor 6 
+[mt_charger_type_detection] Got data !!, 0, 1
+RAM_CONSOLE offset:0x7C0
+RAM_CONSOLE sram_plat_dbg_info_addr:0x10EF40, sram_plat_dbg_info_size:0x200, sram_log_store_addr:0x10F200, sram_log_store_size:0x100
+RAM_CONSOLE mrdump_addr:0x10F300, mrdump_size:0xE00, dram_addr:0x47C80000, dram_size:0x10000
+RAM_CONSOLE pstore_addr:0x47C90000, pstore_size:0xE0000, pstore_console_size:0x40000, pstore_pmsg_size:0x10000
+RAM_CONSOLE mrdump_mini_header_addr:0x47D70000, mrdump_mini_header_size:0x10000, magic1:0x61646472, magic2:0x73697A65
+MEM Index: 2
+EMMC MID: 0xD6
+BOOT_REASON: 31
+BOOT_MODE: 0
+MEM_SIZE: 0x400
+MEM_SIZE: 0x400
+BOOT_TIME: 10239
+[TZ_TBASE] teearg.magic: 0x434D4254
+[TZ_TBASE] teearg.length: 0x0
+[TZ_TBASE] teearg.dRamBase: 0x40000000
+[TZ_TBASE] teearg.dRamSize: 0x0
+[TZ_TBASE] teearg.secDRamBase: 0x79800000
+[TZ_TBASE] teearg.secDRamSize: 0x6000000
+[TZ_TBASE] teearg.secIRamBase: 0x0
+[TZ_TBASE] teearg.secIRamSize: 0x0
+[TZ_TBASE] teearg.total_number_spi: 352
+[TZ_TBASE] teearg.ssiq_number: 303
+
+[BLDR] jump to 0x48000000
+[BLDR] <0x48000000>=0xEA000007
+[BLDR] <0x48000004>=0xEA006654
+[BLDR] next is GZ at 0x000000027FC00000
+[TZ_SEC_CFG] [B]SRAMROM SEC_ADDR:0x0, SEC_ADDR1:0x0, SEC_ADDR2:0x0
+[TZ_SEC_CFG] [B]SRAMROM SEC_CTRL:0x0, SEC_CTRL2:0x0, SEC_CTRL5:0x0, SEC_CTRL6:0x0
+[TZ_SEC_CFG] [A]SRAMROM SEC_ADDR:0x9000DC00, SEC_ADDR1:0xDC00, SEC_ADDR2:0xDC00
+[TZ_SEC_CFG] [A]SRAMROM SEC_CTRL:0xB69, SEC_CTRL2:0x0, SEC_CTRL5:0x1680000, SEC_CTRL6:0x0
+
+Current RTC time:[2010/1/1 0:0:9]
+[10857] [MT22] MP chip
+[10857] [XT22] : 0 0x24 0x24 done
+[10858] [PROFILE] ::: lvl(2) Devinfo Init takes 5 ms
+[10859] bootarg_addr: 0x47e6de80, bootarg_size: 0x1720
+[10859] [WDT]  mtk_wdt_mode LK config  mode value=7d
+[10860] [WDT]  mtk_wdt_mode_config LK  mode value=30, tmp:22000030
+[10861] [WDT] wdt init
+[10861] [WDT]  mtk_wdt_mode LK config  mode value=30
+[10862] [WDT]  mtk_wdt_mode_config LK  mode value=7d, tmp:2200007d
+[10863] [PROFILE] ::: lvl(2) WDT Init takes 4 ms
+[10863] [PWRAP] pwrap_init_lk
+[10864] [PWRAP] is_pwrap_init_done 1
+[10864] [PWRAP] [PMIC_WRAP] pwrap_init already init, do nothing
+[10865] [pmic_init] LK Start..................
+[10865] [pmic_init] MT6357 CHIP Code = 0x5721
+[10866] [pmic_init] Done
+[10866] [PROFILE] ::: lvl(2) pmic_init takes 1 ms
+[10867] [PROFILE] ::: lvl(1) platform_early_init takes 14 ms
+[0] welcome to lk
+
+[0] LK_VER_TAG = x6526_v658-0e5073643-20230929093543-20231009151053
+[1] calling constructors
+[1] initializing heap
+[1] heap base 0x4819383c size 2541508 bytes
+[2] initializing threads
+[2] initializing dpc
+[3] initializing timers
+[3] creating bootstrap completion thread
+[3] iothread starts.
+[4] Wait for bootstrap2...
+[4] top of bootstrap2()
+[4] thread: bootstrap2, bottom(stack) = 0x48197934, limit(stack) = 0x48195934
+[5] mblock_reserve-R start: 0x48000000, sz: 0x400000 map:0 name:lk_addr_mb
+[6] mblock_reserve-R start: 0x48b00000, sz: 0x8000000 map:0 name:scratch_addr_mb
+[7] initializing platform
+[8] platform_init()
+[8] [SD0] Host controller intialization start
+[9] [SD0] SET_CLK(260kHz): SCLK(259kHz) MODE(0) DDR(0) DIV(385) DS(0) RS(0)
+[10] [SD0] Host controller intialization done
+[10] [mmc_init]: msdc0 start mmc_init_card()
+[11] [mmc_init_card]: start
+[61] [SD0] ocr = 0x40018000, card->ocr=0xC0FF8080, s18a = 0 
+[82] [SD0] EXT_CSD_ERASE_GRP_DEF is Off, wp_size = 8192KB
+[SD0] csd.write_prot_grpsz = 15, csd.erase_sctsz = 1024
+[84] [SD0] Switch to High-Speed mode!
+[86] [SD0] Switch to DDR buswidth
+[86] [SD0] SET_CLK(260kHz): SCLK(259kHz) MODE(2) DDR(1) DIV(192) DS(0) RS(0)
+[87] [SD0] Size: 118000 MB, Max.Speed: 52000 kHz, blklen(512), nblks(241664000)
+[88] [SD0] Initialized, eMMC45
+[88] [SD0] SET_CLK(52000kHz): SCLK(50000kHz) MODE(2) DDR(1) DIV(1) DS(0) RS(0)
+[89] [mmc_init_card]: finish successfully
+[90] [mt_part_register_device]
+[90] [PART_COMMON_LK][partition init]
+[91] [GPT_LK]Parsing Primary GPT now...
+[91] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[92] [PROFILE] mmc read 32 blks in 0 ms: 8KB/s
+[93] [GPT_LK] user part id = 0
+[94] [GPT_LK][0]name=boot_para, start_sect=0x40, nr_sects=0x800, uuid=f57ad330-39c2-4488-9bb0-00cb43c9ccd4
+[95] [WP]boot_para(mmcblk0p1(40-840)):rw
+[95] [GPT_LK][1]name=proinfo, start_sect=0x840, nr_sects=0x1800, uuid=fe686d97-3544-4a41-be21-167e25b61b6f
+[97] [WP]proinfo(mmcblk0p2(840-2040)):noerase
+[97] [GPT_LK][2]name=para, start_sect=0x2040, nr_sects=0x400, uuid=1cb143a8-b1a8-4b57-b251-945c5119e8fe
+[98] [WP]para(mmcblk0p3(2040-2440)):noerase
+[99] [GPT_LK][3]name=expdb, start_sect=0x2440, nr_sects=0xa000, uuid=3b9e343b-cdc8-4d7f-9fa6-b6812e50ab62
+[100] [WP]expdb(mmcblk0p4(2440-c440)):rw
+[101] [GPT_LK][4]name=frp, start_sect=0xc440, nr_sects=0x800, uuid=5f6a2c79-6617-4b85-ac02-c2975a14d2d7
+[102] [WP]frp(mmcblk0p5(c440-cc40)):rw
+[103] [GPT_LK][5]name=nvcfg, start_sect=0xcc40, nr_sects=0x10000, uuid=4ae2050b-5db5-4ff7-aad3-5730534be63d
+[104] [WP]nvcfg(mmcblk0p6(cc40-1cc40)):rw
+[104] [GPT_LK][6]name=nvdata, start_sect=0x1cc40, nr_sects=0x20000, uuid=1f9b0939-e16b-4bc9-a5bc-dc2ee969d801
+[106] [WP]nvdata(mmcblk0p7(1cc40-3cc40)):rw
+[106] [GPT_LK][7]name=md_udc, start_sect=0x3cc40, nr_sects=0xb4d0, uuid=d722c721-0dee-4cb8-8a83-2c63cd1393c7
+[108] [WP]md_udc(mmcblk0p8(3cc40-48110)):rw
+[108] [GPT_LK][8]name=metadata, start_sect=0x48110, nr_sects=0x10000, uuid=e02179a8-ceb5-48a9-8831-4f1c9c5a8695
+[110] [WP]metadata(mmcblk0p9(48110-58110)):noerase
+[110] [GPT_LK][9]name=protect1, start_sect=0x58110, nr_sects=0x4000, uuid=84b09a81-fad2-41ac-890e-407c24975e74
+[112] [WP]protect1(mmcblk0p10(58110-5c110)):rw
+[112] [GPT_LK][10]name=protect2, start_sect=0x5c110, nr_sects=0x7ef0, uuid=e8f0a5ef-8d1b-42ea-9c2a-835cd77de363
+[114] [WP]protect2(mmcblk0p11(5c110-64000)):rw
+[114] [GPT_LK][11]name=seccfg, start_sect=0x64000, nr_sects=0x4000, uuid=d5f0e175-a6e1-4db7-94c0-f82ad032950b
+[115] [WP]seccfg(mmcblk0p12(64000-68000)):ro
+[116] [GPT_LK][12]name=persist, start_sect=0x68000, nr_sects=0x18000, uuid=1d9056e1-e139-4fca-8c0b-b75fd74d81c6
+[117] [WP]persist(mmcblk0p13(68000-80000)):rw
+[118] [GPT_LK][13]name=sec1, start_sect=0x80000, nr_sects=0x1000, uuid=7792210b-b6a8-45d5-ad91-3361ed14c608
+[119] [WP]sec1(mmcblk0p14(80000-81000)):ro
+[120] [GPT_LK][14]name=nvram, start_sect=0x81000, nr_sects=0x23000, uuid=138a6db9-1032-451d-91e9-0fa38ff94fbb
+[121] [WP]nvram(mmcblk0p15(81000-a4000)):ro
+[122] [GPT_LK][15]name=md1img_a, start_sect=0xa4000, nr_sects=0x32000, uuid=756d934c-50e3-4c91-af46-02d824169ca7
+[123] [WP]md1img_a(mmcblk0p16(a4000-d6000)):rw
+[124] [GPT_LK][16]name=spmfw_a, start_sect=0xd6000, nr_sects=0x800, uuid=a3f3c267-5521-42dd-a724-3bdec20c7c6f
+[125] [WP]spmfw_a(mmcblk0p17(d6000-d6800)):rw
+[126] [GPT_LK][17]name=scp_a, start_sect=0xd6800, nr_sects=0x800, uuid=8c68cd2a-ccc9-4c5d-8b57-34ae9b2dd481
+[127] [WP]scp_a(mmcblk0p18(d6800-d7000)):rw
+[127] [GPT_LK][18]name=sspm_a, start_sect=0xd7000, nr_sects=0x800, uuid=6a5cebf8-54a7-4b89-8d1d-c5eb140b095b
+[129] [WP]sspm_a(mmcblk0p19(d7000-d7800)):rw
+[129] [GPT_LK][19]name=gz_a, start_sect=0xd7800, nr_sects=0x8000, uuid=a0d65bf8-e8de-4107-9434-1d318c843d37
+[131] [WP]gz_a(mmcblk0p20(d7800-df800)):rw
+[131] [GPT_LK][20]name=lk_a, start_sect=0xdf800, nr_sects=0x1000, uuid=46f0c0bb-f227-4eb6-b82f-66408e13e36d
+[133] [WP]lk_a(mmcblk0p21(df800-e0800)):rw
+[133] [GPT_LK][21]name=logo_a, start_sect=0xe0800, nr_sects=0x4000, uuid=fbc2c131-6392-4217-b51e-548a6edb03d0
+[134] [WP]logo_a(mmcblk0p22(e0800-e4800)):rw
+[135] [GPT_LK][22]name=boot_a, start_sect=0xe4800, nr_sects=0x10000, uuid=e195a981-e285-4734-8025-ec323e9589d9
+[136] [WP]boot_a(mmcblk0p23(e4800-f4800)):rw
+[137] [GPT_LK][23]name=vendor_boot_a, start_sect=0xf4800, nr_sects=0x20000, uuid=e29052f8-5d3a-4e97-adb5-5f312ce6610a
+[138] [WP]vendor_boot_a(mmcblk0p24(f4800-114800)):rw
+[139] [GPT_LK][24]name=init_boot_a, start_sect=0x114800, nr_sects=0x4000, uuid=9c3cabd7-a35d-4b45-8c57-b80775426b35
+[140] [WP]init_boot_a(mmcblk0p25(114800-118800)):rw
+[141] [GPT_LK][25]name=dtbo_a, start_sect=0x118800, nr_sects=0x4000, uuid=e7099731-95a6-45a6-a1e5-1b6aba032cf1
+[142] [WP]dtbo_a(mmcblk0p26(118800-11c800)):rw
+[143] [GPT_LK][26]name=tee_a, start_sect=0x11c800, nr_sects=0x2800, uuid=8273e1ab-846f-4468-b999-ee2ea8e50a16
+[144] [WP]tee_a(mmcblk0p27(11c800-11f000)):rw
+[145] [GPT_LK][27]name=tkv_a, start_sect=0x11f000, nr_sects=0x800, uuid=d26472f1-9ebc-421d-ba14-311296457c90
+[146] [WP]tkv_a(mmcblk0p28(11f000-11f800)):rw
+[147] [GPT_LK][28]name=vbmeta_a, start_sect=0x11f800, nr_sects=0x4000, uuid=b72ccbe9-2055-46f4-a167-4a069c201738
+[148] [WP]vbmeta_a(mmcblk0p29(11f800-123800)):rw
+[149] [GPT_LK][29]name=vbmeta_system_a, start_sect=0x123800, nr_sects=0x4000, uuid=9c1520f3-c2c5-4b89-8242-fe4c61208a9e
+[150] [WP]vbmeta_system_a(mmcblk0p30(123800-127800)):rw
+[151] [GPT_LK][30]name=vbmeta_vendor_a, start_sect=0x127800, nr_sects=0x4800, uuid=902d5f3f-434a-4de7-8988-321e88c9b8aa
+[152] [WP]vbmeta_vendor_a(mmcblk0p31(127800-12c000)):rw
+[153] [GPT_LK][31]name=md1img_b, start_sect=0x12c000, nr_sects=0x32000, uuid=bece74c8-d8e2-4863-9bfe-5b0b66bb920f
+[155] [WP]md1img_b(mmcblk0p32(12c000-15e000)):rw
+[155] [GPT_LK][32]name=spmfw_b, start_sect=0x15e000, nr_sects=0x800, uuid=ff1342cf-b7be-44d5-a25e-a435addd2702
+[156] [WP]spmfw_b(mmcblk0p33(15e000-15e800)):rw
+[157] [GPT_LK][33]name=scp_b, start_sect=0x15e800, nr_sects=0x800, uuid=a4da8f1b-fe07-433b-95cb-84a5f23e477b
+[158] [WP]scp_b(mmcblk0p34(15e800-15f000)):rw
+[159] [GPT_LK][34]name=sspm_b, start_sect=0x15f000, nr_sects=0x800, uuid=c2635e15-61aa-454e-9c40-ebe1bdf19b9b
+[160] [WP]sspm_b(mmcblk0p35(15f000-15f800)):rw
+[161] [GPT_LK][35]name=gz_b, start_sect=0x15f800, nr_sects=0x8000, uuid=4d2d1290-36a3-4f5d-afb4-319f8ab6dcd8
+[162] [WP]gz_b(mmcblk0p36(15f800-167800)):rw
+[163] [GPT_LK][36]name=lk_b, start_sect=0x167800, nr_sects=0x1000, uuid=fdce12f0-a7eb-40f7-8350-960972e6cb57
+[164] [WP]lk_b(mmcblk0p37(167800-168800)):rw
+[165] [GPT_LK][37]name=logo_b, start_sect=0x168800, nr_sects=0x4000, uuid=0fbbafa2-4aa9-4490-8983-5329328505fd
+[166] [WP]logo_b(mmcblk0p38(168800-16c800)):rw
+[167] [GPT_LK][38]name=boot_b, start_sect=0x16c800, nr_sects=0x10000, uuid=a76e4b2f-31cb-40ba-826a-c0cb0b73c856
+[168] [WP]boot_b(mmcblk0p39(16c800-17c800)):rw
+[169] [GPT_LK][39]name=vendor_boot_b, start_sect=0x17c800, nr_sects=0x20000, uuid=f54ac030-7004-4d02-9481-bbf982036807
+[170] [WP]vendor_boot_b(mmcblk0p40(17c800-19c800)):rw
+[171] [GPT_LK][40]name=init_boot_b, start_sect=0x19c800, nr_sects=0x4000, uuid=c4c310e2-4a7e-77d3-4818-61e2d8bb5e86
+[172] [WP]init_boot_b(mmcblk0p41(19c800-1a0800)):rw
+[173] [GPT_LK][41]name=dtbo_b, start_sect=0x1a0800, nr_sects=0x4000, uuid=3734710f-0f13-1ab9-734c-12a08ec50837
+[174] [WP]dtbo_b(mmcblk0p42(1a0800-1a4800)):rw
+[175] [GPT_LK][42]name=tee_b, start_sect=0x1a4800, nr_sects=0x3800, uuid=85a5b02f-3773-18b3-1049-718cde95107e
+[176] [WP]tee_b(mmcblk0p43(1a4800-1a8000)):rw
+[177] [GPT_LK][43]name=super, start_sect=0x1a8000, nr_sects=0xd00000, uuid=6fce83a6-5273-4748-1145-c205ebb4b8ad
+[178] [WP]super(mmcblk0p44(1a8000-ea8000)):ro
+[179] [GPT_LK][44]name=tkv_b, start_sect=0xea8000, nr_sects=0x800, uuid=3645e6a3-a7e3-19b2-4941-172c10190eef
+[180] [WP]tkv_b(mmcblk0p45(ea8000-ea8800)):rw
+[181] [GPT_LK][45]name=vbmeta_b, start_sect=0xea8800, nr_sects=0x4000, uuid=f60b92b4-0e2f-91b6-fb4a-2d0b643bab4b
+[182] [WP]vbmeta_b(mmcblk0p46(ea8800-eac800)):rw
+[182] [GPT_LK][46]name=vbmeta_system_b, start_sect=0xeac800, nr_sects=0x4000, uuid=d05cedfe-20b7-68b3-59f2-4fe25317f2fc
+[184] [WP]vbmeta_system_b(mmcblk0p47(eac800-eb0800)):rw
+[185] [GPT_LK][47]name=vbmeta_vendor_b, start_sect=0xeb0800, nr_sects=0x4000, uuid=54060b67-fa74-5c82-6116-44821e54dced
+[186] [WP]vbmeta_vendor_b(mmcblk0p48(eb0800-eb4800)):rw
+[187] [GPT_LK][48]name=tranfs, start_sect=0xeb4800, nr_sects=0x97800, uuid=c0a128fb-59d1-0a9e-f0e8-ea3d36a9d658
+[188] [WP]tranfs(mmcblk0p49(eb4800-f4c000)):rw
+[189] [GPT_LK][49]name=userdata, start_sect=0xf4c000, nr_sects=0xd70e7c0, uuid=f5f5a7f8-f8ec-3ba1-cbc9-4e2a7cbc7d07
+[190] [WP]userdata(mmcblk0p50(f4c000-e65a7c0)):rw
+[191] [GPT_LK][50]name=otp, start_sect=0xe65a7c0, nr_sects=0x15800, uuid=736d618a-5b79-530b-9dac-895339690613
+[192] [WP]otp(mmcblk0p51(e65a7c0-e66ffc0)):rw
+[193] [GPT_LK][51]name=flashinfo, start_sect=0xe66ffc0, nr_sects=0x8000, uuid=a2342ac6-4c40-b02c-514f-e90d46f93454
+[194] [WP]flashinfo(mmcblk0p52(e66ffc0-e677fc0)):rw
+[195] [GPT_LK]Success to find valid GPT.
+[196] [SD0] EXT_CSD_ERASE_GRP_DEF is Off, wp_size = 8192KB
+[SD0] csd.write_prot_grpsz = 15, csd.erase_sctsz = 1024
+[198] [PART_COMMON_LK]boot_device str is loop.max_part=7 androidboot.boot_devices=bootdevice,soc/11230000.mmc,11230000.mmc,soc/11230000.msdc,11230000.msdc.
+[200] [SD0] boot device found
+[200] [SD0] EXT_CSD_ERASE_GRP_DEF is Off, wp_size = 8192KB
+[SD0] csd.write_prot_grpsz = 15, csd.erase_sctsz = 1024
+[202] mmc_rpmb_read_data, mmc_set_part_config done!!
+[203] mmc_rpmb_read_data, rpmb_req.result=7
+[203] mmc_rpmb_read_data, compare hmac error!!
+[204] [SD0] EXT_CSD_ERASE_GRP_DEF is Off, wp_size = 8192KB
+[SD0] csd.write_prot_grpsz = 15, csd.erase_sctsz = 1024
+[206] mmc_rpmb_get_wc, mmc_set_part_config done!!
+[207] mmc_rpmb_post_frame, rpmb_cfg->wc = 0
+[207] mmc_rpmb_get_wc, rpmb_req.result=7
+[208] mmc_rpmb_get_wc, compare hmac error!!
+[209] mmc_rpmb_post_frame, rpmb_cfg->wc = 0
+[209] mmc_rpmb_write_data, rpmb_req.result=7
+[210] mmc_rpmb_check_result Authentication key not yet programmed 
+[211] mmc_rpmb_write_data, check result error!!
+[211] [mmc_dummy_rpmb_write] mmc_dummy_rpmb_write failed
+[212] [PROFILE] ::: lvl(2) NAND/EMMC init takes 204 ms
+[213] [SD0] EXT_CSD_ERASE_GRP_DEF is Off, wp_size = 8192KB
+[SD0] csd.write_prot_grpsz = 15, csd.erase_sctsz = 1024
+[214] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[215] [SD0] EXT_CSD_ERASE_GRP_DEF is Off, wp_size = 8192KB
+[SD0] csd.write_prot_grpsz = 15, csd.erase_sctsz = 1024
+[217] [PROFILE] mmc read 24 blks in 2 ms: 6000KB/s
+rom_info_ver = 2
+m_rom_info_ver = 20002
+[218] [SD0] EXT_CSD_ERASE_GRP_DEF is Off, wp_size = 8192KB
+[SD0] csd.write_prot_grpsz = 15, csd.erase_sctsz = 1024
+[220] [PROFILE] mmc read 24 blks in 2 ms: 6000KB/s
+[221] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[221] [PROFILE] mmc write 1 blks in 0 ms: 8KB/s
+[222] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[223] [PROFILE] ::: lvl(2) lk_vb_init takes 10 ms
+[223] mblock_reserve-R start: 0x7faf8000, sz: 0x8000 map:0 name:tkv
+[224] tkv g_tkv_base =0x7faf8000 g_boot_arg->tkv_base=0x7faf8000
+[225] tkv init
+[225]  tkv io->size=1048576
+[226] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[226] tkv magic = 0
+[226] tkv actual size = 0
+[227] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[228] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[229] [PROFILE] mmc read 64 blks in 1 ms: 32000KB/s
+[229] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[230] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[231] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[232] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[232] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[233] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[234] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[234] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[235] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[236] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[237] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[237] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[238] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[239] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[239] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[240] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[241] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[241] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[242] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[243] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[243] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[244] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[245] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[246] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[246] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[247] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[248] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[248] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[249] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[250] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[250] tkv base =ro.build.display.id=X6526-V658ADEFGHI-TGo-OP-231009V686DevT
+[251] tkv ret=0
+[252] [get_AB_OTA_param:1969] p_AB_suffix: _a, AB_retry_count: 7
+[252] [SEC_POLICY] reached the end, use default policy
+[253] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[254] [SEC_POLICY] sboot_state = 0x1
+[254] [SEC_POLICY] lock_state(default) = 0x4
+[255] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[256] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[257] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[258] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[258] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[259] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[260] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[260] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[261] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[262] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[262] Image name matched 
+[263] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[264] [PROFILE] mmc read 4 blks in 1 ms: 2000KB/s
+[264] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[SBC] sbc_en = 1
+[SBC] sbc_en = 1
+[270] [SEC_POLICY] reached the end, use default policy
+[271] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[272] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[273] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[273] [PROFILE] mmc read 2 blks in 0 ms: 8KB/s
+[274] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[279] [SBC] image lk_main_dtb auth init pass
+[280] [SBC] image lk_main_dtb cert vfy pass(25 ms)
+[281] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[281] 
+=========================================
+[282] [LK_BOOT] lk_a magic number : 0x58881688
+[283] [LK_BOOT] lk_a name         : lk
+[283] [LK_BOOT] lk_a size         : 869932
+[284] =========================================
+[284] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[285] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[286] 
+=========================================
+[286] [LK_BOOT] lk_a magic number : 0x58881688
+[287] [LK_BOOT] lk_a name         : cert1
+[287] [LK_BOOT] lk_a size         : 1733
+[288] =========================================
+[289] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[289] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[290] 
+=========================================
+[291] [LK_BOOT] lk_a magic number : 0x58881688
+[291] [LK_BOOT] lk_a name         : cert2
+[292] [LK_BOOT] lk_a size         : 982
+[292] =========================================
+[293] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[294] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[294] 
+=========================================
+[295] [LK_BOOT] lk_a magic number : 0x58881688
+[295] [LK_BOOT] lk_a name         : lk_main_dtb
+[296] [LK_BOOT] lk_a size         : 115482
+[297] =========================================
+[297] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[300] [PROFILE] mmc read 224 blks in 2 ms: 56000KB/s
+[300] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[301] load_lk_dtb(): load lk_main_dtb dtb_img_size=115482
+[303] [SBC][oem] img auth pass
+[303] [SBC] lk_main_dtb vfy pass(1 ms)
+[304] [PROFILE] ::: lvl(3) load_lk_dtb takes 52 ms
+[304] [SEC_POLICY] reached the end, use default policy
+[305] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[306] [SEC_POLICY] sboot_state = 0x1
+[306] [SEC_POLICY] lock_state(default) = 0x4
+[307] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[308] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[309] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[309] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[310] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[311] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[SBC] sbc_en = 1
+[SBC] sbc_en = 1
+[317] [SEC_POLICY] reached the end, use default policy
+[318] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[318] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[319] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[320] [PROFILE] mmc read 2 blks in 0 ms: 8KB/s
+[320] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[326] [SBC] image dtbo auth init pass
+[326] [SBC] image dtbo cert vfy pass(19 ms)
+[327] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[328] dtbo_total_len: 0xb964
+[329] [PROFILE] mmc read 92 blks in 1 ms: 46000KB/s
+[329] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[331] [SBC][oem] img auth pass
+[331] [SBC] dtbo vfy pass(1 ms)
+[331] pin163 = 0, pin164 = 0
+[332] PCB_ID: SEVB (MTK0963), dtb idx = 0
+[332] dtbo_offset: 0x40
+[333] [PROFILE] ::: lvl(3) load_dtbo_buffer takes 29 ms
+[333] dtbo_size : 47396
+[345] [PROFILE] ::: lvl(3) dtb_overlay takes 11 ms
+[345] [PROFILE] ::: lvl(2) lk_dtb_init takes 93 ms
+[346] [GPIO] Found /gpio@10005000at offset 11404
+[347] [GPIO] Found perperty at 0x480fb0a0, len 5040
+[349] mt6370_bled_probe: (1.0.3_MTK)
+[354] mt6370_bled_parse_dt: subpmic_pmu id = 5
+[357] [LEDS] mt,ext_en_pin val = 0
+[357] [LEDS] mt,chan_en val = 15
+[357] [LEDS] mt,map_linear = 1
+[358] [LEDS] mt,bl_ovp_level = 3
+[358] [LEDS] mt,bl_ocp_level = 2
+[359] [LEDS] mt,use_pwm = 1
+[359] [LEDS] mt,pwm_fsample = 2
+[360] [LEDS] mt,pwm_deglitch = 1
+[360] [LEDS] mt,pwm_hys_en = 1
+[360] [LEDS] mt,pwm_hys = 0
+[361] [LEDS] mt,bled_ramptime = 3
+[361] [LEDS] mt,bled_flash_ramp = 1
+[362] [LEDS] mt,max_bled_brightness = 512
+[362] [LEDS] mt,bled_curr_scale = 0
+[363] [LEDS] mt,pwm_lpf_coef = 0
+[363] [LEDS] mt,pwm_lpf_en = 0
+[363] [LEDS] mt,bled_curr_mode = 0
+[364] [I2C-LK] 367: id=5,addr: 34, transfer error
+[365] [I2C-LK] 373: I2C_ACKERR
+[365] [I2C-LK] 244: I2C structure:
+[I2C-LK] Clk=24960,Id=5,Mode=1,St_rs=0,Dma_en=0,Op=3,Poll_en=1,Irq_stat=2
+[I2C-LK] Trans_len=1,Trans_num=2,Trans_auxlen=1,Data_size=ffff,speed=400
+[367] [I2C-LK] 247: base address 0x11016000
+[368] [I2C-LK] 268: I2C register:
+[I2C-LK] SLAVE_ADDR=68,INTR_MASK=1f8,INTR_STAT=3,CONTROL=38,TRANSFER_LEN=1
+[I2C-LK] TRANSAC_LEN=2,DELAY_LEN=a,TIMING=405,LTIMING=23,START=0,FIFO_STAT=1101
+[I2C-LK] IO_CONFIG=1a3,HS=8000,DEBUGSTAT=300,EXT_CONF=1800,TRANSFER_LEN_AUX=1,CLOCK_DIV=4
+[371] [I2C-LK] 906: write_read 0x10001 bytes fails,ret=-121.
+[372] mt6370_i2c_read_byte: I2CR[0x00] fail(-1)
+[373] [I2C-LK] 367: id=5,addr: 34, transfer error
+[373] [I2C-LK] 373: I2C_ACKERR
+[374] [I2C-LK] 244: I2C structure:
+[I2C-LK] Clk=24960,Id=5,Mode=1,St_rs=0,Dma_en=0,Op=1,Poll_en=1,Irq_stat=2
+[I2C-LK] Trans_len=2,Trans_num=1,Trans_auxlen=0,Data_size=ffff,speed=400
+[376] [I2C-LK] 247: base address 0x11016000
+[376] [I2C-LK] 268: I2C register:
+[I2C-LK] SLAVE_ADDR=68,INTR_MASK=1f8,INTR_STAT=3,CONTROL=28,TRANSFER_LEN=2
+[I2C-LK] TRANSAC_LEN=1,DELAY_LEN=a,TIMING=405,LTIMING=23,START=0,FIFO_STAT=1210
+[I2C-LK] IO_CONFIG=1a3,HS=8000,DEBUGSTAT=300,EXT_CONF=1800,TRANSFER_LEN_AUX=0,CLOCK_DIV=4
+[380] [I2C-LK] 867: Write 2 bytes fails,ret=-121.
+[380] mt6370_i2c_write_byte: I2CW[0xA1] = 0xED fail(-1)
+[381] [LEDS]LK: leds_init: mt65xx_backlight_off 
+[382] [LEDS]LK: mt65xx_backlight_off 
+[384] [LEDS]LK:led[0] offset is 104456,mode is 0,data is 1 .
+[387] [LEDS]LK:led[1] offset is 104580,mode is 0,data is 1 .
+[389] [LEDS]LK:led[2] offset is 104704,mode is 0,data is 1 .
+[392] [LEDS]LK:led[3] offset is 104828,mode is 0,data is 1 .
+[394] [LEDS]LK:led[4] offset is 104964,mode is 0,data is 1 .
+[397] [LEDS]LK:led[5] offset is 105100,mode is 0,data is 1 .
+[399] [LEDS]LK:The backlight hw mode is LCM.
+[400] [LEDS]LK:led[6] offset is 105236,mode is 4,data is 1208033805 .
+[400] [LEDS]LK: mt65xx_leds_brightness_set no lcm connected, no need to set backlight.
+[402] [PROFILE] ::: lvl(2) led init takes 53 ms
+[403] kpd_sw_pwrkey = 116, kpd_hw_pwrkey = 8, kpd_sw_rstkey = 115, kpd_hw_rstkey = 17
+[404] kpd_use_extend_type = 0, kpd_hw_recovery_key = 17, kpd_hw_factory_key = 0
+[405] MT65XX_FACTORY_KEY 0x0
+[405] MT65XX_BOOT_MENU_KEY 0x11
+[406] MT65XX_RECOVERY_KEY 0x11
+[407] [PROFILE] mmc read 32 blks in 1 ms: 16000KB/s
+[408] [LK_ENV]ENV SIG of area 0 is wrong
+[409] [PROFILE] mmc read 32 blks in 0 ms: 8KB/s
+[409] [LK_ENV]ENV SIG of area 1 is wrong
+[410] [LK_ENV]env area: 0
+[410] [LK_ENV]no valid env
+[411] [LK_ENV]env area: 1
+[411] [LK_ENV]no valid env
+[411] [PROFILE] ::: lvl(2) ENV init takes 5 ms
+[412] [DISP][DDPDSI] DSI Mode: BURST_VDO_MODE
+[413] [DISP][DDPDSI] LANE_NUM: 4,data_format:(0,3,0,0)
+[413] [DISP][DDPDSI] vact: 3, vbp: 300, vfp: 18, vact_line: 1612, hact: 2, hbp: 135, hfp: 107, hblank: 0
+[415] [DISP][DDPDSI] pll_select: 0, pll_div1: 0, pll_div2: 0, fbk_div: 0,fbk_sel: 0, rg_bir: 0
+[416] [DISP][DDPDSI] rg_bic: 0, rg_bp: 0, PLL_CLOCK: 550, dsi_clock: 0, ssc_range: 0,	ssc_disable: 1, compatibility_for_nvk: 0, cont_clock: 0
+[417] [DISP][DDPDSI] lcm_ext_te_enable: 0, noncont_clock: 0, noncont_clock_period: 0
+[522] [LK/LCM]lcm_compare_id, read_id: id0:0x40, expected:0x00000040
+[523] [LK_DDP/DSI]error:polling SLEEPIN_DONE 100
+[524] we will use lcm: nt36528_hd720_dsi_vdo_djn
+[524] [DISP]******** dump lcm driver information ********
+[525] [DISP][LCM], name: nt36528_hd720_dsi_vdo_djn
+[526] [DISP][LCM] resolution: 720 x 1612
+[526] [DISP][LCM] physical size: 0 x 0
+[527] [DISP][LCM] physical size: 0 x 0
+[527] [DISP][LCM] lcm_if:0, cmd_if:0
+[528] [DISP][LCM] interface: unknown
+[528] [DISP][LCM] Type: DSI
+[529] [DISP][LCM] DSI Mode: BURST_VDO_MODE
+[529] [DISP][LCM] LANE_NUM: 4,data_format:(0,3,0,0)
+[530] [DISP][LCM] vact: 3, vbp: 300, vfp: 18, vact_line: 1612, hact: 2, hbp: 135, hfp: 107, hblank: 0, hactive: 720
+[531] [DISP][LCM] pll_select: 0, pll_div1: 0, pll_div2: 0, fbk_div: 0,fbk_sel: 0, rg_bir: 0
+[532] [DISP][LCM] rg_bic: 0, rg_bp: 0, PLL_CLOCK: 550, dsi_clock: 0, ssc_range: 0,	ssc_disable: 1, compatibility_for_nvk: 0, cont_clock: 0
+[534] [DISP][LCM] lcm_ext_te_enable: 0, noncont_clock: 0, noncont_clock_period: 0
+[535] [DISP]ERROR:corner_params is null!
+[535] mblock_reserve-R start: 0x78800000, sz: 0x1000000 map:0 name:framebuffer
+[536] FB base = 0x78800000, FB size = 0x1000000 (16777216)
+[537] fb_va: 0x78800000, fb_pa: 0x78800000, fb_pa_k: 0x78800000
+[538] mblock_reserve-R start: 0x77800000, sz: 0x1000000 map:0 name:logo_db_addr_pa
+[539] mblock_reserve-R start: 0x77360000, sz: 0x495000 map:0 name:display-others_logo_fb-addr
+[540] [DISP]config color dirty = 1
+[541] [DISP]bypass color
+[541] [DISP]config ccorr dirty = 1
+[542] [DISP]bypass ccorr
+[542] [DISP]config aal dirty = 1
+[542] [DISP]bypass aal
+[543] [DISP]config gamma dirty = 1
+[543] [DISP]bypass gamma
+[543] config dither dirty = 1
+[544] disp_dither_bypass(bypass = 1)[544] [DISP][DDPDSI] DSI Mode: BURST_VDO_MODE
+[545] [DISP][DDPDSI] LANE_NUM: 4,data_format:(0,3,0,0)
+[545] [DISP][DDPDSI] vact: 3, vbp: 300, vfp: 18, vact_line: 1612, hact: 2, hbp: 135, hfp: 107, hblank: 0
+[547] [DISP][DDPDSI] pll_select: 0, pll_div1: 0, pll_div2: 0, fbk_div: 0,fbk_sel: 0, rg_bir: 0
+[548] [DISP][DDPDSI] rg_bic: 0, rg_bp: 0, PLL_CLOCK: 550, dsi_clock: 0, ssc_range: 0,	ssc_disable: 1, compatibility_for_nvk: 0, cont_clock: 0
+[550] [DISP][DDPDSI] lcm_ext_te_enable: 0, noncont_clock: 0, noncont_clock_period: 0
+[555] [LK_DDP/DSI]error:polling SLEEPOUT_DONE 100
+[555] [LK_DDP/DSI]error:polling SLEEPOUT_DONE 200
+[556] [DISP]lcm init_power 
+[575] [DISP]lcm init 
+[575] [LK/LCM]lcm_init start
+[776] [LK/LCM]debug,lcm init end 
+[778] [DISP]read from lcm 0x0A: 156
+[778] [DISP]lcm is connected
+[781] [DISP]config color dirty = 0
+[782] [DISP]config ccorr dirty = 0
+[782] [DISP]config aal dirty = 0
+[782] [DISP]config gamma dirty = 0
+[783] config dither dirty = 0
+[783] disp_dither_bypass(bypass = 1)[784] [DISP]config color dirty = 0
+[784] [DISP]config ccorr dirty = 0
+[785] [DISP]config aal dirty = 0
+[785] [DISP]config gamma dirty = 0
+[785] config dither dirty = 0
+[786] disp_dither_bypass(bypass = 1)[786] [DISP]mt_disp_init() done
+[787] s_mt65xx_gd.gdfIndex=3[787] [PROFILE] ::: lvl(2) disp init takes 375 ms
+SMART RESET: TRUE
+rst from: unknown
+kedump mini start
+kedump: current time: [2010/1/1 0:0:10]
+kedump: ddr reserve mode disabled
+kedump: ddr reserve mode failed
+[794] atf ram dump address hi:0x0, adress lo:0xbff70000, size: 80000
+[795] atf ram dump address:0xbff70000, size: 80000
+[795] atf_footprint_hi_addr=0xffffffff(ATF_SMC_UNK)
+[796] ATF: LAST BUFF
+[796] atf_log_buf_addr:0xbff44000, atf_log_buf_size:131072, atf_crash_flag addr:0xbff3002c, atf_log_type:0x41544641
+[798] plat_atf_log_get:0x48046a55, plat_atf_crash_get:0x0
+kedump: lkdump debug init ok
+kedump: boot_reason(31)
+RAM_CONSOLE. boot_arg(PL2LK): sram_addr:0x10ea00, sram_size:0x540, def_type:0x1, memory_info_offset:0x7c0
+RAM_CONSOLE. start: 0x10ea00, size: 0x540
+RAM_CONSOLE. lk last status: 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 
+RAM_CONSOLE. wdt_status 0x2, fiq_step 0x0, exp_type 0x0
+RAM_CONSOLE. set reboot reason info done
+kedump: last is not full pmic reset!
+kedump: partiton 7[488000 - 1100000]
+[805] [PROFILE] mmc read 8 blks in 1 ms: 4000KB/s
+[805] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[806] [META] Check meta info from pre-loader: 0, 504c504c, 0
+[807] [LK_ENV]get_env reboot_meta_flag from area 0
+[807] detecting pmic just reset
+[808] Just recover from a reset
+[808] [PROFILE] mmc read 12 blks in 0 ms: 8KB/s
+[809] [LK_BOOT] Load 'para' partition to 0x4819ccac (6144 bytes in 1 ms)
+[810] eng build
+[860] [is_force_boot] Bypass Kernel Power off charging mode and enter Alarm Boot
+[861] [kernel_power_off_charging_detection] Turn off HW Led
+[861] < Kernel Enter Normal Boot > 
+[862] tran_3sec_bootup
+[862] vibrator enable disable HW
+[863] vibrator lk  enable
+[868] [PROFILE] mmc read 1 blks in 5 ms: 100KB/s
+[869] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[872] [pmic_get_auxadc_value] reg_val = 0x6bb2, adc_result = 4543
+[873] get_bat_volt, vbat=4543 0
+[873] [DRAM TEST] bat_vol=4543
+[873] is_low_battery, FALSE
+[874] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[875] [PE TEST] read dram_info from partition value:(0)[875] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[876] [PE TEST] read dram_info from partition value:(0)[877] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[877] [PE TEST] read dram_info from partition value:(0)[878] [PROFILE] ::: lvl(3) wdt_check_exception takes 0 ms
+[879] [LK_ENV]get_env usb2jtag from area 0
+[879] [USB2JTAG] current setting is 0.
+[880] [PROFILE] ::: lvl(2) boot mode select takes 92 ms
+[880] mt_get_logo_db_addr_pa: 0x77800000
+[881] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[882] 
+=========================================
+[882] [LK_BOOT] logo magic number : 0x58881688
+[883] [LK_BOOT] logo name         : logo
+[883] [LK_BOOT] logo size         : 335230
+[884] =========================================
+[889] [PROFILE] mmc read 654 blks in 4 ms: 81750KB/s
+[894] [PROFILE] mmc read 1 blks in 5 ms: 100KB/s
+[895] [PROFILE] ::: lvl(2) load_logo takes 15 ms
+[895] mt_get_logo_db_addr_pa: 0x77800000
+[896] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[896] [SEC_POLICY] sboot_state = 0x1
+[897] [SEC_POLICY] lock_state(default) = 0x4
+[898] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[899] Image name matched 
+[899] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[900] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[900] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[901] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[902] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[SBC] sbc_en = 1
+[SBC] sbc_en = 1
+[908] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[909] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[909] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[910] [PROFILE] mmc read 2 blks in 0 ms: 8KB/s
+[911] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[916] [SBC] image logo auth init pass
+[917] [SBC] image logo cert vfy pass(19 ms)
+[920] [SBC][oem] img auth pass
+[921] [SBC] logo vfy pass(4 ms)
+[921] [PROFILE] ::: lvl(2) logo verify takes 25 ms
+[924] [pmic_get_auxadc_value] reg_val = 0x6bb5, adc_result = 4543
+[925] get_bat_volt, vbat=4543 0
+[926] yes bat_vol=4543
+[926] [lk logo: mt_disp_show_boot_logo 132]
+[927] [lk logo: init_fb_screen 60]
+[927] mt_get_logo_db_addr: 0x77800000
+[927] [lk logo: init_fb_screen 78]MTK_LCM_PHYSICAL_ROTATION = 0
+[928] [lk logo: sync_anim_version 43]
+[929] [lk logo: init_fb_screen 99]pinfo[0]=0x0000003d, pinfo[1]=0x00051d7e, pinfo[2]=252
+[930] [lk logo: init_fb_screen 101]define ANIMATION_NEW:show new animation with capacity num
+[931] [lk logo: init_fb_screen 102]CAPACITY_LEFT =172, CAPACITY_TOP =330 
+[932] [lk logo: init_fb_screen 103]LCM_HEIGHT=307, LCM_WIDTH=546 
+[933] mt_get_tempfb_addr: 0x77360000
+[933] [LK_ENV]get_env logo-offset from area 0
+[934] [get_logo_offset: calculate_logo_offset 185]logo_offset = -1
+[935] [calculate_logo_offset: calculate_logo_offset 194]pinfo[0] = 61
+[935] [calculate_logo_offset: calculate_logo_offset 196]TOTAL_LOG0_COUNT = 60
+[936] [show_animation_common: check_logo_index_valid 124]logonum =61, index =0
+[937] show_animation_common, in_addr=0x778000fc,  logolen=15702
+[938] [decompress_logo decompress_logo 48]in=0x778000fc, out=0x77360000, inlen=15702, logolen=4804608
+[957] [decompress_logo decompress_logo 97]have=4642560
+[958] [calculate_logo_offset: calculate_logo_offset 214]Width = 720
+  Height = 1612
+  raw_data_size = 4642560
+[959] [set_logo_offset: calculate_logo_offset 229]logo_offset = 0
+[960] [LK_ENV]set_env logo-offset 0
+[961] checksum 1234
+[966] [PROFILE] mmc write 32 blks in 5 ms: 3200KB/s
+[967] [show_animation_common: check_logo_index_valid 124]logonum =61, index =0
+[968] show_animation_common, in_addr=0x778000fc,  logolen=15702
+[969] [decompress_logo decompress_logo 48]in=0x778000fc, out=0x77360000, inlen=15702, logolen=4804608
+[988] [decompress_logo decompress_logo 97]have=4642560
+[988] [show_animation_common: fill_animation_logo 264]Width = 720
+  Height = 1612
+  raw_data_size = 4642560
+[990] [show_logo_common: fill_rect_with_content 427]
+[990] [show_logo_common: fill_rect_with_content_by_32bit_argb8888 128]
+[991] [show_logo_common]dst_addr= 0xff000000, color_addr= 0xff000000, i= 0, j=0
+[992] [show_logo_common]dst_addr= 0xff000000, color_addr= 0xff000000, i= 0, j=719
+[1044] [show_logo_common]dst_addr= 0xff000000, color_addr= 0xff000000, i= 1611, j=0
+[1045] [show_logo_common]dst_addr= 0xff000000, color_addr= 0xff000000, i= 1611, j=719
+[1046] [lk logo: mt_disp_config_fb_layer, addr = 0x78800000
+[1047] [DISP]config color dirty = 0
+[1047] [DISP]config ccorr dirty = 0
+[1048] [DISP]config aal dirty = 0
+[1048] [DISP]config gamma dirty = 0
+[1049] config dither dirty = 0
+[1049] disp_dither_bypass(bypass = 1)[1050] mt_disp_update: 0x78800000, 0x78800000
+[1050] fb dump: 0xff000000, 0xff000000, 0xff000000, 0xff000000
+[1052] ovl start done idx = 0, addr = 0x1400b00c
+[1053] ovl start done addr0 = 0x1000
+[1053] vibr_disable_callbak
+[1054] vibrator lk  disable
+[1053] ovl start done addr1 = 0x0
+[1055] ovl start done addr2 = 0x1400b00c
+[1055] ovl start done addr3 = 0x1400b00c
+[1056] ovl start done addr4 = 0x1400b00c
+[1056] ovl start done idx = 1, addr = 0x1400c00c
+[1057] ovl start done addr0 = 0x1000
+[1057] ovl start done addr1 = 0x1000
+[1058] ovl start done addr2 = 0x1400b00c
+[1058] ovl start done addr3 = 0x1400c00c
+[1059] ovl start done addr4 = 0x1400c00c
+[1059] [PROFILE] ::: lvl(2) show logo takes 133 ms
+[1060] [LEDS]LK: mt65xx_backlight_on:level =  4095
+[1060] [LEDS]LK: lcd-backlight level is 4095 
+[1061] [DISP]lk primary_display_setbacklight level=4095
+[1062] [DISP]set GPIO152 GPIO_OUT_ONE
+[1070] [LK/LCM]lk lcm_setbacklight, backlight: level = 4095
+[1071] [PROFILE] ::: lvl(2) backlight takes 11 ms
+[1071] mt_disp_update: 0x78800000, 0x00000000
+[1072] fb dump: 0xff000000, 0xff000000, 0xff000000, 0xff000000
+[1074] [PROFILE] ::: lvl(2) disp update takes 3 ms
+[1075] backlight enabled before battery init
+[1075] [dcm_set_default]type:0x4A87, init_dcm_type=0x4A87
+[1076] [ARMCORE_DCM 0x1] current state:1 (0)
+[1077] [MCUSYS_DCM 0x2] current state:1 (0)
+[1077] [INFRA_DCM 0x4] current state:1 (0)
+[1078] [STALL_DCM 0x80] current state:1 (0)
+[1078] [GIC_SYNC_DCM 0x200] current state:1 (0)
+[1079] [RGU_CORE_DCM 0x800] current state:1 (0)
+[1079] [MCSI_DCM 0x4000] current state:1 (0)
+[1080] 
+******** dcm dump register *********
+[1081] L2C_SRAM_CTRL                 (0x10200648): 0x000c0081
+[1081] CCI_CLK_CTRL                  (0x10200660): 0x00000114
+[1082] BUS_FABRIC_DCM_CTRL           (0x10200668): 0x3fff1fff
+[1083] MCU_MISC_DCM_CTRL             (0x1020066c): 0x00000003
+[1084] CCI_ADB400_DCM_CONFIG         (0x10200740): 0x0000087f
+[1085] SYNC_DCM_CONFIG               (0x10200744): 0x00100401
+[1085] SYNC_DCM_CLUSTER_CONFIG       (0x1020074c): 0x063f8f8f
+[1086] MP_GIC_RGU_SYNC_DCM           (0x10200758): 0x00000001
+[1087] MP0_PLL_DIVIDER_CFG           (0x102007a0): 0x00010a00
+[1088] MP1_PLL_DIVIDER_CFG           (0x102007a4): 0x00000aff
+[1088] BUS_PLL_DIVIDER_CFG           (0x102007c0): 0x00010a00
+[1089] MCSIA_DCM_EN                  (0x10200b60): 0xffff0000
+[1090] INFRA_BUS_DCM_CTRL            (0x10001070): 0x40ff0603
+[1091] PERI_BUS_DCM_CTRL             (0x10001074): 0xb47f83e3
+[1091] MEM_DCM_CTRL                  (0x10001078): 0x19a007c0
+[1092] P2P_RX_CLK_ON                 (0x100010a0): 0x00000000
+[1093] CHN0_EMI_CHN_EMI_CONB         (0x1022d008): 0x00ff2048
+[1094] CHN1_EMI_CHN_EMI_CONB         (0x10235008): 0x00ff2048
+[1095] MP0_CPUCFG_MP0_RGU_DCM_CONFIG (0x10200088): 0x00000001
+[1095] MP1_CPUCFG_MP1_RGU_DCM_CONFIG (0x10200288): 0x00000001
+[1099] [init_cust_data_from_dt]:chroff:0,pe:0,powpath:1,vchrmax:6500,vchrmin:4000,vfast:2500,usb:500,ac:2000 2000,nac:1200,cdp:1500,ta:3000,pd:3000,t:50 45 0
+[1101] sgm41513d_get_charge_type: use preloader BC12 charge type, no need to detect again!
+[1103] sgm41513d_get_charge_type: charge type: 1
+[1103] sgm41513d_init_setting: starts
+[1104] sgm41513d_i2c_write_byte: I2CW[0x03] = 0xFA
+[1105] sgm41513d_i2c_write_byte: I2CW[0x07] = 0x48
+[1106] sgm41513d_i2c_write_byte: I2CW[0x05] = 0x8F
+[1107] sgm41513d_i2c_write_byte: I2CW[0x00] = 0x04
+[1107] sgm41513d_charger_set_aicr: aicr = 500
+[1108] sgm41513d_charger_dump_register start
+[1108] sgm41513d_charger_dump_register:Reg[00] = 0x04
+[1109] sgm41513d_charger_dump_register:Reg[01] = 0x1A
+[1110] sgm41513d_charger_dump_register:Reg[02] = 0x96
+[1111] sgm41513d_charger_dump_register:Reg[03] = 0xFA
+[1112] sgm41513d_charger_dump_register:Reg[04] = 0x90
+[1113] sgm41513d_charger_dump_register:Reg[05] = 0x8F
+[1113] sgm41513d_charger_dump_register:Reg[06] = 0xE6
+[1114] sgm41513d_charger_dump_register:Reg[07] = 0x48
+[1115] sgm41513d_charger_dump_register:Reg[08] = 0x3C
+[1116] sgm41513d_charger_dump_register:Reg[09] = 0x08
+[1117] sgm41513d_charger_dump_register:Reg[0A] = 0x80
+[1117] sgm41513d_charger_dump_register:Reg[0B] = 0x08
+[1118] sgm41513d_charger_dump_register:Reg[0C] = 0x75
+[1119] sgm41513d_charger_dump_register:Reg[0D] = 0x01
+[1120] sgm41513d_charger_dump_register:Reg[0E] = 0x00
+[1121] sgm41513d_charger_dump_register:Reg[0F] = 0x00
+[1121] sgm41513d_charger_dump_register end
+[1122] sgm41513d_probe: driver version 1.0 ret=0
+[1122] [I2C-LK] 367: id=5,addr: 6b, transfer error
+[1123] [I2C-LK] 373: I2C_ACKERR
+[1124] [I2C-LK] 244: I2C structure:
+[I2C-LK] Clk=24960,Id=5,Mode=1,St_rs=0,Dma_en=0,Op=3,Poll_en=1,Irq_stat=2
+[I2C-LK] Trans_len=1,Trans_num=2,Trans_auxlen=1,Data_size=ffff,speed=400
+[1126] [I2C-LK] 247: base address 0x11016000
+[1126] [I2C-LK] 268: I2C register:
+[I2C-LK] SLAVE_ADDR=d6,INTR_MASK=1f8,INTR_STAT=3,CONTROL=38,TRANSFER_LEN=1
+[I2C-LK] TRANSAC_LEN=2,DELAY_LEN=a,TIMING=405,LTIMING=23,START=0,FIFO_STAT=1101
+[I2C-LK] IO_CONFIG=1a3,HS=8000,DEBUGSTAT=300,EXT_CONF=1800,TRANSFER_LEN_AUX=1,CLOCK_DIV=4
+[1130] [I2C-LK] 906: write_read 0x10001 bytes fails,ret=-121.
+[1131] cx2560x_read_byte: I2CR[0x0B] failed, code = -1
+[1131] cx2560x_probe: fail
+[1133] [pmic_get_auxadc_value] reg_val = 0x4b8, adc_result = 530
+[1138] [init_bat_cust_data_dt]: battery:no device tree !use default values
+[1138] sgm41513d_charge_enable_ctrl: enable value = 0
+[1139] sgm41513d_i2c_write_byte: I2CW[0x01] = 0x0A
+[1140] charger_enable_charging: disable charging
+[1143] [pmic_get_auxadc_value] reg_val = 0x6901, adc_result = 4429
+[1144] get_bat_volt, vbat=4429 1
+[1145] [upmu_is_chr_det] 1
+[1158] [fgauge_read_IM_current](charging)FG_CURRENT:0x2,curr:[6,12,12] mA, Rfg:50 ratio:1000
+[1159] [do_ptim] bat 44298 cur 12 in 2ms
+[1167] [fgauge_read_IM_current](charging)FG_CURRENT:0x4,curr:[12,24,24] mA, Rfg:50 ratio:1000
+[1168] [do_ptim] bat 44298 cur 24 in 1ms
+[1175] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffd,curr:[6,12,12] mA, Rfg:50 ratio:1000
+[1177] [do_ptim] bat 44298 cur 12 in 1ms
+[1184] [fgauge_read_IM_current](charging)FG_CURRENT:0x6,curr:[18,36,36] mA, Rfg:50 ratio:1000
+[1185] [do_ptim] bat 44301 cur 36 in 1ms
+[1193] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffe,curr:[3,6,6] mA, Rfg:50 ratio:1000
+[1194] [do_ptim] bat 44300 cur 6 in 1ms
+[1195] do_ptim_gauge, 44298(44298, 44298, 44298, 44300, 44301), 12(6, 12, 12, 24, 36)
+[1197] [pmic_get_auxadc_value] reg_val = 0x5b9, adc_result = 643
+[1198] [fgauge_read_current]g_isbat_init:1,cartune:1000,50,314331
+[1199] [fgauge_read_current]is_charge:1 Ori_curr:0x1,curr:[3,6,Final:6] Rfg:50 ratio:1000
+[1200] [BattThermistorConverTemp] 10000 8315 9392 25 30 26
+[1201] [BattVoltToTemp] 643 16900 1800 0
+[1201] [force_get_tbat] 643,643,1,0,50,temp:26 r:75 50
+[1202] [check_sw_ocv]0 ptim[44298 12] fg_swocv[44298 -12] boot_vbat:0 shutdowntime:0 vbat:4429 tmp:26
+[1203] sgm41513d_charge_enable_ctrl: enable value = 1
+[1204] sgm41513d_i2c_write_byte: I2CW[0x01] = 0x1A
+[1205] charger_enable_charging: enable charging
+[1208] [pmic_get_auxadc_value] reg_val = 0x6908, adc_result = 4431
+[1209] get_bat_volt, vbat=4431 1
+[1209] [check_low_battery] g_boot_mode=0
+[1210] is_low_battery, FALSE
+[1210] mtk_charger_start: disable wdt fail
+[1211] sgm41513d_charge_enable_ctrl: enable value = 0
+[1212] sgm41513d_i2c_write_byte: I2CW[0x01] = 0x0A
+[1212] charger_enable_charging: disable charging
+[1270] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffd,curr:[6,12,12] mA, Rfg:50 ratio:1000
+[1271] [do_ptim] bat 44301 cur 12 in 1ms
+[1281] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffd,curr:[6,12,12] mA, Rfg:50 ratio:1000
+[1282] [do_ptim] bat 44298 cur 12 in 1ms
+[1285] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1285] v1=44301,v2=44298,c1=12,c2=12,rac_cal=0,ret=-1,retry=0,v_diff=3,c_diff=0
+[1293] [fgauge_read_IM_current](discharg)FG_CURRENT:0x0,curr:[0,0,0] mA, Rfg:50 ratio:1000
+[1294] [do_ptim] bat 44300 cur 0 in 1ms
+[1304] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffe,curr:[3,6,6] mA, Rfg:50 ratio:1000
+[1305] [do_ptim] bat 44298 cur 6 in 1ms
+[1308] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1309] v1=44300,v2=44298,c1=0,c2=6,rac_cal=0,ret=-1,retry=1,v_diff=2,c_diff=6
+[1317] [fgauge_read_IM_current](charging)FG_CURRENT:0x2,curr:[6,12,12] mA, Rfg:50 ratio:1000
+[1318] [do_ptim] bat 44300 cur 12 in 1ms
+[1327] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffb,curr:[12,24,24] mA, Rfg:50 ratio:1000
+[1329] [do_ptim] bat 44298 cur 24 in 1ms
+[1331] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1332] v1=44300,v2=44298,c1=12,c2=24,rac_cal=0,ret=-1,retry=2,v_diff=2,c_diff=12
+[1340] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffe,curr:[3,6,6] mA, Rfg:50 ratio:1000
+[1341] [do_ptim] bat 44300 cur 6 in 1ms
+[1351] [fgauge_read_IM_current](discharg)FG_CURRENT:0x0,curr:[0,0,0] mA, Rfg:50 ratio:1000
+[1352] [do_ptim] bat 44298 cur 0 in 1ms
+[1354] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1355] v1=44300,v2=44298,c1=6,c2=0,rac_cal=0,ret=-1,retry=0,v_diff=2,c_diff=-6
+[1363] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffd,curr:[6,12,12] mA, Rfg:50 ratio:1000
+[1364] [do_ptim] bat 44300 cur 12 in 1ms
+[1374] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffb,curr:[12,24,24] mA, Rfg:50 ratio:1000
+[1375] [do_ptim] bat 44298 cur 24 in 1ms
+[1378] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1379] v1=44300,v2=44298,c1=12,c2=24,rac_cal=0,ret=-1,retry=1,v_diff=2,c_diff=12
+[1387] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffe,curr:[3,6,6] mA, Rfg:50 ratio:1000
+[1388] [do_ptim] bat 44298 cur 6 in 1ms
+[1397] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffd,curr:[6,12,12] mA, Rfg:50 ratio:1000
+[1399] [do_ptim] bat 44298 cur 12 in 1ms
+[1401] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1402] v1=44298,v2=44298,c1=6,c2=12,rac_cal=0,ret=-1,retry=2,v_diff=0,c_diff=6
+[1410] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffd,curr:[6,12,12] mA, Rfg:50 ratio:1000
+[1411] [do_ptim] bat 44298 cur 12 in 1ms
+[1421] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffd,curr:[6,12,12] mA, Rfg:50 ratio:1000
+[1422] [do_ptim] bat 44298 cur 12 in 1ms
+[1424] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1425] v1=44298,v2=44298,c1=12,c2=12,rac_cal=0,ret=-1,retry=0,v_diff=0,c_diff=0
+[1433] [fgauge_read_IM_current](discharg)FG_CURRENT:0x0,curr:[0,0,0] mA, Rfg:50 ratio:1000
+[1434] [do_ptim] bat 44298 cur 0 in 1ms
+[1444] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffd,curr:[6,12,12] mA, Rfg:50 ratio:1000
+[1445] [do_ptim] bat 44296 cur 12 in 1ms
+[1448] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1449] v1=44298,v2=44296,c1=0,c2=12,rac_cal=0,ret=-1,retry=1,v_diff=2,c_diff=12
+[1457] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffa,curr:[15,30,30] mA, Rfg:50 ratio:1000
+[1458] [do_ptim] bat 44298 cur 30 in 1ms
+[1467] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffd,curr:[6,12,12] mA, Rfg:50 ratio:1000
+[1469] [do_ptim] bat 44296 cur 12 in 1ms
+[1471] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1472] v1=44298,v2=44296,c1=30,c2=12,rac_cal=0,ret=-1,retry=2,v_diff=2,c_diff=-18
+[1480] [fgauge_read_IM_current](discharg)FG_CURRENT:0x0,curr:[0,0,0] mA, Rfg:50 ratio:1000
+[1481] [do_ptim] bat 44298 cur 0 in 1ms
+[1491] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfff8,curr:[22,44,44] mA, Rfg:50 ratio:1000
+[1492] [do_ptim] bat 44295 cur 44 in 1ms
+[1495] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1495] v1=44298,v2=44295,c1=0,c2=44,rac_cal=0,ret=-1,retry=0,v_diff=3,c_diff=44
+[1503] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffc,curr:[9,18,18] mA, Rfg:50 ratio:1000
+[1505] [do_ptim] bat 44296 cur 18 in 1ms
+[1514] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffd,curr:[6,12,12] mA, Rfg:50 ratio:1000
+[1515] [do_ptim] bat 44295 cur 12 in 1ms
+[1518] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1519] v1=44296,v2=44295,c1=18,c2=12,rac_cal=0,ret=-1,retry=1,v_diff=1,c_diff=-6
+[1527] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffa,curr:[15,30,30] mA, Rfg:50 ratio:1000
+[1528] [do_ptim] bat 44296 cur 30 in 1ms
+[1538] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffc,curr:[9,18,18] mA, Rfg:50 ratio:1000
+[1539] [do_ptim] bat 44293 cur 18 in 1ms
+[1541] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1542] v1=44296,v2=44293,c1=30,c2=18,rac_cal=0,ret=-1,retry=2,v_diff=3,c_diff=-12
+[1550] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfff8,curr:[22,44,44] mA, Rfg:50 ratio:1000
+[1551] [do_ptim] bat 44296 cur 44 in 1ms
+[1561] [fgauge_read_IM_current](discharg)FG_CURRENT:0x0,curr:[0,0,0] mA, Rfg:50 ratio:1000
+[1562] [do_ptim] bat 44293 cur 0 in 1ms
+[1565] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1565] v1=44296,v2=44293,c1=44,c2=0,rac_cal=0,ret=-1,retry=0,v_diff=3,c_diff=-44
+[1573] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffc,curr:[9,18,18] mA, Rfg:50 ratio:1000
+[1575] [do_ptim] bat 44296 cur 18 in 1ms
+[1584] [fgauge_read_IM_current](charging)FG_CURRENT:0x1,curr:[3,6,6] mA, Rfg:50 ratio:1000
+[1585] [do_ptim] bat 44295 cur 6 in 1ms
+[1588] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1589] v1=44296,v2=44295,c1=18,c2=6,rac_cal=0,ret=-1,retry=1,v_diff=1,c_diff=-12
+[1597] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfffa,curr:[15,30,30] mA, Rfg:50 ratio:1000
+[1598] [do_ptim] bat 44295 cur 30 in 1ms
+[1608] [fgauge_read_IM_current](discharg)FG_CURRENT:0xfff9,curr:[18,36,36] mA, Rfg:50 ratio:1000
+[1609] [do_ptim] bat 44295 cur 36 in 1ms
+[1611] [Calculate Rac] bypass due to (curr_x-curr_y) < 40mA
+[1612] v1=44295,v2=44295,c1=30,c2=36,rac_cal=0,ret=-1,retry=2,v_diff=0,c_diff=6
+[1613] [dlpt_R] rac_val:-1,-1,-1,-1,-1 [1000:0:0], imix_r:170
+[1614] sgm41513d_charge_enable_ctrl: enable value = 0
+[1615] sgm41513d_i2c_write_byte: I2CW[0x01] = 0x0A
+[1615] bat_low_vol = 3400 ,low_battery_flag = 1
+[1619] [pmic_get_auxadc_value] reg_val = 0x68ff, adc_result = 4429
+[1620] get_bat_volt, vbat=4429 1
+[1620] [check_bat_protect_status]: check VBAT=4429 mV with 3400 mV
+[1621] check_bat_protect_status: set charge nCE pin GPIO 153 2
+[1622] [PROFILE] ------- Charging takes 1 ms -------- 
+[1625] [pmic_get_auxadc_value] reg_val = 0x6900, adc_result = 4429
+[1626] get_bat_volt, vbat=4429 1
+[1626] charger_type: 1
+[1627] sgm41513d_i2c_write_byte: I2CW[0x00] = 0x04
+[1627] sgm41513d_charger_set_aicr: aicr = 500
+[1628] sgm41513d_charger_set_ichg: ichg = 500
+[1629] sgm41513d_i2c_write_byte: I2CW[0x02] = 0x9E
+[1629] sgm41513d_charge_enable_ctrl: enable value = 1
+[1630] sgm41513d_i2c_write_byte: I2CW[0x01] = 0x1A
+[1631] charger_enable_charging: enable charging
+[1631] [PROFILE] ::: lvl(2) battery init takes 556 ms
+[1632] [PROFILE] ::: lvl(2) RTC boot check Init takes 0 ms
+[1633] [LEDS]LK: mt65xx_backlight_on:level =  4095
+[1634] [PROFILE] ::: lvl(2) backlight takes 1 ms
+[1634] mt_disp_update: 0x78800000, 0x00000000
+[1635] fb dump: 0xff000000, 0xff000000, 0xff000000, 0xff000000
+[1637] [PROFILE] ::: lvl(2) display update takes 3 ms
+[1641] [PROFILE] mmc read 15 blks in 3 ms: 2500KB/s
+[1641] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[1642] [DL_INFO]version: V1.0
+[1642] [DL_INFO]dl_status: DL_CK_DONE
+[1643] [DL_INFO]dram_checksum: DRAM_PASS
+[1643] [DL_INFO]image:[01]preloader_backuÿmd1img_a, checksum: PASS
+[1644] [DL_INFO]image:[02]md1img_a    , checksum: PASS
+[1645] [DL_INFO]image:[03]spmfw_a     , checksum: PASS
+[1646] [DL_INFO]image:[04]scp_a       , checksum: PASS
+[1646] [DL_INFO]image:[05]sspm_a      , checksum: PASS
+[1647] [DL_INFO]image:[06]gz_a        , checksum: PASS
+[1648] [DL_INFO]image:[07]lk_a        , checksum: PASS
+[1648] [DL_INFO]image:[08]logo_a      , checksum: PASS
+[1649] [DL_INFO]image:[09]boot_a      , checksum: PASS
+[1650] [DL_INFO]image:[10]dtbo_a      , checksum: PASS
+[1650] [DL_INFO]image:[11]tee_a       , checksum: PASS
+[1651] [DL_INFO]image:[12]tkv_a       , checksum: PASS
+[1652] [DL_INFO]image:[13]vbmeta_a    , checksum: PASS
+[1652] [DL_INFO]image:[14]vbmeta_system_aÿvbmeta_vendor_aÿlogo_b, checksum: PASS
+[1653] [DL_INFO]image:[15]vbmeta_vendor_aÿlogo_b, checksum: PASS
+[1654] [DL_INFO]image:[16]logo_b      , checksum: PASS
+[1655] [DL_INFO]image:[17]super       , checksum: PASS
+[1656] [DL_INFO]image:[18]tranfs      , checksum: PASS
+[1656] [DL_INFO]image:[19]userdata    , checksum: PASS
+[1657] mt65xx_sw_env--dl_status: 0
+[1657] [PROFILE] ::: lvl(2) sw_env takes 19 ms
+[1658] [PROFILE] ::: lvl(1) platform_init takes 1650 ms
+[1659] initializing target
+[1659] calling apps_init()
+[1659] [LK_ENV]get_env MTK_DEVICE_ID from area 0
+[1660] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[1661] [LK_BOOT] Load 'proinfo' partition to 0x480d8b20 (19 bytes in 1 ms)
+[1662] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[1662] [Dev_ctrl] magic miss match!
+[1663] [Dev_ctrl] magic miss match!
+[1663] [Dev_ctrl] get flags error, code = 0x4
+[1664] [TRAN Blowing] readed flags error, is_magic_match = 0x0
+[1667] [pmic_get_auxadc_value] reg_val = 0x6904, adc_result = 4430
+[1668] get_bat_volt, vbat=4430 1
+[1669] [TRAN Blowing] bypass blow
+[1669] [TRAN Blowing] Read data: 0x0
+[1670] [TRAN Blowing] don't below.
+[1670] [TRAN Blowing] get state end.
+[1670] mblock_reserve-R start: 0xb7330000, sz: 0x8c00000 map:0 name:avb
+[1672] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[1672] [SEC_POLICY] sboot_state = 0x1
+[1673] [SEC_POLICY] lock_state(default) = 0x4
+[1673] [avb] img_auth_required = 1
+[1674] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[1675] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[1676] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[1676] [PROFILE] mmc write 1 blks in 0 ms: 8KB/s
+[1678] [PROFILE] mmc read 128 blks in 1 ms: 64000KB/s
+[1680] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[1681] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[1682] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[1969] [PROFILE] mmc read 47768 blks in 285 ms: 83803KB/s
+[2196] [PROFILE] mmc read 128 blks in 4 ms: 16000KB/s
+[2199] [PROFILE] mmc read 128 blks in 1 ms: 64000KB/s
+[2201] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[2202] [AVB20] lock_state = 0x1
+[2203] com.android.build.boot.security_patch is found in idx 0x1, val = 2019-06-06
+[2204] com.android.build.system.os_version is found in idx 0x2, val = 13
+[2205] com.android.build.system.security_patch is found in idx 0x2, val = 2023-09-05
+[2206] com.android.build.vendor.security_patch is found in idx 0x3, val = 2023-09-05
+[2258] mblock_reserve-R start: 0x47880000, sz: 0x80000 map:1 name:dtb_kernel_addr_mb
+[2259] mblock_reserve-R start: 0x40080000, sz: 0x7800000 map:0 name:kernel_addr_mb
+[2260] mblock_reserve-R start: 0x51b00000, sz: 0x4000000 map:0 name:ramdisk_addr_mb
+[2277] [PROFILE] mmc read 1 blks in 5 ms: 100KB/s
+[2286] [avb] cmdline = androidboot.vbmeta.device=PARTUUID=b72ccbe9-2055-46f4-a167-4a069c201738 androidboot.vbmeta.avb_version=1.2 androidboot.vbmeta.device_state=locked androidboot.veritymode=enforcing androidboot.veritymode.managed=yes
+[2289] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[2290] [SEC_POLICY] sboot_state = 0x1
+[2290] [SEC_POLICY] lock_state(default) = 0x4
+[2291] [avb] img_auth_required = 1
+[2291] [avb] boot/recovery vfy time = 621 ms
+[2292] mblock_create mblock start: 0xb7330000 size: 0x8c00000 name: avb
+[2293] [avb] avb_ret = 0
+[2293] [avb] ret = 0
+[2293] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[2294] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[2295] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2296] [LK] check_ota_result = 0
+[2296] [LK] ota-fail
+[2296] boot state: green
+[2297] [PROFILE] ::: lvl(1) load boot image takes 627 ms
+[2305] [Efuse] hw sbc is enable
+[2305] [check efuse state]:hw sbc is enable
+[2306] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2307] get atoi(b_buf) = 0
+[2307] get flag = 10785445
+[2307] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2308] get atoi(b_buf) = 0
+[2308] get flag = 10785445
+[2309] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2309] enable_factory = 0
+[2310] [Part_WP]WP(preloader->preloader): Region(1), start_sect(0x0), nr_blk(0x200), type(1)
+[2312] [SD0] EXT_CSD_ERASE_GRP_DEF is Off, wp_size = 8192KB
+[SD0] csd.write_prot_grpsz = 15, csd.erase_sctsz = 1024
+[2314] [Part_WP]WP(sec1->nvram): Region(0), start_sect(0x80000), nr_blk(0x24000), type(1)
+[2315] [SD0] EXT_CSD_ERASE_GRP_DEF is Off, wp_size = 8192KB
+[SD0] csd.write_prot_grpsz = 15, csd.erase_sctsz = 1024
+[2318] [SD0] EXT_CSD_ERASE_GRP_DEF is Off, wp_size = 8192KB
+[SD0] csd.write_prot_grpsz = 15, csd.erase_sctsz = 1024
+[2320] [Part_WP]WP(md1img_a->tee_a): Region(0), start_sect(0xa4000), nr_blk(0x7b000), type(1)
+[2321] [mmc_set_write_protect]: alignment or capility error 
+[2322] [set_write_protect]: Lock md1img_a->tee_a failed:4
+[2322] [Part_WP]WP(seccfg->seccfg): Region(0), start_sect(0x64000), nr_blk(0x4000), type(1)
+[2324] [SD0] EXT_CSD_ERASE_GRP_DEF is Off, wp_size = 8192KB
+[SD0] csd.write_prot_grpsz = 15, csd.erase_sctsz = 1024
+[2327] [SD0] EXT_CSD_ERASE_GRP_DEF is Off, wp_size = 8192KB
+[SD0] csd.write_prot_grpsz = 15, csd.erase_sctsz = 1024
+[2328] write protect Done! 
+[2329] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2329] [FEAT]sfi:feature status is not changed by cloudengine:sfi=0x00000000
+[2331] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[2331] vcore_num = 0
+[2332] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[2333] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[2338] kernel real kernel_sz=0x00aeaedb
+[2339] Wake up iothread.
+[2342] Met bootstrap2.
+[2342] mblock_reserve-R start: 0x77350000, sz: 0x10000 map:0 name:SPM-reserved
+[2343] [spmfw] addr=0x77350000 size=0x10000
+[2344] [SEC_POLICY] reached the end, use default policy
+[2345] [PROFILE] mmc read 24 blks in 1 ms: 12000KB/s
+[2345] [SEC_POLICY] sboot_state = 0x1
+[2346] [SEC_POLICY] lock_state(default) = 0x4
+[2347] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[2348] Image name matched 
+[2348] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2349] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2349] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2350] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[2351] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[SBC] sbc_en = 1
+[SBC] sbc_en = 1
+[2357] [SEC_POLICY] reached the end, use default policy
+[2358] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2359] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[2359] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2360] [PROFILE] mmc read 2 blks in 0 ms: 8KB/s
+[2361] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2366] [SBC] image spmfw auth init pass
+[2367] [SBC] spmfw_a cert vfy(23 ms)
+[2367] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2368] 
+=========================================
+[2369] [LK_BOOT] spmfw_a magic number : 0x58881688
+[2369] [LK_BOOT] spmfw_a name         : spmfw
+[2370] [LK_BOOT] spmfw_a size         : 59859
+[2370] =========================================
+[2372] [PROFILE] mmc read 116 blks in 1 ms: 58000KB/s
+[2373] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2373] [spmfw] image size = 59859
+[2374] [SBC][oem] img auth pass
+[2375] [SBC] img vfy(1 ms)
+[2375] [spmfw] before smc call
+[2376] [spmfw] after smc call
+[2377] [PROFILE] ::: lvl(2) load spm takes 35 ms
+[2379] [LK_ENV]get_env scp from area 0
+[2379] [SCP] current setting is 1.
+[2380] mblock_reserve-R start: 0x9f900000, sz: 0x600000 map:0 name:SCP-reserved
+[2381] [SCP] load_scp: dram_addr=0x9f900000
+[2382] platform_fdt_scp_get_sram_size()
+[2384] scp sram_size=262144, len=4
+[2384] [SCP] part_name=scp_a, scp_A_sram_size=262144
+[2385] [SEC_POLICY] reached the end, use default policy
+[2386] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[2387] [SEC_POLICY] sboot_state = 0x1
+[2387] [SEC_POLICY] lock_state(default) = 0x4
+[2388] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[2389] Image name matched 
+[2389] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2390] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2391] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2391] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[2392] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[SBC] sbc_en = 1
+[SBC] sbc_en = 1
+[2398] [SEC_POLICY] reached the end, use default policy
+[2399] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2400] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2400] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2401] [PROFILE] mmc read 2 blks in 0 ms: 8KB/s
+[2402] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2407] [SBC] image tinysys-loader-CM4_A auth init pass
+[2408] [SBC] image tinysys-loader-CM4_A cert vfy pass(20 ms)
+[2409] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2410] 
+=========================================
+[2410] [LK_BOOT] scp_a magic number : 0x58881688
+[2411] [LK_BOOT] scp_a name         : tinysys-loader-CM4_A
+[2412] [LK_BOOT] scp_a size         : 1080
+[2412] =========================================
+[2413] [PROFILE] mmc read 2 blks in 0 ms: 8KB/s
+[2414] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2414] load_scp_image(): load tinysys-loader-CM4_A ret=1080
+[2415] [SBC][oem] img auth pass
+[2415] [SBC] tinysys-loader-CM4_A vfy pass(0 ms)
+[2416] [SEC_POLICY] reached the end, use default policy
+[2417] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[2418] [SEC_POLICY] sboot_state = 0x1
+[2418] [SEC_POLICY] lock_state(default) = 0x4
+[2419] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[2420] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2421] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[2421] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2422] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2423] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[2424] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2424] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2425] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[2426] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2426] Image name matched 
+[2427] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2428] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2428] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2429] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[2430] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[SBC] sbc_en = 1
+[SBC] sbc_en = 1
+[2436] [SEC_POLICY] reached the end, use default policy
+[2437] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2437] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2438] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2439] [PROFILE] mmc read 2 blks in 0 ms: 8KB/s
+[2440] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[2445] [SBC] image tinysys-scp-CM4_A auth init pass
+[2446] [SBC] image tinysys-scp-CM4_A cert vfy pass(27 ms)
+[2447] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[2447] 
+=========================================
+[2448] [LK_BOOT] scp_a magic number : 0x58881688
+[2449] [LK_BOOT] scp_a name         : tinysys-loader-CM4_A
+[2449] [LK_BOOT] scp_a size         : 1080
+[2450] =========================================
+[2451] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[2451] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2452] 
+=========================================
+[2453] [LK_BOOT] scp_a magic number : 0x58881688
+[2453] [LK_BOOT] scp_a name         : cert1
+[2454] [LK_BOOT] scp_a size         : 1733
+[2454] =========================================
+[2455] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2456] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2456] 
+=========================================
+[2457] [LK_BOOT] scp_a magic number : 0x58881688
+[2458] [LK_BOOT] scp_a name         : cert2
+[2458] [LK_BOOT] scp_a size         : 982
+[2459] =========================================
+[2460] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[2460] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2461] 
+=========================================
+[2462] [LK_BOOT] scp_a magic number : 0x58881688
+[2462] [LK_BOOT] scp_a name         : tinysys-scp-CM4_A
+[2463] [LK_BOOT] scp_a size         : 599250
+[2463] =========================================
+[2464] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2472] [PROFILE] mmc read 1169 blks in 7 ms: 83500KB/s
+[2473] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2473] load_scp_image(): load tinysys-scp-CM4_A ret=599250
+[2480] [SBC][oem] img auth pass
+[2480] [SBC] tinysys-scp-CM4_A vfy pass(6 ms)
+[2481] [SEC_POLICY] reached the end, use default policy
+[2482] [PROFILE] mmc read 24 blks in 1 ms: 12000KB/s
+[2482] [SEC_POLICY] sboot_state = 0x1
+[2483] [SEC_POLICY] lock_state(default) = 0x4
+[2484] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[2485] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2485] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[2486] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2487] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2488] [PROFILE] mmc read 3 blks in 1 ms: 1500KB/s
+[2488] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2489] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2490] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[2491] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[2491] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2492] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[2493] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2493] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2494] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[2495] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2496] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2496] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[2497] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2498] Image name matched 
+[2498] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2499] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2500] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2500] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[2501] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[SBC] sbc_en = 1
+[SBC] sbc_en = 1
+[2507] [SEC_POLICY] reached the end, use default policy
+[2508] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2509] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2510] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[2510] [PROFILE] mmc read 2 blks in 0 ms: 8KB/s
+[2511] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2516] [SBC] image tinysys-scp-CM4_A_dram auth init pass
+[2517] [SBC] image tinysys-scp-CM4_A_dram cert vfy pass(34 ms)
+[2518] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2519] 
+=========================================
+[2519] [LK_BOOT] scp_a magic number : 0x58881688
+[2520] [LK_BOOT] scp_a name         : tinysys-loader-CM4_A
+[2521] [LK_BOOT] scp_a size         : 1080
+[2521] =========================================
+[2522] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2523] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2523] 
+=========================================
+[2524] [LK_BOOT] scp_a magic number : 0x58881688
+[2525] [LK_BOOT] scp_a name         : cert1
+[2525] [LK_BOOT] scp_a size         : 1733
+[2526] =========================================
+[2527] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[2527] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2528] 
+=========================================
+[2529] [LK_BOOT] scp_a magic number : 0x58881688
+[2529] [LK_BOOT] scp_a name         : cert2
+[2530] [LK_BOOT] scp_a size         : 982
+[2530] =========================================
+[2531] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2532] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2532] 
+=========================================
+[2533] [LK_BOOT] scp_a magic number : 0x58881688
+[2534] [LK_BOOT] scp_a name         : tinysys-scp-CM4_A
+[2534] [LK_BOOT] scp_a size         : 599250
+[2535] =========================================
+[2536] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2536] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2537] 
+=========================================
+[2538] [LK_BOOT] scp_a magic number : 0x58881688
+[2538] [LK_BOOT] scp_a name         : cert1
+[2539] [LK_BOOT] scp_a size         : 1733
+[2539] =========================================
+[2540] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2541] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2541] 
+=========================================
+[2542] [LK_BOOT] scp_a magic number : 0x58881688
+[2543] [LK_BOOT] scp_a name         : cert2
+[2543] [LK_BOOT] scp_a size         : 982
+[2544] =========================================
+[2545] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[2545] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2546] 
+=========================================
+[2547] [LK_BOOT] scp_a magic number : 0x58881688
+[2547] [LK_BOOT] scp_a name         : tinysys-scp-CM4_A_dram
+[2548] [LK_BOOT] scp_a size         : 24088
+[2549] =========================================
+[2549] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2550] [PROFILE] mmc read 46 blks in 0 ms: 8KB/s
+[2551] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2552] load_scp_image(): load tinysys-scp-CM4_A_dram ret=24088
+[2553] [SBC][oem] img auth pass
+[2553] [SBC] tinysys-scp-CM4_A_dram vfy pass(0 ms)
+[2554] [SCP] load_scp_image tinysys-scp-CM4_A_dram 24088 bytes
+[2555] DRAM l1cable region:0x80000~0x10000000
+[2555] L1C_CON, addr:0x105d4000, value:0x100
+[2556] L1C_CON, addr:0x105d7000, value:0x100
+[2556] l1c init status: 0x0
+[2557] platform_fdt_scp_get_sram_size()
+[2559] scp sram_size=262144, len=4
+[2559] [SCP]sram size=262144 bytes
+[2560] [SCP](overlay)firmware size 243712 bytes
+[2561] scp_region_info->ap_loader_start 0x9f900000
+[2561] scp_region_info->ap_loader_size 0x438
+[2562] scp_region_info->ap_firmware_start 0x9f900800
+[2562] scp_region_info->ap_firmware_size 0x3b800
+[2563] scp_region_info->ap_dram_start 0x9f980000
+[2564] scp_region_info->ap_dram_size 0x5e18
+[2564] scp_region_info->ap_dram_backup_start 0x9fa80000
+[2565] scp_region_info->Il1c_con 0x10d
+[2565] scp_region_info->Dl1c_con 0x10d
+[2567] LK emi_mpu_set_protection start:9f900000 end=9fefffff region=26 [2567] apc1=b6db6d [2568] apc0=b6d168 [2568] 
+[2568] load_scp(): done
+[2568] [PROFILE] ::: lvl(2) load scp takes 191 ms
+[2569] get_plat_get_free_method: weak function:free_in_kernel=0
+[2570] ccci_ld_md_wrapper_api_init:free_in_kernel=1
+[2570] Enter load_modem_image v2.0
+[2571] get limit and align weak func
+[2571] mblock_reserve-R start: 0x9fff0000, sz: 0x10000 map:0 name:ccci_tag_mem
+[2572] name[ccci_tag_mem] limit: 0xA0000000, request size: 0x00010000, get start address: 0x9fff0000
+[2575] radio cap:radio_md_g_en using default
+[2576] -- MD1 --
+[2576] get limit and align weak func
+[2577] mblock_reserve-R start: 0x8e000000, sz: 0x10000000 map:1 name:md_mem_usage
+[2578] name[md_mem_usage] limit: 0xA0000000, request size: 0x10000000, get start address: 0x8e000000
+[2579] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2580] ccci_load_raw_data: addr[0x4819e8c0],size[0x00000200] @md1img
+[2581] ptr hdr verify:partition[md1img], image_name[md1rom]
+[2581] policy_entry_idx = 12 
+[2582] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[2583] [SEC_POLICY] sboot_state = 0x1
+[2583] [SEC_POLICY] lock_state(default) = 0x4
+[2584] img_auth_required = 1 
+[2585] [PROFILE] mmc read 4 blks in 1 ms: 2000KB/s
+[2585] Image name matched 
+[2586] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2586] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2587] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2588] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[2589] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[SBC] sbc_en = 1
+[SBC] sbc_en = 1
+[SEC] No need to fill MD1 pubk hash.
+[2595] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2596] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2597] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2598] [PROFILE] mmc read 2 blks in 1 ms: 1000KB/s
+[2598] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2604] [SBC] image md1rom auth init pass
+[2604] Verify md1rom cert chain cost 20 ms
+[2831] [PROFILE] mmc read 37941 blks in 226 ms: 83940KB/s
+[2832] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[2834] ccci_load_raw_data: addr[0x8e000000],size[0x01286be4] @md1img
+[2835] image verify:partition[md1img], image_name[md1rom], addr[0x8e000000], size[0x1286bf0]
+[2836] LTE now, and lte sbc en != 0x1 
+[3012] [SBC][oem] img auth pass
+[3012] Image hash verification success: ret = 0
+[3013] Verify md1rom image hash cost 177 ms
+[3015] sync_cache in img_vfy addr:0x8e000000 size:1286bf0
+[3016] ccci_plat_realloc_map_mem: weak function,addr=0x8f286900,size=962080[3017] ass_func_for_v6_normal_img:realloc weak func
+[3018] padding_with_additional_num:4 with mpu_num:3
+[3018] MPU region not enough, cancel to retrieve padding(offset):0x04870000 ~ 0x04880000
+[3019] retrieve_blk_num: 5
+[3020] == Get retrieve 0x1380000~0x1bfffff =======
+[3020] [0x8e000000~0x8fbfffff] ==>
+[3021] [0x8e000000-Reserved-0x8f37ffff|0x8f380000-Retrieve-0x8fbfffff]
+[3022]   0x880000B retrieved by AP
+[3022] [ccci_retrieve_mem] free_in_kernel: 1
+[3023] == Get retrieve 0x2020000~0x27fffff =======
+[3023] [0x8fc00000~0x907fffff] ==>
+[3024] [0x8fc00000-Reserved-0x9001ffff|0x90020000-Retrieve-0x907fffff]
+[3025]   0x7e0000B retrieved by AP
+[3025] [ccci_retrieve_mem] free_in_kernel: 1
+[3026] == Get retrieve 0x4a50000~0x6ffffff =======
+[3026] [0x91df0000~0x95dfffff] ==>
+[3027] [0x91df0000-Reserved-0x92a4ffff|0x92a50000-Retrieve-00x94ffffff|0x95000000-Reserved-0x95dfffff]
+[3028]   0x25b0000B retrieved by AP
+[3028] [ccci_retrieve_mem] free_in_kernel: 1
+[3029] == Get retrieve 0x48d0000~0x49fffff =======
+[3030] [0x91df0000~0x92a4ffff] ==>
+[3030] [0x91df0000-Reserved-0x928cffff|0x928d0000-Retrieve-00x929fffff|0x92a00000-Reserved-0x92a4ffff]
+[3031]   0x130000B retrieved by AP
+[3032] [ccci_retrieve_mem] free_in_kernel: 1
+[3032] == Get retrieve 0x4890000~0x489ffff =======
+[3033] [0x91df0000~0x928cffff] ==>
+[3033] [0x91df0000-Reserved-0x9288ffff|0x92890000-Retrieve-00x9289ffff|0x928a0000-Reserved-0x928cffff]
+[3035]   0x10000B retrieved by AP
+[3035] [ccci_retrieve_mem] free_in_kernel: 1
+[3036] mt_secure_call: set_addr = 0x8e000000, get_addr = 0x8e000000
+[3037] ---> Map 0x00000000 to 0x8e000000 for MD1
+[3037] BANK0_MAP0 value:0x91008F
+[3038] BANK0_MAP1 value:0x950093
+[3038] BANK0_MAP2 value:0x990097
+[3039] BANK0_MAP3 value:0x9D009B
+[3043] [PROFILE] mmc read 1 blks in 4 ms: 125KB/s
+[3044] ccci_load_raw_data: addr[0x4819e8c0],size[0x00000200] @md1img
+[3045] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[3045] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3046] ccci_load_raw_data: addr[0x4819e8c0],size[0x00000200] @md1img
+[3047] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3048] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3048] ccci_load_raw_data: addr[0x4819e8c0],size[0x00000200] @md1img
+[3049] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3050] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3051] ccci_load_raw_data: addr[0x4819e8c0],size[0x00000200] @md1img
+[3052] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3052] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3053] ccci_load_raw_data: addr[0x4819e8c0],size[0x00000200] @md1img
+[3054] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3055] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3055] ccci_load_raw_data: addr[0x4819e8c0],size[0x00000200] @md1img
+[3056] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3057] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3058] ccci_load_raw_data: addr[0x4819e8c0],size[0x00000200] @md1img
+[3059] ptr hdr verify:partition[md1img], image_name[md1dsp]
+[3059] policy_entry_idx = 12 
+[3060] [PROFILE] mmc read 24 blks in 0 ms: 8KB/s
+[3061] [SEC_POLICY] sboot_state = 0x1
+[3061] [SEC_POLICY] lock_state(default) = 0x4
+[3062] img_auth_required = 1 
+[3063] [PROFILE] mmc read 4 blks in 1 ms: 2000KB/s
+[3063] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3064] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[3065] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3066] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3066] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[3067] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3068] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3069] [PROFILE] mmc read 3 blks in 1 ms: 1500KB/s
+[3069] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3070] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3071] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[3072] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[3072] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3073] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[3074] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3075] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[3075] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[3076] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3077] Image name matched 
+[3077] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3078] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3079] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3079] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[3080] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[SBC] sbc_en = 1
+[SBC] sbc_en = 1
+[3086] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3087] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3088] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3088] [PROFILE] mmc read 2 blks in 0 ms: 8KB/s
+[3089] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3095] [SBC] image md1dsp auth init pass
+[3095] Verify md1dsp cert chain cost 33 ms
+[3096] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3161] [PROFILE] ::: lvl(2) decompress_kernel takes 822 ms
+[3161] Wait for iothread...
+[3177] [PROFILE] mmc read 13504 blks in 80 ms: 84400KB/s
+[3178] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3179] ccci_load_raw_data: addr[0x95000000],size[0x0069811c] @md1img
+[3180] image verify:partition[md1img], image_name[md1dsp], addr[0x95000000], size[0x698120]
+[3243] [SBC][oem] img auth pass
+[3244] Image hash verification success: ret = 0
+[3244] Verify md1dsp image hash cost 63 ms
+[3246] sync_cache in img_vfy addr:0x95000000 size:698120
+[3250] [PROFILE] mmc read 1 blks in 4 ms: 125KB/s
+[3250] ccci_load_raw_data: addr[0x4819ccc0],size[0x00000200] @md1img
+[3251] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3252] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3253] ccci_load_raw_data: addr[0x4819ccc0],size[0x00000200] @md1img
+[3254] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[3254] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3255] ccci_load_raw_data: addr[0x4819ccc0],size[0x00000200] @md1img
+[3256] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3257] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3257] ccci_load_raw_data: addr[0x4819ccc0],size[0x00000200] @md1img
+[3258] ptr hdr verify:partition[md1img], image_name[md1drdi]
+[3259] policy_entry_idx = 12 
+[3260] [PROFILE] mmc read 24 blks in 1 ms: 12000KB/s
+[3260] [SEC_POLICY] sboot_state = 0x1
+[3261] [SEC_POLICY] lock_state(default) = 0x4
+[3261] img_auth_required = 1 
+[3262] [PROFILE] mmc read 4 blks in 0 ms: 8KB/s
+[3263] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3264] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[3265] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[3265] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3266] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[3267] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3267] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3268] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[3269] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3270] Image name matched 
+[3270] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3271] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3271] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3272] [PROFILE] mmc read 3 blks in 0 ms: 8KB/s
+[3273] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[SBC] sbc_en = 1
+[SBC] sbc_en = 1
+[3279] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3280] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3281] [PROFILE] mmc read 1 blks in 1 ms: 500KB/s
+[3281] [PROFILE] mmc read 2 blks in 0 ms: 8KB/s
+[3282] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3288] [SBC] image md1drdi auth init pass
+[3288] Verify md1drdi cert chain cost 26 ms
+[3289] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3301] [PROFILE] mmc read 1878 blks in 12 ms: 78250KB/s
+[3301] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3302] ccci_load_raw_data: addr[0x8f286900],size[0x000eae20] @md1img
+[3303] image verify:partition[md1img], image_name[md1drdi], addr[0x8f286900], size[0xeae20]
+[3313] [SBC][oem] img auth pass
+[3313] Image hash verification success: ret = 0
+[3314] Verify md1drdi image hash cost 10 ms
+[3315] sync_cache in img_vfy addr:0x8f286900 size:eae20
+[3339] arch_sync_cache_range: addr[0x8e000000], size[0x10000000]
+[3340] md memory require:0x7e00000, reserved:0x10000000
+[3341]   0x8200000B retrieved by AP
+[3341] [ccci_retrieve_mem] free_in_kernel: 1
+[3342] get limit and align weak func
+[3342] mblock_reserve-R start: 0x72000000, sz: 0x4000000 map:1 name:ap_md_nc_smem
+[3343] name[ap_md_nc_smem] limit: 0x80000000, request size: 0x04000000, get start address: 0x72000000
+[3344] [LK_ENV]get_env apmd1_smem from area 0
+[3345] [LK_ENV]get_env md1md3_smem from area 0
+[3346] [LK_ENV]get_env apmd3_smem from area 0
+[3346] [LK_ENV]get_env md1_phy_cap_gear from area 0
+[3347] env[apmd1_smem]0.
+[3347] env[md1md3_smem]0.
+[3347] env[apmd3_smem]0.
+[3348] env[md1_phy_cap_gear]0.
+[3352] [PROFILE] mmc read 1 blks in 4 ms: 125KB/s
+[3352] get atoi(b_buf) = 0
+[3353] get flag = 10785445
+[3353] [LK_ENV]get_env md1_ccb_cap_gear from area 0
+[3354] [LK_ENV]set_env md1_ccb_cap_gear 1
+[3354] checksum 2906
+[3355] [PROFILE] mmc write 32 blks in 1 ms: 16000KB/s
+[3355] set env[md1_ccb_cap_gear]1
+[3356] allocate ccb data buffer0x1600000
+[3356] [LK_ENV]set_env md1_ccb_gear_list 1(2,20);2(2,10);3(0,0);11(2,2);12(2,62)
+[3357] checksum 6518
+[3358] [PROFILE] mmc write 32 blks in 0 ms: 8KB/s
+[3359] get limit and align weak func
+[3359] mblock_reserve-R start: 0x70000000, sz: 0x1600000 map:1 name:ap_md_c_smem
+[3360] name[ap_md_c_smem] limit: 0x80000000, request size: 0x01600000, get start address: 0x70000000
+[3361] ccb_info.ccb_data_buffer_addr: 70000000
+[3362] ccb_info.ccb_data_buffer_size: 1600000
+[3362] md1 phy capture size: 0
+[3363] smem_info.base_addr: 72000000
+[3363] smem_info.ap_md1_smem_offset: 0
+[3364] smem_info.ap_md1_smem_size: 170000
+[3364] smem_info.ap_md3_smem_offset: 0
+[3365] smem_info.ap_md3_smem_size: 0
+[3365] smem_info.md1_md3_smem_offset: 0
+[3366] smem_info.md1_md3_smem_size: 0
+[3366] smem_info.total_smem_size: 170000
+[3367] ap md1 share mem MPU need configure
+[3367] LK emi_mpu_set_protection start:8e000000 end=8f37ffff region=9 [3368] apc1=b6db6d [3368] apc0=8096db64 [3369] 
+[3369] Set MPU:S:0x8e000000 E:0x8f37ffff A:<9>[0~15]4-4-5-5-5-5-5-4-5-5-5-5-5-5-5-5(U)
+[3370] LK emi_mpu_set_protection start:8fc00000 end=9001ffff region=15 [3371] apc1=b6db6d [3371] apc0=8016db64 [3371] 
+[3371] Set MPU:S:0x8fc00000 E:0x9001ffff A:<15>[0~15]4-4-5-5-5-5-5-0-5-5-5-5-5-5-5-5(U)
+[3372] LK emi_mpu_set_protection start:90800000 end=91deffff region=14 [3373] apc1=b6db6d [3374] apc0=8096db44 [3374] 
+[3374] Set MPU:S:0x90800000 E:0x91deffff A:<14>[0~15]4-0-5-5-5-5-5-4-5-5-5-5-5-5-5-5(U)
+[3375] LK emi_mpu_set_protection start:91df0000 end=9288ffff region=13 [3376] apc1=b6db6d [3376] apc0=8016db44 [3376] 
+[3376] Set MPU:S:0x91df0000 E:0x9288ffff A:<13>[0~15]4-0-5-5-5-5-5-0-5-5-5-5-5-5-5-5(U)
+[3378] LK emi_mpu_set_protection start:95000000 end=95dfffff region=16 [3378] apc1=b6db6d [3379] apc0=8016db44 [3379] 
+[3379] Set MPU:S:0x95000000 E:0x95dfffff A:<16>[0~15]4-0-5-5-5-5-5-0-5-5-5-5-5-5-5-5(U)
+[3380] LK emi_mpu_set_protection start:92a00000 end=92a4ffff region=17 [3381] apc1=b6db6d [3381] apc0=8016db44 [3381] 
+[3382] Set MPU:S:0x92a00000 E:0x92a4ffff A:<17>[0~15]4-0-5-5-5-5-5-0-5-5-5-5-5-5-5-5(U)
+[3383] LK emi_mpu_set_protection start:928a0000 end=928cffff region=18 [3383] apc1=b6db6d [3384] apc0=8016db44 [3384] 
+[3384] Set MPU:S:0x928a0000 E:0x928cffff A:<18>[0~15]4-0-5-5-5-5-5-0-5-5-5-5-5-5-5-5(U)
+[3385] LK emi_mpu_set_protection start:92a00000 end=92a4ffff region=12 [3386] apc1=b6db6d [3386] apc0=8096db64 [3387] 
+[3387] Set MPU:S:0x92a00000 E:0x92a4ffff A:<12>[0~15]4-4-5-5-5-5-5-4-5-5-5-5-5-5-5-5(U)
+[3388] LK emi_mpu_set_protection start:8e000000 end=9dffffff region=30 [3389] apc1=b6db6d [3389] apc0=80ba8b60 [3389] 
+[3389] Set MPU:S:0x8e000000 E:0x9dffffff A:<30>[0~15]0-4-5-5-0-5-6-5-5-5-5-5-5-5-5-5(U)
+[3390] LK emi_mpu_set_protection start:95000000 end=956fffff region=10 [3391] apc1=b6db6d [3391] apc0=8096db64 [3392] 
+[3392] Set MPU:S:0x95000000 E:0x956fffff A:<10>[0~15]4-4-5-5-5-5-5-4-5-5-5-5-5-5-5-5(U)
+[3393] LK emi_mpu_set_protection start:95700000 end=95dfffff region=11 [3394] apc1=b6db6d [3394] apc0=8016db44 [3394] 
+[3394] Set MPU:S:0x95700000 E:0x95dfffff A:<11>[0~15]4-0-5-5-5-5-5-0-5-5-5-5-5-5-5-5(U)
+[3395] LK emi_mpu_set_protection start:72000000 end=7216ffff region=23 [3396] apc1=b6db6d [3396] apc0=16d140 [3397] 
+[3397] Set MPU:S:0x72000000 E:0x7216ffff A:<23>[0~15]0-0-5-0-5-5-5-0-5-5-5-5-5-5-5-5(U)
+[3398] LK emi_mpu_set_protection start:70000000 end=715fffff region=22 [3399] apc1=b6db6d [3399] apc0=16db40 [3399] 
+[3399] Set MPU:S:0x70000000 E:0x715fffff A:<22>[0~15]0-0-5-5-5-5-5-0-5-5-5-5-5-5-5-5(U)
+[3400] ---> Map 0x40000000 to 0x72000000 for MD1
+[3401] BANK4_MAP0 value:0x73
+[3401] BANK4_MAP0 value:0x750073
+[3402] BANK4_MAP1 value:0x77
+[3402] BANK4_MAP1 value:0x790077
+[3403] BANK4_MAP2 value:0x7B
+[3403] BANK4_MAP2 value:0x7D007B
+[3403] BANK4_MAP3 value:0x7F
+[3404] BANK4_MAP3 value:0x81007F
+[3404] BANK4_MAP1 value:0x710077
+[3405] BANK4_MAP2 value:0x7D0073
+[3405] BANK4_MAP2 value:0x750073
+[3406] before hw remap lock: MD1[0]
+[3406] before hw remap lock: MD1[1]
+[3406] re-size share memory form 4000000 to 170000
+[3407] mblock_resize  start: 72000000, size: 4000000 addr = 72000000 oldsize = 4000000
+[3408] mblock_resize putback mblock 72170000 size: 3e90000
+[3409] mblock_resize-debug[0].start: 0x40000000, sz: 0x80000
+[3410] mblock_resize-debug[1].start: 0x47900000, sz: 0x380000
+[3410] mblock_resize-debug[2].start: 0x47d80000, sz: 0x0
+[3411] mblock_resize-debug[3].start: 0x47fd0000, sz: 0x30000
+[3412] mblock_resize-debug[4].start: 0x48400000, sz: 0x700000
+[3413] mblock_resize-debug[5].start: 0x50b00000, sz: 0x1000000
+[3413] mblock_resize-debug[6].start: 0x55b00000, sz: 0x1a500000
+[3414] mblock_resize-debug[7].start: 0x71600000, sz: 0xa00000
+[3415] mblock_resize-debug[8].start: 0x72170000, sz: 0x51e0000
+[3416] mblock_resize-debug[9].start: 0x777f5000, sz: 0xb000
+[3417] mblock_resize-debug[10].start: 0x7fa41000, sz: 0xb7000
+[3417] mblock_resize-debug[11].start: 0x80000000, sz: 0xe000000
+[3418] mblock_resize-debug[12].start: 0x9e000000, sz: 0x1900000
+[3419] mblock_resize-debug[13].start: 0x9ff00000, sz: 0xf0000
+[3420] mblock_resize-debug[14].start: 0xa0000000, sz: 0x1ff30000
+[3420] mblock_resize-debug[15].start: 0xbfff0000, sz: 0xf000
+[3421] mblock_resize-debug[16].start: 0xc0000000, sz: 0x10000000
+[3422] mblock_resize-debug[17].start: 0xd0000000, sz: 0x6ffff000
+[3423] mblock_resize-debug-R[0].start: 0xbffff000, sz: 0x1000 map: 0 name: dramc-rk0
+[3424] mblock_resize-debug-R[1].start: 0x13ffff000, sz: 0x1000 map: 0 name: dramc-rk1
+[3425] mblock_resize-debug-R[2].start: 0x7fc00000, sz: 0x400000 map: 0 name: gz
+[3426] mblock_resize-debug-R[3].start: 0x7fa00000, sz: 0x41000 map: 1 name: gz-log
+[3427] mblock_resize-debug-R[4].start: 0x7fbc0000, sz: 0x40000 map: 1 name: log_store
+[3428] mblock_resize-debug-R[5].start: 0x47d80000, sz: 0x50000 map: 0 name: atf-reserved
+[3429] mblock_resize-debug-R[6].start: 0xbff70000, sz: 0x80000 map: 0 name: atf-ramdump-reserved
+[3430] mblock_resize-debug-R[7].start: 0xbff30000, sz: 0x40000 map: 0 name: atf-log-reserved
+[3431] mblock_resize-debug-R[8].start: 0x7f800000, sz: 0x200000 map: 0 name: tee-secmem
+[3433] mblock_resize-debug-R[9].start: 0x7fb00000, sz: 0xc0000 map: 0 name: SSPM-reserved
+[3434] mblock_resize-debug-R[10].start: 0x79800000, sz: 0x6000000 map: 0 name: tee-reserved
+[3435] mblock_resize-debug-R[11].start: 0x47dd0000, sz: 0x200000 map: 1 name: pl-bootarg
+[3436] mblock_resize-debug-R[12].start: 0x47c80000, sz: 0x10000 map: 0 name: aee_debug_kinfo
+[3437] mblock_resize-debug-R[13].start: 0x47c90000, sz: 0xe0000 map: 0 name: pstore
+[3438] mblock_resize-debug-R[14].start: 0x47d70000, sz: 0x10000 map: 0 name: minirdump
+[3439] mblock_resize-debug-R[15].start: 0x48000000, sz: 0x400000 map: 0 name: lk_addr_mb
+[3440] mblock_resize-debug-R[16].start: 0x48b00000, sz: 0x8000000 map: 0 name: scratch_addr_mb
+[3441] mblock_resize-debug-R[17].start: 0x7faf8000, sz: 0x8000 map: 0 name: tkv
+[3442] mblock_resize-debug-R[18].start: 0x78800000, sz: 0x1000000 map: 0 name: framebuffer
+[3444] mblock_resize-debug-R[19].start: 0x77800000, sz: 0x1000000 map: 0 name: logo_db_addr_pa
+[3445] mblock_resize-debug-R[20].start: 0x77360000, sz: 0x495000 map: 0 name: display-others_logo_fb-addr
+[3446] mblock_resize-debug-R[21].start: 0x47880000, sz: 0x80000 map: 1 name: dtb_kernel_addr_mb
+[3447] mblock_resize-debug-R[22].start: 0x40080000, sz: 0x7800000 map: 0 name: kernel_addr_mb
+[3448] mblock_resize-debug-R[23].start: 0x51b00000, sz: 0x4000000 map: 0 name: ramdisk_addr_mb
+[3449] mblock_resize-debug-R[24].start: 0x77350000, sz: 0x10000 map: 0 name: SPM-reserved
+[3451] mblock_resize-debug-R[25].start: 0x9f900000, sz: 0x600000 map: 0 name: SCP-reserved
+[3452] mblock_resize-debug-R[26].start: 0x9fff0000, sz: 0x10000 map: 0 name: ccci_tag_mem
+[3453] mblock_resize-debug-R[27].start: 0x8e000000, sz: 0x10000000 map: 1 name: md_mem_usage
+[3454] mblock_resize-debug-R[28].start: 0x72000000, sz: 0x170000 map: 1 name: ap_md_nc_smem
+[3455] mblock_resize-debug-R[29].start: 0x70000000, sz: 0x1600000 map: 1 name: ap_md_c_smem
+[3456] [set_hw_locked_in_atf]
+[3457] [set_hw_locked_in_atf] error: MD_HW_REMAP_LOCKED fail: 0xFFFFFFFF
+[3458] lk info.lk_info_base_addr: 0x9fff0000
+[3458] lk info.lk_info_size:      0x988
+[3459] lk info.lk_info_tag_num:   0x12
+[3459] [PROFILE] ------- load_modem_image init cost 890 ms ----
+[3460] [MD1 Baseband version] MOLY.LR12A.R3.MP.V283.3.P2(26)
+[3461] [MD3 Baseband version] MOLY.LR12A.R3.MP.V283.3.P2(-1)
+[3462] [ccci-off]src clk ena = 0x1006300
+[3462] [ccci-off] later power down not needed or not ready!
+[3463] [PROFILE] ::: lvl(1) load modem image takes 894 ms
+[3464] Wake up bootstrap2.
+[3464] Met iothread.
+[3464] [LK] segment = 0x24, 0x80002
+[3465] model=MT6765
+[3465] model-external-name not found
+[3466] model-external-name=MT6765V/XBA
+[3467] model-part-name not found
+[3468] model-part-name=MT6765V/XBA
+[3468] model atag update done
+[3468]  mem_start=0x40000000 mem_sz=0x100000000
+[3469]  mem_reg_property[30].start_hi = 0x00000000
+[3470]  mem_reg_property[30].start_lo = 0x00000040
+[3470]  mem_reg_property[30].size_hi  = 0x01000000
+[3471]  mem_reg_property[30].size_lo  = 0x00000000
+[3475] project_id = 0x24
+[3475] armpll_ll_enable = 0x1(0x64a8)
+[3479] EMMC Manufacturer id = 0xd6
+[3480] size = 115 GB, size = 0x1cd0800000 byte
+[3480] tinno_ddr_get_vendor ddr vendor 6
+[3481] tinno_ddr_get_size ddr size 4 Gb
+[3481] tinno_ddr_get_type ddr type 6
+[3485] set tinno boardinfo attributes to device tree
+[3486] attr : compatible value : tinno_flash_info
+[3487] attr : status value : ok
+[3487] attr : mmc_vendor value : FORESEE
+[3488] attr : mmc_size value : 128GB
+[3489] attr : ddr_vendor value : HYNIX
+[3490] attr : ddr_size value : 4GB
+[3491] attr : ddr_type value : LPDDR4X
+[3492] PASS memory DTS node
+[3494] [SCP] set core status=okay
+[3494] SSPM: set reserved mem status=okay
+[3496] spmfw version: pcm_allinone_lp3_1866_v7.2.7
+[3497] spmfw version: pcm_allinone_lp4_2400_v7.2.7
+[3498] spmfw version: pcm_allinone_lp4_3200_v7.2.7
+[3499] spmfw version: pcm_allinone_lp4_term_3200_v7.2.7
+[3500] spmfw version: pcm_allinone_lp4_term_2400_v7.2.7
+[3501] [LK_ENV]get_env MTK_DRAMC_MEMTEST_R0 from area 0
+[3502] [LK_ENV]get_env MTK_DRAMC_MEMTEST_R1 from area 0
+[3509] memory_ssmr_fixup, scenario: svp_scheme, scenario_size 0x0
+[3510] memory_ssmr_fixup, scenario: face_registration_scheme, scenario_size 0x0
+[3511] memory_ssmr_fixup, scenario: face_payment_scheme, scenario_size 0x0
+[3512] memory_ssmr_fixup, scenario: face_unlock_scheme, scenario_size 0x0
+[3513] memory_ssmr_fixup, scenario: tui_scheme, scenario_size 0x0
+[3515] Storage type :1
+[3516] update_mmc_status: setting PIN for EMMC
+[3520] disable_fdt_node_by_compatible: fail to find node(mediatek,mt6765-mmc), error:-1
+[3521] update_mmc_status: setting PIN for EMMC failed, error:-1 
+[3522] target_atag_imix_r:170
+[3524] fg_swocv_v buf [44298], [0x48197064:0x48197069:5]
+[3525] fg_swocv_i buf [-12], [0x48197064:0x48197067:3]
+[3526] shutdown_time buf [0], [0x48197064:0x48197065:1]
+RAM_CONSOLE. [0x10ea00,0x540,0x1,0x7c0]
+RAM_CONSOLE. log_store [0x10f200,0x100]
+[3530] boot_voltage buf [0], [0x48197064:0x48197065:1]
+[3532] boot_voltage buf [0], [0x48197064:0x48197065:1]
+[3533] Not Support VCORE DVFS
+[3533] SSSS:0x0
+[3534] SSSS:0x0
+[3534] SSSS:0x0
+[3534] SSSS:0x80000000
+[3534] SSSS:0x1200
+[3535] SSSS:0x766
+[3535] SSSS:0x0
+[3535] SSSS:0x24
+[3561] mt_disp_get_lcd_time, fps=9077
+[3561] videolfb - fb_base    = 0x78800000
+[3562] videolfb - islcmfound = 1
+[3562] videolfb - lcm status = 156
+[3563] videolfb - fps        = 9077
+[3563] videolfb - vram       = 16777216
+[3564] videolfb - lcmname    = nt36528_hd720_dsi_vdo_djn
+[3567] [ccci] create modem chosen arguments info DT OK
+[3569] [ccci] create modem mddriver arguments info DT OK
+[3570] Create PTP DT OK
+[3574] [PROFILE] mmc read 24 blks in 3 ms: 4000KB/s
+start dump lk masp atag 
+dump sw sbc:0x11, sw sdl:0x11 , hw sbc: 1
+dump lock_state, 0x1
+[3576] create masp atag OK
+[3577] tee_reserved_mem not supported
+[3577] [LK] non_secure_sram (0x10dc00, 0x4400)
+[3578] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3579] [tran] 695 enable_factory = 0 
+[3580] [tran] tran_agingtest_bat_ctl is disable 
+[3580] tran_agingtest_bat_ctl : send cmdline tran_aging_mode= 0
+[3581] [ccci]get_md_view_smem: user_id = 0x0, ap_addr = 0x72100000, md_addr = 0x40100000, size = 0x70000
+[3584] [dfd] plat->plat_sram_flag2 = 0x72100000, addr = 0x104000000000, addr_msb = 0x1072
+[3585] [LK_ENV]get_env usb2jtag from area 0
+[3585] [USB2JTAG] current setting is 0.
+[3586] [LK_ENV]get_env hibboot from area 0
+[3586] [LK_ENV]get_env resume from area 0
+[3587] resume = NULL 
+[3587] target_atag_commandline skip for not used
+[3589]  hw_code = 0x766
+[3589]  hw_subcode = 0x8a00
+[3590]  hw_ver = 0xca00
+[3590]  sw_ver = 0x0
+[3593] get_hw_id, id_gpio[0]=0 
+[3593] get_hw_id, id_gpio[1]=0 
+[3594] get_hw_id, id_gpio[2]=0 
+[3594] get_hw_id, hw_id=0 
+[3595] mrdump_key_fdt_init: force trigger default to EINT
+[3600] mediatek, mrdump_ext_rst-eint not found
+[3602] mrdump_ddr_rsv_fdt: set ddr_rsv = yes
+[3604] mrdump_lk_version_fdt: set lk_version = MRDUMP11
+[3605] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3605] mrdump_output: 
+[3606] mrdump_output: 
+[3606] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3607] mrdump_output update to internal-storage
+[3607] [PROFILE] mmc read 1 blks in 0 ms: 8KB/s
+[3608] [PROFILE] mmc write 1 blks in 0 ms: 8KB/s
+[3609] mrdump_set_output_device: defaults: internal-storage
+[3612] device_name: /debug-kinfo, mblock_name: aee_debug_kinfo success
+[3613] mblock_create mblock start: 0x47880000 size: 0x80000 name: dtb_kernel_addr_mb
+[3614] mblock_create mblock start: 0x40080000 size: 0x7800000 name: kernel_addr_mb
+[3615] mblock_create mblock start: 0x51b00000 size: 0x4000000 name: ramdisk_addr_mb
+[3616] mblock_create mblock start: 0x48000000 size: 0x400000 name: lk_addr_mb
+[3617] mblock_create mblock start: 0x48b00000 size: 0x8000000 name: scratch_addr_mb
+[3618] mt_free_logo_from_mblock: 0
+[3619] mblock_create mblock start: 0x77800000 size: 0x1000000 name: logo_db_addr_pa
+[3620] mblock_create mblock start: 0x77360000 size: 0x495000 name: display-others_logo_fb-addr
+[3621] mblock_reserve-R start: 0x48000000, sz: 0x400000 map:0 name:lk_addr_mrdump
+[3622] mblock_reserve-R start: 0x47880000, sz: 0x80000 map:1 name:dtb_addr_mrdump
+[3623] mblock_sanity_check:PASS
+[3648] Set phandle reserved-memory:aee_debug_kinfo, phandle=337
+[3649] Set device: /debug-kinfo, memory-region=337
+[3675] [PROFILE] ::: lvl(0) 1st logo takes 1075 ms
+[3676] [PROFILE] ::: lvl(0) boot_time takes 3673 ms
+[3676] booting linux @ 0x40080000, ramdisk @ 0x51b00000 (12889208)
+[3677] [DEVAPC] sec_post_init
+[3678] [DEVAPC] platform_sec_post_init - SMC call to ATF from LK
+[3686] DRAM Rank :2
+[3686] DRAM Rank[0] Start = 0x40000000, Size = 0x7c80000
+[3687] DRAM Rank[1] Start = 0x47d80000, Size = 0x0
+[3688] mblock_magic:0x99999999 mblock_version:0x2
+[3689] mblock[0].start: 0x40000000, size: 0x80000
+[3690] mblock[1].start: 0x40080000, size: 0x7800000
+[3692] mblock[2].start: 0x47900000, size: 0x380000
+[3693] mblock[3].start: 0x47d80000, size: 0x0
+[3694] mblock[4].start: 0x47fd0000, size: 0x30000
+[3695] mblock[5].start: 0x48400000, size: 0x700000
+[3696] mblock[6].start: 0x48b00000, size: 0x9000000
+[3697] mblock[7].start: 0x51b00000, size: 0x1e500000
+[3698] mblock[8].start: 0x71600000, size: 0xa00000
+[3699] mblock[9].start: 0x72170000, size: 0x51e0000
+[3700] mblock[10].start: 0x77360000, size: 0x14a0000
+[3701] mblock[11].start: 0x7fa41000, size: 0xb7000
+[3702] mblock[12].start: 0x80000000, size: 0xe000000
+[3703] mblock[13].start: 0x9e000000, size: 0x1900000
+[3705] mblock[14].start: 0x9ff00000, size: 0xf0000
+[3706] mblock[15].start: 0xa0000000, size: 0x1ff30000
+[3707] mblock[16].start: 0xbfff0000, size: 0xf000
+[3708] mblock[17].start: 0xc0000000, size: 0x10000000
+[3709] mblock[18].start: 0xd0000000, size: 0x6ffff000
+[3710] mblock_reserve-R[0].start: 0xbffff000, size: 0x1000 map:0 name:dramc-rk0
+[3712] mblock_reserve-R[1].start: 0x13ffff000, size: 0x1000 map:0 name:dramc-rk1
+[3713] mblock_reserve-R[2].start: 0x7fc00000, size: 0x400000 map:0 name:gz
+[3715] mblock_reserve-R[3].start: 0x7fa00000, size: 0x41000 map:1 name:gz-log
+[3716] mblock_reserve-R[4].start: 0x7fbc0000, size: 0x40000 map:1 name:log_store
+[3718] mblock_reserve-R[5].start: 0x47d80000, size: 0x50000 map:0 name:atf-reserved
+[3720] mblock_reserve-R[6].start: 0xbff70000, size: 0x80000 map:0 name:atf-ramdump-reserved
+[3721] mblock_reserve-R[7].start: 0xbff30000, size: 0x40000 map:0 name:atf-log-reserved
+[3723] mblock_reserve-R[8].start: 0x7f800000, size: 0x200000 map:0 name:tee-secmem
+[3725] mblock_reserve-R[9].start: 0x7fb00000, size: 0xc0000 map:0 name:SSPM-reserved
+[3727] mblock_reserve-R[10].start: 0x79800000, size: 0x6000000 map:0 name:tee-reserved
+[3728] mblock_reserve-R[11].start: 0x47dd0000, size: 0x200000 map:1 name:pl-bootarg
+[3730] mblock_reserve-R[12].start: 0x47c80000, size: 0x10000 map:0 name:aee_debug_kinfo
+[3732] mblock_reserve-R[13].start: 0x47c90000, size: 0xe0000 map:0 name:pstore
+[3733] mblock_reserve-R[14].start: 0x47d70000, size: 0x10000 map:0 name:minirdump
+[3735] mblock_reserve-R[15].start: 0x7faf8000, size: 0x8000 map:0 name:tkv
+[3736] mblock_reserve-R[16].start: 0x78800000, size: 0x1000000 map:0 name:framebuffer
+[3738] mblock_reserve-R[17].start: 0x77350000, size: 0x10000 map:0 name:SPM-reserved
+[3740] mblock_reserve-R[18].start: 0x9f900000, size: 0x600000 map:0 name:SCP-reserved
+[3742] mblock_reserve-R[19].start: 0x9fff0000, size: 0x10000 map:0 name:ccci_tag_mem
+[3743] mblock_reserve-R[20].start: 0x8e000000, size: 0x10000000 map:1 name:md_mem_usage
+[3745] mblock_reserve-R[21].start: 0x72000000, size: 0x170000 map:1 name:ap_md_nc_smem
+[3747] mblock_reserve-R[22].start: 0x70000000, size: 0x1600000 map:1 name:ap_md_c_smem
+[3749] mblock_reserve-R[23].start: 0x48000000, size: 0x400000 map:0 name:lk_addr_mrdump
+[3750] mblock_reserve-R[24].start: 0x47880000, size: 0x80000 map:1 name:dtb_addr_mrdump
+[3752] g_cmdline size: 1457
+[3753] cmdline: console=tty0 console=ttyS0,921600n1 vmalloc=400M slub_debug=OFZPU page_owner=on androidboot.hardware=mt6765 maxcpus=8 loop.max_
+[3756]        : part=7 androidboot.init_fatal_panic=true firmware_class.path=/vendor/firmware has_battery_removed=1 FlashID=Jbl+413341353632 lo
+[3759]        : op.max_part=7 androidboot.boot_devices=bootdevice,soc/11230000.mmc,11230000.mmc,soc/11230000.msdc,11230000.msdc ramoops.mem_add
+[3761]        : ress=0x47c90000 ramoops.mem_size=0xe0000 ramoops.pmsg_size=0x10000 ramoops.console_size=0x40000 androidboot.blow_disbrom=0 boot
+[3764]        : opt=64S3,32N2,64N2 buildvariant=userdebug PN=CY-X6526-V658 root=/dev/ram androidboot.vbmeta.device=PARTUUID=b72ccbe9-2055-46f4-
+[3767]        : a167-4a069c201738 androidboot.vbmeta.avb_version=1.2 androidboot.vbmeta.device_state=locked androidboot.veritymode=enforcing an
+[3770]        : droidboot.veritymode.managed=yes androidboot.slot_suffix=_a androidboot.slot=a androidboot.verifiedbootstate=green androidboot.
+[3772]        : efusemode=hw androidboot.efuse=1 ro.boot.efuse=1 androidboot.atm=disabled sfi=0x00000000 vcore_num=0 androidboot.force_normal_b
+[3775]        : oot=1 androidboot.meta_log_disable=0 androidboot.secureboot=[secboot:(1)sec_usbdl:(1)efuse:(1)] androidboot.locked=yes tran_cpu
+[3778]        : _model=mt6765 mem_index=2 emmc_cid=JBL_413341353632 mtk_printk_ctrl.disable_uart=0 mtk_printk_ctrl.disable_uart=0 androidboot.s
+[3781]        : erialno=V658X65260123456 androidboot.secreg_val=6 tkv=2142208000 tran_aging_mode=0 androidboot.bootreason=reboot_longkey gpt=1 
+[3783]        : usb2jtag_mode=0 androidboot.dtb_idx=0 androidboot.dtbo_idx=0
+[3785] lk boot mode = 0
+[3785] lk boot reason = 31
+[3786] lk finished --> jump to linux kernel 64Bit
+
+[3787] 
+[LK]jump to K64 0x40080000
+================ END of FILE ===============
+

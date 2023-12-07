@@ -1,0 +1,266 @@
+----- timezone:Africa/Brazzaville
+[ATF](0)[10.328591]INFO:    ATF log service is registered (0xbff30000, aee:0xbff6c000)
+[ATF](0)[10.329524]NOTICE:  BL31_BASE=0x47d80800, BL31_TZRAM_SIZE=0x31800
+[ATF](0)[10.330332]NOTICE:  TZRAM2_BASE=0x47db2000, TZRAM2_SIZE=0x1d000
+[ATF](0)[10.331118]NOTICE:  BL31: v1.4(debug):7b9f0f471
+[ATF](0)[10.331732]NOTICE:  BL31: Built : 15:06:16, Oct  9 2023
+[ATF](0)[10.332432]INFO:    platform_setup_cpu()
+[ATF](0)[10.332971]INFO:    addr of cci_adb400_dcm_config: 0x0
+[ATF](0)[10.333660]INFO:    addr of sync_dcm_config: 0x0
+[ATF](0)[10.334284]INFO:    mp0_spmc: 0x3a00203b
+[ATF](0)[10.334823]INFO:    mp1_spmc: 0x640c043
+[ATF](0)[10.335362]INFO:    [ATF GIC] before clear_sec_pol_ctl_en
+[ATF](0)[10.336103]NOTICE:  call pccif1_hw_init
+[ATF](0)[10.336616]INFO:    BL31: Initializing runtime services
+[ATF](0)[10.337320]WARNING: BL31: cortex_a53: CPU workaround for 835769 was missing!
+[ATF](0)[10.338242]WARNING: BL31: cortex_a53: CPU workaround for 843419 was missing!
+[ATF](0)[10.339169]INFO:    BL31: cortex_a53: CPU workaround for 855873 was applied
+[ATF](0)[10.340105]NOTICE:  tbase_init_secure_context
+[ATF](0)[10.340684]INFO:    BL31: Initializing BL32
+[ATF](0)[10.341253]NOTICE:  tbase_init
+[ATF](0)[10.341695]NOTICE:   linear id 0 has Mpidr of 0
+[ATF](0)[10.342309]NOTICE:   tbase_init_entry registerFileStart[0] 47daa000 -- registerFileEnd[0] 47dab9d0
+[ATF](0)[10.343472]NOTICE:   tbase_init_entry registerFileStart[1] 47dae000 -- registerFileEnd[1] 47dafd80
+[ATF](0)[10.344635]NOTICE:  *** tbase (SPD unified) boot cfg ***
+[ATF](0)[10.345345]NOTICE:  * magic                 : 0x434d4254
+[ATF](0)[10.346056]NOTICE:  * length                : 0x90
+[ATF](0)[10.346702]NOTICE:  * version               : 0x2
+[ATF](0)[10.347337]NOTICE:  * dRamBase              : 0x40000000
+[ATF](0)[10.348048]NOTICE:  * dRamSize              : 0x100000000
+[ATF](0)[10.348770]NOTICE:  * secDRamBase           : 0x79800000
+[ATF](0)[10.349480]NOTICE:  * secDRamSize           : 0x6000000
+[ATF](0)[10.350180]NOTICE:  * secIRamBase           : 0x79800000
+[ATF](0)[10.350891]NOTICE:  * secIRamSize           : 0x0
+[ATF](0)[10.351526]NOTICE:  * conf_mair_el3         : 0x4404ff
+[ATF](0)[10.352216]NOTICE:  * MSMPteCount           : 0x4
+[ATF](0)[10.352851]NOTICE:  * MSMBase               : 0x47da3ba8
+[ATF](0)[10.353562]NOTICE:  * gic_distributor_base  : 0xc000000
+[ATF](0)[10.354262]NOTICE:  * gic_cpuinterface_base : 0xc400000
+[ATF](0)[10.354962]NOTICE:  * gic_redistributor_base: 0xc100000
+[ATF](0)[10.355662]NOTICE:  * gic_redistributor_len : 0x20000
+[ATF](0)[10.356340]NOTICE:  * gic_version           : 0x3
+[ATF](0)[10.356976]NOTICE:  * total_number_spi      : 0x160
+[ATF](0)[10.357633]NOTICE:  * ssiq_number           : 0x12f
+[ATF](0)[10.358290]NOTICE:  * flags                 : 0x0
+[ATF](0)[10.358925]NOTICE:  Image AARCH64 detected
+[ATF](0)[10.359485]NOTICE:  tbase SCR 0x638
+[ATF](0)[10.359970]NOTICE:  tbase init SPSR 0x3c5
+[ATF](0)[10.360519]NOTICE:  tbase SMC SPSR 3c5
+[ATF](0)[10.361077]NOTICE:  tbase_fastcall_handler TBASE_SMC_FASTCALL_CONFIG_OK
+[ATF](0)[10.361935]NOTICE:  tbase config ok fffffffff8200000 1
+[ATF](0)[10.364945]NOTICE:  Configuring Kinibi forwarded FIQs...[bypass]
+[ATF](0)[10.365731]INFO:    BL31: Preparing for EL3 exit to normal world
+[ATF](0)[10.366526]INFO:    Entry point address = 0x27fc00000
+[ATF](0)[10.367204]INFO:    SPSR = 0x3c9
+[ATF](0)[10.367659]NOTICE:  NS-SCR_EL3_EFIN=0x4
+[ATF](0)[10.368184]NOTICE:  S-SCR_EL3_EFIN=0x0
+[ATF](0)[10.389516]ERROR:   [MPU][mpu_svc]origin=0x2 invalid zone size=0x0
+[ATF](0)[10.414243]INFO:    TZ_TAGS: req=0, tag_val=0x535312
+[ATF](0)[10.414321]INFO:    TZ_TAGS: pa=0x7f9f8000, size=0x8000
+[ATF](0)[10.415533]INFO:    TZ_TAGS: req=1, tag_val=0x535313
+[ATF](0)[10.415611]INFO:    TZ_TAGS: pa=0x7f908000, size=0xf0000
+[ATF](0)[10.416834]INFO:    TZ_TAGS: req=2, tag_val=0x535314
+[ATF](0)[10.416912]INFO:    TZ_TAGS: pa=0x7f888000, size=0x80000
+[ATF](0)[10.418136]INFO:    TZ_TAGS: req=3, tag_val=0x535315
+[ATF](0)[10.418215]ERROR:   TZ_TAGS: tag=0x535315 is not found!
+[ATF](0)[10.419287]INFO:    TZ_TAGS: req=4, tag_val=0xffffffff
+[ATF](0)[10.419368]ERROR:   TZ_TAGS: tag=0xffffffff is not found!
+[ATF](0)[10.420441]INFO:    TZ_TAGS: req=5, tag_val=0xffffffff
+[ATF](0)[10.420522]ERROR:   TZ_TAGS: tag=0xffffffff is not found!
+[ATF](0)[11.067702]INFO:    [rpmb_init] invoked from lk
+[ATF](0)[11.662874]ERROR:   mediatek_plat_sip_handler: unknown 32b LK SMC(0x82000400)
+[ATF](0)[13.201425]INFO:    ROT: 0x1f88fc4f, 0x1a2dfbaa, 0xcf40ddf7, 0x4a94cba
+[ATF](0)[13.201534]INFO:    ROT: 0x68f5b464, 0xecf4f79e, 0xb7e70f3a, 0x88064441
+[ATF](0)[13.201639]INFO:    ROT: 0x1, 0x0, 0x1fbd0, 0x31645
+[ATF](0)[13.201716]INFO:    ROT: 0xbed3b1b5, 0x2844616b, 0xc6711984, 0xf5c59c4
+[ATF](0)[13.201817]INFO:    ROT: 0xe138ba59, 0x1057d48d, 0xc9fa6336, 0x8ca747db
+[ATF](0)[13.201919]INFO:    ROT: 0x134b2f9, 0x134158e, 0x0, 0x0
+[ATF](0)[13.243021]INFO:    #@# spm_load_pcm_firmware(161) use spmfw partition for pcm_allinone_lp4_term_3200.bin - allinone_lp4_term_3200_v7.2.7
+[ATF](0)[13.243208]INFO:    #@# spm_load_pcm_firmware(161) use spmfw partition for pcm_allinone_lp4_3200.bin - allinone_lp4_3200_v7.2.7
+[ATF](0)[13.243380]INFO:    #@# spm_load_pcm_firmware(161) use spmfw partition for pcm_allinone_lp3_1866.bin - allinone_lp3_1866_v7.2.7
+[ATF](0)[13.243551]INFO:    #@# spm_load_pcm_firmware(161) use spmfw partition for pcm_allinone_lp4_term_2400.bin - allinone_lp4_term_2400_v7.2.7
+[ATF](0)[13.243736]INFO:    #@# spm_load_pcm_firmware(161) use spmfw partition for pcm_allinone_lp4_2400.bin - allinone_lp4_2400_v7.2.7
+[ATF](0)[13.903276]NOTICE:  sip_amms_set_md_base_address:372 md_base_address = 8e000000
+[ATF](0)[13.903394]NOTICE:  sip_amms_get_md_base_address:380 md_base_address = 8e000000
+[ATF](0)[14.324112]ERROR:   mediatek_plat_sip_handler: unknown 32b LK SMC(0x8200040b)
+[ATF](0)[14.545880]INFO:    [DAPC] Walk TEE
+[ATF](0)[14.546226]INFO:    [DEVAPC] set_smi_larb_apc: MMSYS SLV3 (0x14003f80)
+[ATF](0)[14.546328]INFO:    [DEVAPC] set_smi_larb_apc: VCODESYS_SMI_LARB1 (0x17010f80)
+[ATF](0)[14.546439]INFO:    [DEVAPC] set_smi_larb_apc: IMGSYS_SMI_LARB2 (0x15021f80)
+[ATF](0)[14.546547]INFO:    [DEVAPC] set_smi_larb_apc: CAMSYS_SMI_LARB3 (0x1a002f80)
+[ATF](0)[14.546655]INFO:    [DEVAPC] Walk initial permission setting - MM 2nd level protection (SMI_LARB)...SUCCESS!
+[ATF](0)[14.546802]INFO:    [DAPC] (INFRA)D0_APC_0 = 0x10100000, (INFRA)D1_APC_0 = 0x30ffc3c3
+[ATF](0)[14.546922]INFO:    [DAPC] ((INFRA)D3_APC_0 = 0x0, (INFRA)D4_APC_0 = 0xfcfcf3f0
+[ATF](0)[14.547035]INFO:    [DAPC] ((INFRA)D5_APC_0 = 0x0, (INFRA)D7_APC_0 = 0xffffffff
+[ATF](0)[14.547147]INFO:    [DAPC] (INFRA)D0_APC_1 = 0x1043000, (INFRA)D1_APC_1 = 0xfffc0fcf
+[ATF](0)[14.547266]INFO:    [DAPC] ((INFRA)D3_APC_1 = 0x0, (INFRA)D4_APC_1 = 0xffff3fff
+[ATF](0)[14.547378]INFO:    [DAPC] ((INFRA)D5_APC_1 = 0x0, (INFRA)D7_APC_1 = 0xffffffff
+[ATF](0)[14.547490]INFO:    [DAPC] (INFRA)D0_APC_2 = 0x40000000, (INFRA)D1_APC_2 = 0xfc0fffff
+[ATF](0)[14.547610]INFO:    [DAPC] ((INFRA)D3_APC_2 = 0x0, (INFRA)D4_APC_2 = 0xff00ffff
+[ATF](0)[14.547722]INFO:    [DAPC] ((INFRA)D5_APC_2 = 0x0, (INFRA)D7_APC_2 = 0xffffffff
+[ATF](0)[14.547834]INFO:    [DAPC] (INFRA)D0_APC_3 = 0x1, (INFRA)D1_APC_3 = 0xfc33ffff
+[ATF](0)[14.547945]INFO:    [DAPC] ((INFRA)D3_APC_3 = 0x0, (INFRA)D4_APC_3 = 0xfffbffff
+[ATF](0)[14.548056]INFO:    [DAPC] ((INFRA)D5_APC_3 = 0x0, (INFRA)D7_APC_3 = 0xffffffff
+[ATF](0)[14.548168]INFO:    [DAPC] (INFRA)D0_APC_4 = 0x4, (INFRA)D1_APC_4 = 0x3fffffff
+[ATF](0)[14.548279]INFO:    [DAPC] ((INFRA)D3_APC_4 = 0x0, (INFRA)D4_APC_4 = 0xffffffb
+[ATF](0)[14.548390]INFO:    [DAPC] ((INFRA)D5_APC_4 = 0x0, (INFRA)D7_APC_4 = 0xffffffff
+[ATF](0)[14.548503]INFO:    [DAPC] (INFRA)D0_APC_5 = 0xf00bf0, (INFRA)D1_APC_5 = 0xfffffff0
+[ATF](0)[14.548620]INFO:    [DAPC] ((INFRA)D3_APC_5 = 0xfffff0, (INFRA)D4_APC_5 = 0xfcfff7f0
+[ATF](0)[14.548738]INFO:    [DAPC] ((INFRA)D5_APC_5 = 0xfff7f0, (INFRA)D7_APC_5 = 0xffffffff
+[ATF](0)[14.548855]INFO:    [DAPC] (INFRA)D0_APC_6 = 0x0, (INFRA)D1_APC_6 = 0xffcffffc
+[ATF](0)[14.548967]INFO:    [DAPC] ((INFRA)D3_APC_6 = 0x0, (INFRA)D4_APC_6 = 0xfffffff0
+[ATF](0)[14.549079]INFO:    [DAPC] ((INFRA)D5_APC_6 = 0x0, (INFRA)D7_APC_6 = 0xffffffff
+[ATF](0)[14.549191]INFO:    [DAPC] (INFRA)D0_APC_7 = 0x300000, (INFRA)D1_APC_7 = 0xffc3ffff
+[ATF](0)[14.549307]INFO:    [DAPC] ((INFRA)D3_APC_7 = 0x0, (INFRA)D4_APC_7 = 0xffffffff
+[ATF](0)[14.549420]INFO:    [DAPC] ((INFRA)D5_APC_7 = 0x0, (INFRA)D7_APC_7 = 0xffffffff
+[ATF](0)[14.549532]INFO:    [DAPC] (INFRA)D0_APC_8 = 0x40000, (INFRA)D1_APC_8 = 0xfffbff3f
+[ATF](0)[14.549648]INFO:    [DAPC] ((INFRA)D3_APC_8 = 0x0, (INFRA)D4_APC_8 = 0xffffff3f
+[ATF](0)[14.549761]INFO:    [DAPC] ((INFRA)D5_APC_8 = 0x0, (INFRA)D7_APC_8 = 0xffffffff
+[ATF](0)[14.549873]INFO:    [DAPC] (INFRA)D0_APC_9 = 0x0, (INFRA)D1_APC_9 = 0x3cfc
+[ATF](0)[14.549978]INFO:    [DAPC] ((INFRA)D3_APC_9 = 0x0, (INFRA)D4_APC_9 = 0x3cff
+[ATF](0)[14.550085]INFO:    [DAPC] ((INFRA)D5_APC_9 = 0x0, (INFRA)D7_APC_9 = 0x3fff
+[ATF](0)[14.550191]INFO:    [DAPC] (INFRA)D0_APC_10 = 0x0, (INFRA)D1_APC_10 = 0x0
+[ATF](0)[14.550296]INFO:    [DAPC] ((INFRA)D3_APC_10 = 0x0, (INFRA)D4_APC_10 = 0x0
+[ATF](0)[14.550402]INFO:    [DAPC] ((INFRA)D5_APC_10 = 0x0, (INFRA)D7_APC_10 = 0x0
+[ATF](0)[14.550508]INFO:    [DAPC] (INFRA)D0_APC_11 = 0x0, (INFRA)D1_APC_11 = 0x0
+[ATF](0)[14.550612]INFO:    [DAPC] ((INFRA)D3_APC_11 = 0x0, (INFRA)D4_APC_11 = 0x0
+[ATF](0)[14.550716]INFO:    [DAPC] ((INFRA)D5_APC_11 = 0x0, (INFRA)D7_APC_11 = 0x0
+[ATF](0)[14.550821]INFO:    [DAPC] (MM)D0_APC_0 = 0x0, (MM)D3_APC_0 = 0xffffffff
+[ATF](0)[14.550925]INFO:    [DAPC] (MM)D0_APC_1 = 0x0, (MM)D3_APC_1 = 0xffffffff
+[ATF](0)[14.551029]INFO:    [DAPC] (MM)D0_APC_2 = 0x0, (MM)D3_APC_2 = 0xffffffff
+[ATF](0)[14.551133]INFO:    [DAPC] (MM)D0_APC_3 = 0x0, (MM)D3_APC_3 = 0xffffffff
+[ATF](0)[14.551235]INFO:    [DAPC] (MM)D0_APC_4 = 0x0, (MM)D3_APC_4 = 0xffffffff
+[ATF](0)[14.551338]INFO:    [DAPC] (MM)D0_APC_5 = 0x0, (MM)D3_APC_5 = 0xfff
+[ATF](0)[14.551434]INFO:    [DAPC] (MD)D0_APC_0 = 0xfffff800, (MD)D3_APC_0 = 0xffffffff
+[ATF](0)[14.551546]INFO:    [DAPC] (MD)D0_APC_1 = 0xffffffff, (MD)D3_APC_1 = 0xffffffff
+[ATF](0)[14.551659]INFO:    [DAPC] (INFRA)MAS_SEC_0 = 0x200400
+[ATF](0)[14.551740]INFO:    [DAPC] (INFRA)VIO_STA_0=0x0
+[ATF](0)[14.551813]INFO:    [DAPC] (INFRA)VIO_STA_1=0x0
+[ATF](0)[14.551884]INFO:    [DAPC] (INFRA)VIO_STA_2=0x0
+[ATF](0)[14.551957]INFO:    [DAPC] (INFRA)VIO_STA_3=0x0
+[ATF](0)[14.552029]INFO:    [DAPC] (INFRA)VIO_STA_4=0x0
+[ATF](0)[14.552100]INFO:    [DAPC] (INFRA)VIO_STA_5=0x0
+[ATF](0)[14.552173]INFO:    [DAPC] (INFRA)VIO_STA_6=0x0
+[ATF](0)[14.552245]INFO:    [DAPC] (INFRA)VIO_STA_7=0x0
+[ATF](0)[14.552318]INFO:    [DAPC] (INFRA)VIO_STA_8=0x190
+[ATF](0)[14.552393]INFO:    [DAPC] (INFRA)VIO_STA_9=0x0
+[ATF](0)[14.552466]INFO:    [DEVAPC] MM_SEC_EN 0:0x40, 1:0x1300000, 2:0x0
+[ATF](0)[14.552562]INFO:    [DAPC] INFRA_AO_SEC_CON = 0x10200
+[ATF](0)[14.552642]INFO:    [DAPC] INFRA_AO_SEC_CG_CON 0: 0x20, 1: 0x18100200, 2: 0x20000000, 3: 0x0
+[ATF](0)[14.552769]INFO:    [DAPC] Init Done
+[ATF](0)[14.552829]INFO:    [DAPC] INFRA_APC_CON = 0x1, MM_APC_CON = 0x1, MD_APC_CON = 0x1
+[ATF](0)[14.552946]INFO:    [PMS(DAPC)] AP2MD1_PMS_CTRL_EN = 0x1
+[ATF](0)[14.553031]INFO:    [PMS(DAPC)] AP2MD1_PMS_CTRL_EN_LOCK = 0x1
+[ATF](0)[14.656336]INFO:    clear_all_on_mux
+[ATF](0)[14.656838]INFO:    SPM: enable SPMC mode
+[ATF](0)[14.657403]INFO:    save kernel info
+[ATF](0)[14.657885]INFO:    bl31_prepare_kernel_entry: return to GZ!
+[ATF](0)[14.658638]INFO:    el3_exit
+[ATF](0)[14.984664]INFO:    plat_affinst_on() mpidr = 0x1, sec_entrypoint = 0x47d810e0, afflvl = 1, state = 1
+[ATF](0)[14.984811]INFO:    plat_affinst_on() mpidr = 0x1, sec_entrypoint = 0x47d810e0, afflvl = 0, state = 1
+[ATF](0)[14.984951]INFO:    spmc: power on core 0.1
+[ATF](0)[14.985022]INFO:    spmc: power on core 0.1 successfully
+[ATF](1)[14.985103]INFO:    psci: core 0:1 ON
+[ATF](1)[14.985241]NOTICE:  tbase_init_secure_context
+[ATF](0)[14.986290]INFO:    plat_affinst_on() mpidr = 0x2, sec_entrypoint = 0x47d810e0, afflvl = 1, state = 1
+[ATF](0)[14.986432]INFO:    plat_affinst_on() mpidr = 0x2, sec_entrypoint = 0x47d810e0, afflvl = 0, state = 1
+[ATF](0)[14.986574]INFO:    spmc: power on core 0.2
+[ATF](0)[14.986646]INFO:    spmc: power on core 0.2 successfully
+[ATF](2)[14.986727]INFO:    psci: core 0:2 ON
+[ATF](2)[14.986863]NOTICE:  tbase_init_secure_context
+[ATF](0)[14.987798]INFO:    plat_affinst_on() mpidr = 0x3, sec_entrypoint = 0x47d810e0, afflvl = 1, state = 1
+[ATF](0)[14.987938]INFO:    plat_affinst_on() mpidr = 0x3, sec_entrypoint = 0x47d810e0, afflvl = 0, state = 1
+[ATF](0)[14.988078]INFO:    spmc: power on core 0.3
+[ATF](0)[14.988148]INFO:    spmc: power on core 0.3 successfully
+[ATF](3)[14.988230]INFO:    psci: core 0:3 ON
+[ATF](3)[14.988364]NOTICE:  tbase_init_secure_context
+[ATF](0)[14.989309]INFO:    plat_affinst_on() mpidr = 0x100, sec_entrypoint = 0x47d810e0, afflvl = 1, state = 1
+[ATF](0)[14.989452]INFO:    spmc: power on cluster 1
+[ATF](0)[14.989528]INFO:    spmc: power on cluster 1 successfully
+[ATF](0)[14.989612]INFO:    plat_affinst_on() mpidr = 0x100, sec_entrypoint = 0x47d810e0, afflvl = 0, state = 1
+[ATF](0)[14.989754]INFO:    spmc: power on core 1.0
+[ATF](0)[14.989825]INFO:    spmc: power on core 1.0 successfully
+[ATF](4)[14.989907]INFO:    psci: cluster 1 ON
+[ATF](4)[14.990053]INFO:    psci: core 1:0 ON
+[ATF](4)[14.990200]NOTICE:  tbase_init_secure_context
+[ATF](0)[14.991288]INFO:    plat_affinst_on() mpidr = 0x101, sec_entrypoint = 0x47d810e0, afflvl = 1, state = 1
+[ATF](0)[14.991430]INFO:    plat_affinst_on() mpidr = 0x101, sec_entrypoint = 0x47d810e0, afflvl = 0, state = 1
+[ATF](0)[14.991572]INFO:    spmc: power on core 1.1
+[ATF](0)[14.991643]INFO:    spmc: power on core 1.1 successfully
+[ATF](5)[14.991724]INFO:    psci: core 1:1 ON
+[ATF](5)[14.991866]NOTICE:  tbase_init_secure_context
+[ATF](0)[14.992886]INFO:    plat_affinst_on() mpidr = 0x102, sec_entrypoint = 0x47d810e0, afflvl = 1, state = 1
+[ATF](0)[14.993029]INFO:    plat_affinst_on() mpidr = 0x102, sec_entrypoint = 0x47d810e0, afflvl = 0, state = 1
+[ATF](0)[14.993171]INFO:    spmc: power on core 1.2
+[ATF](0)[14.993243]INFO:    spmc: power on core 1.2 successfully
+[ATF](6)[14.993324]INFO:    psci: core 1:2 ON
+[ATF](6)[14.993467]NOTICE:  tbase_init_secure_context
+[ATF](0)[14.994445]INFO:    plat_affinst_on() mpidr = 0x103, sec_entrypoint = 0x47d810e0, afflvl = 1, state = 1
+[ATF](0)[14.994588]INFO:    plat_affinst_on() mpidr = 0x103, sec_entrypoint = 0x47d810e0, afflvl = 0, state = 1
+[ATF](0)[14.994730]INFO:    spmc: power on core 1.3
+[ATF](0)[14.994802]INFO:    spmc: power on core 1.3 successfully
+[ATF](7)[14.994883]INFO:    psci: core 1:3 ON
+[ATF](7)[14.995025]NOTICE:  tbase_init_secure_context
+[ATF](0)[15.646761]INFO:    plat_rgu_cfg_dvfsrc: MTK_WDT_DEBUG_CTL2(0x2ff)
+[ATF](0)[15.646863]INFO:    plat_rgu_cfg_dvfsrc: MTK_WDT_LATCH_CTL(0x23e71)
+[ATF](0)[16.487593]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.487878]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.488009]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.488137]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.488266]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.489074]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.489206]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.489336]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.489467]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.490771]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.490901]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.491031]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.491162]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.491295]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.491425]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.491557]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.491688]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.491819]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.491949]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.492079]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.492209]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.492340]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.492471]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.492611]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.492741]INFO:    [TRNG] get notify from kernel!
+[ATF](1)[16.848220]INFO:    kernel time sync 0x[ATF](1)K:[3.469337]NOTICE:  tbase entry (1) 0xbf00000a 0x34d80000 0x1 0x40000
+[ATF](1)K:[3.470575]NOTICE:  tbase entry (1) 0xbf000001 0x34dc0000 0x10418 0x41800a0
+[ATF](1)K:[3.473168]NOTICE:  tbase entry (1) 0xbf000002 0x0 0x0 0x0
+[ATF](1)K:[3.473946]NOTICE:  tbase entry (1) 0xbf000002 0x0 0x0 0x0
+[ATF](2)K:[5.532850]INFO:    dvfsrc: release vcore high opp for free run!!
+[ATF](4)K:[12.893824]INFO:    ROT RET: 0x1f88fc4f, 0x1a2dfbaa, 0xcf40ddf7, 0x4a94cba
+[ATF](4)K:[12.893935]INFO:    ROT RET: 0x68f5b464, 0xecf4f79e, 0xb7e70f3a, 0x88064441
+[ATF](4)K:[12.894041]INFO:    ROT RET: 0x1, 0x0, 0x1fbd0, 0x31645
+[ATF](4)K:[12.894124]INFO:    ROT RET: 0xbed3b1b5, 0x2844616b, 0xc6711984, 0xf5c59c4
+[ATF](4)K:[12.894229]INFO:    ROT RET: 0xe138ba59, 0x1057d48d, 0xc9fa6336, 0x8ca747db
+[ATF](4)K:[12.894335]INFO:    ROT RET: 0x134b2f9, 0x134158e, 0x0, 0x0
+[ATF](4)K:[26.878821]INFO:    TZ_TAGS: TEE_PARAMETER_BASE =0x100000
+[ATF](3)K:[28.753386]INFO:    TZ_TAGS: TEE_PARAMETER_BASE =0x100000
+[ATF](6)K:[30.508201]NOTICE:  amms_cmd_init_handler
+[ATF](6)K:[30.508268]NOTICE:  cmd = 1, seq_id = 1 version=1
+[ATF](6)K:[30.508345]NOTICE:  reply=0x10000 0x10101
+[ATF](7)K:[30.508418]NOTICE:  amms_cmd_DRDI_free
+[ATF](7)K:[30.508478]NOTICE:  cmd = 2, seq_id = 2
+[ATF](7)K:[30.508539]NOTICE:  reply=0x20000 0x0
+[ATF](0)K:[30.508610]NOTICE:  amms_cmd_MPU_handler
+[ATF](0)K:[30.508670]NOTICE:  cmd = 3, seq_id = 3,per=1 mpu_id=0 start=0x4a00000 length=0x45a00
+[ATF](2)K:[30.511255]NOTICE:  amms_cmd_MPU_handler
+[ATF](2)K:[30.511317]NOTICE:  cmd = 3, seq_id = 4,per=2 mpu_id=0 start=0x4a00000 length=0x45a00
+[ATF](3)K:[30.511437]NOTICE:  amms_cmd_STATIC_FREE_handler
+[ATF](3)K:[30.511505]NOTICE:  cmd = 4, seq_id = 5 start=1286900 length=eae20
+[ATF](3)K:[30.511594]NOTICE:  amms_cmd_STATIC_FREE_handler:88 md_base=0x8e000000 free address=8f290000 free length=e0000 low = 0x1290000 high=0x1370000
+[ATF](5)K:[30.511834]ERROR:   mediatek_plat_sip_handler: unknown 64B kernel SMC(0xc2000258)
+[ATF](5)K:[30.511991]ERROR:   mediatek_plat_sip_handler: unknown 64B kernel SMC(0xc2000252)
+[ATF](5)K:[30.513898]NOTICE:  sip_kernel_amms_get_free_addr:386 free address = 8f290000
+[ATF](5)K:[30.514006]NOTICE:  sip_kernel_amms_get_free_length:392 length = e0000
+[ATF](6)K:[2882.028021]NOTICE:  amms_cmd_init_handler
+[ATF](6)K:[2882.028141]NOTICE:  cmd = 1, seq_id = 1 version=1
+[ATF](6)K:[2882.028274]NOTICE:  reply=0x10000 0x10101
+[ATF](7)K:[2882.028403]NOTICE:  amms_cmd_DRDI_free
+[ATF](7)K:[2882.028519]NOTICE:  cmd = 2, seq_id = 2
+[ATF](7)K:[2882.028623]NOTICE:  reply=0x200ff 0x0

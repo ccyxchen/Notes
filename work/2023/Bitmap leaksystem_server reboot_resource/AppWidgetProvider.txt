@@ -1,0 +1,258 @@
+class RecorderWidgetProvider: AppWidgetProvider() {
+    companion object {
+        /**
+         * 小部件需要的数据：录音状态、录音时间、桌面主题、桌面是否有录音机小部件
+         */
+        const val WIDGET_STATE_KEY = "widget_state_key"
+        const val WIDGET_TIME_KEY = "widget_time_key"
+        const val WIDGET_THEME_KEY = "widget_theme_key"
+        const val WIDGET_ENABLED_KEY = "widget_enabled_key"
+
+        /**
+         * 小部件的点击Action
+         */
+        private const val ACTION = "os.recorder.action.WIDGET_CLICK"
+
+        /**
+         * 小部件刷新主题Action
+         */
+        const val UPDATE_THEME_ACTION = "os.recorder.action.UPDATE_THEME"
+
+        /**
+         * 小部件设置enabled
+         */
+        const val SET_ENABLED_ACTION = "os.recorder.action.SET_ENABLED"
+
+        /**
+         * 小部件的主题
+         */
+        const val THEME_DEFAULT = 0
+        const val THEME_FUTURE_TECHNOLOGY = 1
+        const val THEME_GEOMETRIC_FASHION = 2
+        const val THEME_CYBERPUNK = 3
+        const val THEME_LIGHT_LUXURY = 4
+        const val THEME_NATURE = 5
+        const val THEME_FREE_FIRE = 6
+
+        val IDLE_STATE = RecordingService.State.IDLE_STATE.ordinal
+        val RECORDING_STATE = RecordingService.State.RECORDING_STATE.ordinal
+        private val STOPPING_STATE = RecordingService.State.STOPPING_STATE.ordinal
+
+        @JvmField var enabled = false
+    }
+
+    private val widgetThemeObserver = WidgetThemeObserver()
+    private val textColorObserver = LauncherTextColorObserver()
+    private val mainHandler = Handler(Looper.getMainLooper())
+
+    override fun onEnabled(context: Context?) {
+        super.onEnabled(context)
+        try {
+            setEnabled(true)
+            initToIdle()
+            context?.sendBroadcast(Intent(RecordingService.UPDATE_WIDGETS_TIME_ACTION))
+            widgetThemeObserver.registerObserver()
+            widgetThemeObserver.onChange(true)
+            textColorObserver.registerObserver()
+        } catch (e: Exception) {
+            Log.d(BaseConstant.WIDGET_TAG, "onEnabled: $e")
+        }
+    }
+
+    override fun onDisabled(context: Context?) {
+        super.onDisabled(context)
+        try {
+            setEnabled(false)
+            widgetThemeObserver.unregisterObserver()
+            textColorObserver.unregisterObserver()
+            initToIdle()
+            releaseBitmapPool()
+        } catch (e: Exception) {
+            Log.d(BaseConstant.WIDGET_TAG, "onDisabled: $e")
+        }
+    }
+
+    override fun onReceive(context: Context, intent: Intent) {
+        Log.w(BaseConstant.WIDGET_TAG, "onReceive: intent=$intent")
+        if (AppWidgetManager.ACTION_APPWIDGET_UPDATE == intent.action
+            || Intent.ACTION_LOCALE_CHANGED == intent.action
+        ) {
+            val appWidgetManager = AppWidgetManager.getInstance(context.applicationContext)
+            val appWidgetIds = appWidgetManager.getAppWidgetIds(ComponentName(context.applicationContext, javaClass))
+            if (appWidgetIds != null && appWidgetIds.isNotEmpty()) {
+                onUpdate(context, appWidgetManager, appWidgetIds)
+            }
+            return
+        }
+        if (ACTION == intent.action) {
+            onClick(context)
+            return
+        }
+        if (UPDATE_THEME_ACTION == intent.action) {
+            widgetThemeObserver.onChange(true)
+            return
+        }
+        if (SET_ENABLED_ACTION == intent.action) {
+            setEnabled(hasWidgets(context))
+            return
+        }
+        super.onReceive(context, intent)
+    }
+
+    override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
+        super.onUpdate(context, appWidgetManager, appWidgetIds)
+        val widgetView = RemoteViews(context.packageName, R.layout.recorder_widget_layout)
+        for (widgetId in appWidgetIds) {
+            updateWidgetView(context.applicationContext, widgetView, appWidgetManager, widgetId)
+        }
+    }
+
+    override fun onAppWidgetOptionsChanged(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int, newOptions: Bundle) {
+        super.onAppWidgetOptionsChanged(context, appWidgetManager, appWidgetId, newOptions)
+        Log.w(BaseConstant.WIDGET_TAG, "onAppWidgetOptionsChanged: id=$appWidgetId")
+        val widgetView = RemoteViews(context.packageName, R.layout.recorder_widget_layout)
+        updateWidgetView(context.applicationContext, widgetView, appWidgetManager, appWidgetId)
+    }
+
+    private fun updateWidgetView(context: Context, widgetView: RemoteViews, manager: AppWidgetManager, appWidgetId: Int) {
+        val appWidgetOptions = manager.getAppWidgetOptions(appWidgetId)
+        val appWidth = appWidgetOptions.getInt(AppWidgetManager.OPTION_APPWIDGET_MAX_WIDTH)
+        val appHeight = appWidgetOptions.getInt(AppWidgetManager.OPTION_APPWIDGET_MAX_HEIGHT)
+        val density = context.resources.displayMetrics.density
+        Log.d(BaseConstant.WIDGET_TAG, "appWidth=$appWidth  appHeight=$appHeight  density=$density")
+        val widgetInfo = getWidgetInfo(appWidth, appHeight, density)
+        widgetInfo ?: return
+
+        val state = SpUtil.getValue(WIDGET_STATE_KEY, IDLE_STATE)
+        Log.d(BaseConstant.WIDGET_TAG, "state=$state")
+
+        val intent = Intent(ACTION).apply {
+            component = ComponentName(context, RecorderWidgetProvider::class.java)
+        }
+        val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, BaseConstant.PENDING_FLAG_DEFAULT)
+        widgetView.setOnClickPendingIntent(R.id.parent_layout, pendingIntent)
+
+        val theme = getTheme(SpUtil.getValue(WIDGET_THEME_KEY, ""))
+        widgetView.setTextViewTextSize(R.id.title, COMPLEX_UNIT_PX, getWidgetTextSize(widgetInfo.isWidthCell5, context, state != RECORDING_STATE, widgetInfo.isLargeScreen()))
+        val titlePadding = getTitlePadding(context)
+        widgetView.setViewPadding(R.id.title, titlePadding, 0, titlePadding, 0)
+        val normalBg = getNormalBg(theme, state, widgetInfo.launcherType)
+        val titleTextColor = context.getColor(getTitleColorId(state, theme))
+        widgetView.setTextColor(R.id.title, titleTextColor)
+        updateBottomTitle(widgetView, LauncherTextColorObserver.getLauncherTextColor(context))
+
+        val iconPadding = setIconPadding(context, widgetInfo.isLargeScreen(), theme)
+        if (Utils.isRtl()) {
+            widgetView.setViewPadding(R.id.icon, 0, 0, iconPadding, 0)
+        } else {
+            widgetView.setViewPadding(R.id.icon, iconPadding, 0, 0, 0)
+        }
+
+        when (state) {
+            IDLE_STATE -> {
+                widgetView.setViewVisibility(R.id.title, View.VISIBLE)
+                widgetView.setViewVisibility(R.id.text_icon, View.GONE)
+                widgetView.setTextViewText(R.id.title, context.resources.getString(R.string.start_recording))
+                widgetView.setImageViewIcon(R.id.bg_view, getBgBitmap(widgetInfo, op(widgetInfo.isLargeScreen(), startBgArray[theme], normalBg), theme).toIcon())
+                widgetView.setImageViewResource(R.id.icon, op(widgetInfo.isWidthCell5, startSmallIconArray[theme], startIconArray[theme]))
+            }
+            RECORDING_STATE -> {
+                val timeString = getCurrentTimeStr(context, SpUtil.getValue(WIDGET_TIME_KEY, 0L))
+                if (Pattern.matches("[0-9:]+", timeString)) {
+                    widgetView.setViewVisibility(R.id.title, View.GONE)
+                    widgetView.setViewVisibility(R.id.text_icon, View.VISIBLE)
+                    widgetView.setImageViewIcon(R.id.text_icon, getTextBitmap(context, timeString, getRecordingTimeSize(widgetInfo.isWidthCell5, context, widgetInfo.isLargeScreen()), titleTextColor).toIcon())
+                } else {
+                    widgetView.setViewVisibility(R.id.title, View.VISIBLE)
+                    widgetView.setViewVisibility(R.id.text_icon, View.GONE)
+                    widgetView.setTextViewText(R.id.title, timeString)
+                }
+                widgetView.setImageViewIcon(R.id.bg_view, getBgBitmap(widgetInfo, op(widgetInfo.isLargeScreen(), recordingBgArray[theme], normalBg), theme).toIcon())
+                widgetView.setImageViewResource(R.id.icon, op(widgetInfo.isWidthCell5, recordingSmallIconArray[theme], recordingIconArray[theme]))
+            }
+            STOPPING_STATE -> {
+                widgetView.setViewVisibility(R.id.title, View.VISIBLE)
+                widgetView.setViewVisibility(R.id.text_icon, View.GONE)
+                widgetView.setTextViewText(R.id.title, context.resources.getString(R.string.saved))
+                widgetView.setImageViewBitmap(R.id.bg_view, getBgBitmap(widgetInfo, op(widgetInfo.isLargeScreen(), endBgArray[theme], normalBg), theme))
+                widgetView.setImageViewResource(R.id.icon, op(widgetInfo.isWidthCell5, endSmallIconArray[theme], endIconArray[theme]))
+                resetToIdle()
+            }
+        }
+
+        manager.updateAppWidget(appWidgetId, widgetView)
+    }
+
+    private fun setIconPadding(context: Context, isLargeScreen: Boolean, theme: Int): Int {
+        return context.getDimension(op(isLargeScreen, iconStartPaddingArray[theme], iconStartPaddingSmallArray[theme])).toInt()
+    }
+
+    private fun resetToIdle() {
+        mainHandler.postDelayed({
+            initToIdle()
+            refreshAllWidgets()
+        }, BaseConstant.TWO_SECONDS.toLong())
+    }
+
+    private fun initToIdle() {
+        val state = SpUtil.getValue(WIDGET_STATE_KEY, IDLE_STATE)
+        if (state == STOPPING_STATE) {
+            SpUtil.setValue(WIDGET_STATE_KEY, IDLE_STATE)
+        }
+    }
+
+    private fun onClick(context: Context) {
+        if (ClickUtil.isFastClick()) {
+            return
+        }
+        Log.w(BaseConstant.WIDGET_TAG, "onClick: context=$context")
+        if (hasMustPermissions(context)) {
+            when (SpUtil.getValue(WIDGET_STATE_KEY, IDLE_STATE)) {
+                IDLE_STATE -> startRecord(context)
+                RECORDING_STATE -> {
+                    if (instance.isBound()) {
+                        instance.stopRecord(true)
+                    } else {
+                        startRecord(context)
+                    }
+                }
+                else -> {
+                    if (!instance.isBound()) {
+                        startRecord(context)
+                    }
+                }
+            }
+        } else {
+            Log.w(BaseConstant.WIDGET_TAG, "Widget no permission")
+            RecorderActivity.start()
+        }
+    }
+
+    private fun startRecord(context: Context) {
+        instance.startRecord(getRecordMimeType(context), BaseConstant.INVALID_SIZE, isAppWidget = true)
+    }
+
+    private fun setEnabled(isEnabled: Boolean) {
+        Log.d(BaseConstant.WIDGET_TAG, "setEnabled: $isEnabled")
+        enabled = isEnabled
+        SpUtil.setValue(WIDGET_ENABLED_KEY, enabled)
+    }
+
+    private fun hasWidgets(context: Context): Boolean {
+        val appWidgetManager = AppWidgetManager.getInstance(context.applicationContext)
+        val appWidgetIds = appWidgetManager.getAppWidgetIds(ComponentName(context.applicationContext, javaClass))
+        return appWidgetIds != null && appWidgetIds.isNotEmpty()
+    }
+
+    private fun updateBottomTitle(widgetView: RemoteViews, color: Int) {
+        if (color == Color.WHITE) {
+            widgetView.setViewVisibility(R.id.bottom_title_white, View.VISIBLE)
+            widgetView.setViewVisibility(R.id.bottom_title_black, View.GONE)
+            widgetView.setTextColor(R.id.bottom_title_white, color)
+        } else {
+            widgetView.setViewVisibility(R.id.bottom_title_white, View.GONE)
+            widgetView.setViewVisibility(R.id.bottom_title_black, View.VISIBLE)
+            widgetView.setTextColor(R.id.bottom_title_black, color)
+        }
+    }
+}

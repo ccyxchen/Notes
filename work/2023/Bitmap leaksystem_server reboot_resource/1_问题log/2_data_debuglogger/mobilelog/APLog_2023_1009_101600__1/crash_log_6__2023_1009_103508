@@ -1,0 +1,79 @@
+----- timezone:Africa/Brazzaville
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: FATAL EXCEPTION: service worker handler
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: Process: com.transsion.soundrecorder, PID: 14089
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: java.lang.IllegalArgumentException: RemoteViews for widget update exceeds maximum bitmap memory usage (used: 7135232, max: 6963840)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3025)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at android.os.Parcel.createException(Parcel.java:3005)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:2988)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:2930)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.android.internal.appwidget.IAppWidgetService$Stub$Proxy.updateAppWidgetIds(IAppWidgetService.java:860)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at android.appwidget.AppWidgetManager.updateAppWidget(AppWidgetManager.java:540)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at android.appwidget.AppWidgetManager.updateAppWidget(AppWidgetManager.java:613)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.sprd.soundrecorder.widget.RecorderWidgetProvider.m(RecorderWidgetProvider.kt:53)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.sprd.soundrecorder.widget.RecorderWidgetProvider.onUpdate(RecorderWidgetProvider.kt:4)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.sprd.soundrecorder.widget.RecorderWidgetProvider.onReceive(RecorderWidgetProvider.kt:14)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.sprd.soundrecorder.RecorderApplication.d(RecorderApplication.java:3)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.sprd.soundrecorder.widget.h.y(WidgetUtil.kt:4)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.sprd.soundrecorder.service.RecordingService.W(RecordingService.java:3)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.sprd.soundrecorder.service.RecordingService.s(RecordingService.java:1)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.sprd.soundrecorder.service.RecordingService$b.handleMessage(RecordingService.java:12)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:204)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:291)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: Caused by: android.os.RemoteException: Remote stack trace:
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.android.server.appwidget.AppWidgetServiceImpl.updateAppWidgetInstanceLocked(AppWidgetServiceImpl.java:1890)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.android.server.appwidget.AppWidgetServiceImpl.updateAppWidgetIds(AppWidgetServiceImpl.java:1709)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.android.server.appwidget.AppWidgetServiceImpl.updateAppWidgetIds(AppWidgetServiceImpl.java:1452)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at com.android.internal.appwidget.IAppWidgetService$Stub.onTransact(IAppWidgetService.java:417)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 	at android.os.Binder.execTransactInternal(Binder.java:1281)
+10-09 10:32:07.391578 14089 14675 E AndroidRuntime: 
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: *** FATAL EXCEPTION IN SYSTEM PROCESS: binder:1375_1A
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:976)
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: 	at com.android.server.pm.AbstractStatsBase.maybeWriteAsync(AbstractStatsBase.java:85)
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: 	at com.android.server.pm.dex.PackageDynamicCodeLoading.maybeWriteAsync(PackageDynamicCodeLoading.java:244)
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: 	at com.android.server.pm.dex.DynamicCodeLogger.recordDex(DynamicCodeLogger.java:227)
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: 	at com.android.server.pm.dex.DexManager.notifyDexLoadInternal(DexManager.java:269)
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: 	at com.android.server.pm.dex.DexManager.notifyDexLoad(DexManager.java:198)
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: 	at com.android.server.pm.PackageManagerService$IPackageManagerImpl.notifyDexLoad(PackageManagerService.java:5519)
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: 	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:3301)
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: 	at com.android.server.pm.PackageManagerService$IPackageManagerImpl.onTransact(PackageManagerService.java:6231)
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: 	at android.os.Binder.execTransactInternal(Binder.java:1286)
+10-09 10:32:41.016397  1375  7239 E AndroidRuntime: 	at android.os.Binder.execTransact(Binder.java:1245)
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: OutOfMemoryError IN SYSTEM PROCESS: Already dump hprof!
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: java.lang.OutOfMemoryError: pthread_create (1040KB stack) failed: Try again
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: 	at java.lang.Thread.nativeCreate(Native Method)
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: 	at java.lang.Thread.start(Thread.java:976)
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: 	at com.android.server.pm.AbstractStatsBase.maybeWriteAsync(AbstractStatsBase.java:85)
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: 	at com.android.server.pm.dex.PackageDynamicCodeLoading.maybeWriteAsync(PackageDynamicCodeLoading.java:244)
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: 	at com.android.server.pm.dex.DynamicCodeLogger.recordDex(DynamicCodeLogger.java:227)
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: 	at com.android.server.pm.dex.DexManager.notifyDexLoadInternal(DexManager.java:269)
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: 	at com.android.server.pm.dex.DexManager.notifyDexLoad(DexManager.java:198)
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: 	at com.android.server.pm.PackageManagerService$IPackageManagerImpl.notifyDexLoad(PackageManagerService.java:5519)
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: 	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:3301)
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: 	at com.android.server.pm.PackageManagerService$IPackageManagerImpl.onTransact(PackageManagerService.java:6231)
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: 	at android.os.Binder.execTransactInternal(Binder.java:1286)
+10-09 10:33:09.629263  1375  7239 E AndroidRuntime: 	at android.os.Binder.execTransact(Binder.java:1245)
+10-09 10:33:28.358245 11529 11529 E AndroidRuntime: FATAL EXCEPTION: main
+10-09 10:33:28.358245 11529 11529 E AndroidRuntime: Process: com.google.android.apps.messaging, PID: 11529
+10-09 10:33:28.358245 11529 11529 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-09 10:33:28.360526 14887 14887 E AndroidRuntime: FATAL EXCEPTION: main
+10-09 10:33:28.360526 14887 14887 E AndroidRuntime: Process: com.transsion.soundrecorder, PID: 14887
+10-09 10:33:28.360526 14887 14887 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-09 10:33:28.370175  3871  3871 E AndroidRuntime: FATAL EXCEPTION: main
+10-09 10:33:28.370175  3871  3871 E AndroidRuntime: Process: com.android.phone, PID: 3871
+10-09 10:33:28.370175  3871  3871 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-09 10:33:28.385201  3994  9547 E AndroidRuntime: FATAL EXCEPTION: lowpool[10]
+10-09 10:33:28.385201  3994  9547 E AndroidRuntime: Process: com.google.android.gms.persistent, PID: 3994
+10-09 10:33:28.385201  3994  9547 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-09 10:33:28.397433  3994  3994 E AndroidRuntime: FATAL EXCEPTION: main
+10-09 10:33:28.397433  3994  3994 E AndroidRuntime: Process: com.google.android.gms.persistent, PID: 3994
+10-09 10:33:28.397433  3994  3994 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-09 10:33:28.402873 15145 15145 E AndroidRuntime: FATAL EXCEPTION: main
+10-09 10:33:28.402873 15145 15145 E AndroidRuntime: Process: com.google.android.gms.unstable, PID: 15145
+10-09 10:33:28.402873 15145 15145 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-09 10:33:28.418908  3994 15400 E AndroidRuntime: FATAL EXCEPTION: [com.google.android.gms.chimera.container.intentoperation.PersistentIntentOperationChimeraService-Executor] idle
+10-09 10:33:28.418908  3994 15400 E AndroidRuntime: Process: com.google.android.gms.persistent, PID: 3994
+10-09 10:33:28.418908  3994 15400 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause

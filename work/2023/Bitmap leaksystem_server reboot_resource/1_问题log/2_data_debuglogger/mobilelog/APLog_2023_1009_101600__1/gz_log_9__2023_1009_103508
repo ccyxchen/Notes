@@ -1,0 +1,283 @@
+----- timezone:Africa/Brazzaville
+====> GZ (0)[    0.201349][memlog_static_init] register pa0x7fa00000, size 0x41000
+====> GZ (0)[    0.202226]INIT: cpu 0, calling hook 0x3802230c (hyp_mmu_init) at level 0x50005, flags 0x1
+====> GZ (0)[    0.203379]hyp_mmu_init:1015: skip init global pgd
+====> GZ (0)[    0.204100]hyp_mmu_init:1028: init done
+====> GZ (0)[    0.204703]INIT: cpu 0, calling hook 0x3803a80c (rkp_init) at level 0x50005, flags 0x1
+====> GZ (0)[    0.205813][GZ_EXPORT] 996: no RKP, rkp is not enable
+====> GZ (0)[    0.206567]INIT: cpu 0, calling hook 0x3803ea34 (test_kta_api_init) at level 0x50005, flags 0x1
+[KTEE UT]KTA mem api:
+====> GZ (0)[    0.208020][TEST KTA API] 29: KTA_Mem_AllocMem:
+====> GZ (0)[    0.208712][TEST KTA API] 37: Get mem_handle = 1
+====> GZ (0)[    0.209409][TEST KTA API] 38: Memory addr= 0x38189748
+====> GZ (0)[    0.210163][TEST KTA API] 39: Stored value = 66   // should be 66
+====> GZ (0)[    0.211046][TEST KTA API] 41: KTA_Mem_ReferenceMem: should return pointer to the memory of the input handle
+====> GZ (0)[    0.212384][TEST KTA API] 46: Memory addr = 0x38189748
+====> GZ (0)[    0.213146][TEST KTA API] 47: Stored value = 33   // should be 33
+====> GZ (0)[    0.214029][TEST KTA API] 49: KTA_Mem_UnreferenceMem: should return reference count of the input memory handle
+====> GZ (0)[    0.215397][TEST KTA API] 52: Ref count of handle = 1   // should be 1
+[KTEE UT]KTA mem api: PASSED
+[KTEE UT]======== UT report =======
+[KTEE UT]total test cases: 6
+[KTEE UT]FAILED test cases: 0
+[KTEE UT]===========> UT SUCCESSED
+====> GZ (0)[    0.218100]INIT: cpu 0, calling hook 0x3803ed9c (test_mtee_api_init) at level 0x50005, flags 0x1
+====> GZ (0)[    0.219317][KTEE SYS UT] 130: UT start
+====> GZ (0)[    0.219909][KTEE SYS UT] 57: dummy value: 10, name: QQQ
+====> GZ (0)[    0.220684][KTEE SYS UT] 58: dummy2 value: 20, name: OAQ
+[KTEE UT]ktee handle:
+====> GZ (0)[    0.221718][KTEE SYS UT] 72: handle type: 0x3805b3a0
+====> GZ (0)[    0.222462][KTEE SYS UT] 76: handle value: 0x2
+====> GZ (0)[    0.223140][KTEE SYS UT] 88: new dummy value: 87
+====> GZ (0)[    0.223840][KTEE SYS UT] 89: new dummy name: QoQ
+[KTEE UT]ktee handle: PASSED
+[KTEE UT]ktee session:
+====> GZ (0)[    0.225121][session] 102: [dummp/service] se: <null>
+====> GZ (0)[    0.225865][KTEE SYS UT] 107: session value: 0x3
+====> GZ (0)[    0.226567][KTEE SYS UT] 32: call free_callback 1
+[KTEE UT]ktee session: PASSED
+[KTEE UT]======== UT report =======
+[KTEE UT]total test cases: 14
+[KTEE UT]FAILED test cases: 0
+[KTEE UT]===========> UT SUCCESSED
+====> GZ (0)[    0.229063][KTEE SYS UT] 137: unit test end
+initializing mp
+initializing threads
+initializing timers
+creating bootstrap completion thread
+top of bootstrap2()
+creating bootstrap completion thread for cpu 1
+creating bootstrap completion thread for cpu 2
+creating bootstrap completion thread for cpu 3
+creating bootstrap completion thread for cpu 4
+creating bootstrap completion thread for cpu 5
+creating bootstrap completion thread for cpu 6
+creating bootstrap completion thread for cpu 7
+initializing platform
+====> GZ (0)[    0.234891]INIT: cpu 0, calling hook 0x3802bbd0 (libsm_cpu) at level 0x8fffe, flags 0x23
+====> GZ (0)[    0.236075]INIT: cpu 0, calling hook 0x3800f168 (percpu) at level 0x8ffff, flags 0x1
+====> GZ (0)[    0.237136]INIT: cpu 0, calling hook 0x3802a91c (libsm) at level 0x8ffff, flags 0x1
+initializing target
+====> GZ (0)[    0.238438]INIT: cpu 0, calling hook 0x380031b0 (platform_timer) at level 0x90000, flags 0x1
+====> GZ (0)[    0.239617]mtk_systimer_init:
+====> GZ (0)[    0.240111]INIT: cpu 0, calling hook 0x380101e0 (gz_apu_power_init) at level 0x90004, flags 0x1
+====> GZ (0)[    0.241313][GZ_APU_POWER] error 403: [ERROR] gz_apu_power_init: not support secure apu power 
+calling apps_init()
+====> GZ (0)[    0.242724]INIT: cpu 0, calling hook 0x3802feec (uctx) at level 0xafffe, flags 0x1
+====> GZ (0)[    0.243791]INIT: cpu 0, calling hook 0x3803798c (tipc_init) at level 0xafffe, flags 0x1
+====> GZ (0)[    0.244920]INIT: cpu 0, calling hook 0x3802c230 (libtrusty) at level 0xaffff, flags 0x1
+====> GZ (0)[    0.246031]Version of GZ: GZ_hypervisor: 3.2.0.050.S0MP1, Built: 17:11:31 Mar 23 2023
+trusty_app 0 uuid: 0xcab9de5f 0x61aa 0x40a8 0xb4aa 0xdad5cbc97732
+trusty_app 0 uuid: 0xd2c50855 0x6f2b 0x57ee 0x2db6 0x7c49944f30a0
+trusty_app 0 uuid: 0xfee67f9f 0xe1b1 0x4e3d 0x8455 0x47f601afef
+trusty_app 0 uuid: 0x27683bcd 0x75cf 0x458d 0x88f8 0xc1f9d77994cd
+trusty_app 0 uuid: 0xcea8706d 0x6cb4 0x49f3 0xb994 0x29e0e478bd29
+trusty_app 0 uuid: 0x1c1c3151 0xf04f 0x4012 0xbfd7 0x59ab76bc7912
+trusty_app 0 uuid: 0x17ea64b5 0x6f72 0x484a 0xa22 0x6310da836828
+====> GZ (0)[    0.252752]INIT: cpu 0, calling hook 0x3801ae7c (user_mm_syscall) at level 0xb0000, flags 0x1
+====> GZ (0)[    0.253936]INIT: cpu 0, calling hook 0x38029308 (memlog) at level 0xb0000, flags 0x1
+====> GZ (0)[    0.255025]INIT: cpu 0, calling hook 0x3803c200 (mtcrypto_service) at level 0xb0000, flags 0x1
+====> GZ (0)[    0.256238]INIT: cpu 0, calling hook 0x3803cb54 (trusty_mt_smcall) at level 0xb0000, flags 0x1
+Initializing MTK SMC handler
+====> GZ (0)[    0.257773]===============================================================================
+====> GZ (0)[    0.258898] Linux table root va=0x38191000, pa=0x27fd91000 num_entries=64
+====> GZ (0)[    0.259867]===============================================================================
+====> GZ (0)[    0.261021]Addr 0000000000~003fffffff PA 0000000000~003fffffff 1GB [000:000]        attr(0x5)  rw(3)  sh(2)  af(1)  xn(1) pxn(0) type(0)
+====> GZ (0)[    0.262666]Addr 0040000000~013fffffff PA 0040000000~013fffffff 1GB [001:004]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(0)
+====> GZ (0)[    0.264316]Addr 0140000000~0fffffffff PA ----------~---------- 1GB [005:063]
+====> GZ (0)[    0.265316]===============================================================================
+====> GZ (0)[    0.266470]INIT: cpu 0, calling hook 0x3802d54c (libtrusty_apps) at level 0xb0001, flags 0x1
+====> GZ (0)[    0.267645]INIT: cpu 0, calling hook 0x3801f62c (disable_trace_init_after_bootup) at level 0xffffffff, flags 0x1
+====> GZ (0)[    0.269075]appid ====> 1
+====> GZ (0)[    0.269488]app:is_vmm=0, vmm_id=0x1
+trusty_app 0: code: start 0x00008000 end 0x00027260
+trusty_app 0: data: start 0x00028000 end 0x0002b000
+trusty_app 0: bss:                end 0x0002a568
+trusty_app 0: brk:  start 0x0002b000 end 0x0002f000
+trusty_app 0: entry 0x0000fdc4
+====> GZ (0)[    0.272723][mtee-server] 174: Init services!!!
+====> GZ (0)[    0.273388]rebuild_hset_all:261: Rebuilding all handles set
+====> GZ (0)[    0.274205][Echo-server] 129: <com.mediatek.geniezone.srv.echo> service init
+====> GZ (0)[    0.275212]===============================================================================
+====> GZ (0)[    0.276348] APP 1 table root va=0x381cd000, pa=0x27fdcd000 num_entries=1
+====> GZ (0)[    0.277306]===============================================================================
+====> GZ (0)[    0.278459]Addr 0000000000~003fffffff table(PA=027fdd0000)     1GB [000:000]
+====> GZ (0)[    0.279460]Addr 0000000000~00001fffff table(PA=027fdd4000)     2MB [000:000]
+====> GZ (0)[    0.280461]Addr 0000000000~0000007fff PA ----------~---------- 4KB [000:007]
+====> GZ (0)[    0.281464]Addr 0000008000~0000027fff PA 027fc61000~027fc80fff 4KB [008:039]        attr(0xf)  rw(1)  sh(3)  af(1)  xn(0) pxn(0) type(1)
+====> GZ (0)[    0.283110]Addr 0000028000~000002afff PA 027fc81000~027fc83fff 4KB [040:042]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(1)
+====> GZ (0)[    0.284758]Addr 000002b000~000002efff PA 027fdd5000~027fdd8fff 4KB [043:046]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(1)
+====> GZ (0)[    0.286415]Addr 000002f000~00001fffff PA ----------~---------- 4KB [047:511]
+====> GZ (0)[    0.287408]Addr 0000200000~0007dfffff PA ----------~---------- 2MB [001:062]
+====> GZ (0)[    0.288409]Addr 0007e00000~0007ffffff table(PA=027fdd1000)     2MB [063:063]
+====> GZ (0)[    0.289421]Addr 0007e00000~0007ffdfff PA ----------~---------- 4KB [000:509]
+====> GZ (0)[    0.290412]Addr 0007ffe000~0007ffffff PA 027fdce000~027fdcffff 4KB [510:511]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(1)
+====> GZ (0)[    0.292069]Addr 0008000000~003fffffff PA ----------~---------- 2MB [064:511]
+====> GZ (0)[    0.293061]===============================================================================
+====> GZ (0)[    0.294231]appid ====> 2
+====> GZ (0)[    0.294655]app:is_vmm=0, vmm_id=0x2
+trusty_app 1: code: start 0x00008000 end 0x0001c90c
+trusty_app 1: data: start 0x0001d000 end 0x0001f000
+trusty_app 1: bss:                end 0x0001e938
+trusty_app 1: brk:  start 0x0001f000 end 0x0002f000
+trusty_app 1: entry 0x0000da20
+====> GZ (0)[    0.297869]constructor: test_omp_init 
+====> GZ (0)[    0.298452][mtee_srv] 544: SEMAPHORE CREATE: init val = 0
+====> GZ (0)[    0.299249][mtee_srv] 544: SEMAPHORE CREATE: init val = 0
+====> GZ (0)[    0.300057][mtee-server] 174: Init services!!!
+====> GZ (0)[    0.300725]rebuild_hset_all:261: Rebuilding all handles set
+====> GZ (0)[    0.301546][GZ TEST] 92: [gz_test_init] <com.mediatek.geniezone.test> service init
+====> GZ (0)[    0.302611][GZ TEST] 570: try a malloc 4096
+====> GZ (0)[    0.303258][GZ TEST] 576: try b malloc 4096
+====> GZ (0)[    0.303902][GZ TEST] 583: try one core malloc 16384
+====> GZ (0)[    0.304635][GZ TEST] 591: try multi core malloc 16384
+====> GZ (0)[    0.305391]===============================================================================
+====> GZ (0)[    0.306536] APP 2 table root va=0x381db000, pa=0x27fddb000 num_entries=1
+====> GZ (0)[    0.307494]===============================================================================
+====> GZ (0)[    0.308646]Addr 0000000000~003fffffff table(PA=027fdde000)     1GB [000:000]
+====> GZ (0)[    0.309648]Addr 0000000000~00001fffff table(PA=027fde2000)     2MB [000:000]
+====> GZ (0)[    0.310649]Addr 0000000000~0000007fff PA ----------~---------- 4KB [000:007]
+====> GZ (0)[    0.311652]Addr 0000008000~000001cfff PA 027fc85000~027fc99fff 4KB [008:028]        attr(0xf)  rw(1)  sh(3)  af(1)  xn(0) pxn(0) type(2)
+====> GZ (0)[    0.313299]Addr 000001d000~000001efff PA 027fc9a000~027fc9bfff 4KB [029:030]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(2)
+====> GZ (0)[    0.314947]Addr 000001f000~000002efff PA 027fde3000~027fdf2fff 4KB [031:046]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(2)
+====> GZ (0)[    0.316603]Addr 000002f000~00001fffff PA ----------~---------- 4KB [047:511]
+====> GZ (0)[    0.317597]Addr 0000200000~0007dfffff PA ----------~---------- 2MB [001:062]
+====> GZ (0)[    0.318597]Addr 0007e00000~0007ffffff table(PA=027fddf000)     2MB [063:063]
+====> GZ (0)[    0.319609]Addr 0007e00000~0007ffdfff PA ----------~---------- 4KB [000:509]
+====> GZ (0)[    0.320600]Addr 0007ffe000~0007ffffff PA 027fddc000~027fdddfff 4KB [510:511]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(2)
+====> GZ (0)[    0.322257]Addr 0008000000~003fffffff PA ----------~---------- 2MB [064:511]
+====> GZ (0)[    0.323249]===============================================================================
+====> GZ (0)[    0.324418]appid ====> 3
+====> GZ (0)[    0.324843]app:is_vmm=0, vmm_id=0x3
+trusty_app 2: code: start 0x00008000 end 0x0000e830
+trusty_app 2: data: start 0x0000f000 end 0x00011000
+trusty_app 2: bss:                end 0x00010a3c
+trusty_app 2: brk:  start 0x00011000 end 0x00015000
+trusty_app 2: entry 0x000094f4
+====> GZ (0)[    0.328041][[TIPC UT]] 343: Init unittest services!!!
+====> GZ (0)[    0.328781]rebuild_hset_all:261: Rebuilding all handles set
+====> GZ (0)[    0.329633]===============================================================================
+====> GZ (0)[    0.330757] APP 3 table root va=0x381f5000, pa=0x27fdf5000 num_entries=1
+====> GZ (0)[    0.331716]===============================================================================
+====> GZ (0)[    0.332868]Addr 0000000000~003fffffff table(PA=027fdf8000)     1GB [000:000]
+====> GZ (0)[    0.333869]Addr 0000000000~00001fffff table(PA=027fdfc000)     2MB [000:000]
+====> GZ (0)[    0.334871]Addr 0000000000~0000007fff PA ----------~---------- 4KB [000:007]
+====> GZ (0)[    0.335873]Addr 0000008000~000000efff PA 027fc9d000~027fca3fff 4KB [008:014]        attr(0xf)  rw(1)  sh(3)  af(1)  xn(0) pxn(0) type(3)
+====> GZ (0)[    0.337520]Addr 000000f000~0000010fff PA 027fca4000~027fca5fff 4KB [015:016]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(3)
+====> GZ (0)[    0.339168]Addr 0000011000~0000014fff PA 027fdfd000~027fe00fff 4KB [017:020]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(3)
+====> GZ (0)[    0.340825]Addr 0000015000~00001fffff PA ----------~---------- 4KB [021:511]
+====> GZ (0)[    0.341818]Addr 0000200000~0007dfffff PA ----------~---------- 2MB [001:062]
+====> GZ (0)[    0.342819]Addr 0007e00000~0007ffffff table(PA=027fdf9000)     2MB [063:063]
+====> GZ (0)[    0.343831]Addr 0007e00000~0007ffdfff PA ----------~---------- 4KB [000:509]
+====> GZ (0)[    0.344822]Addr 0007ffe000~0007ffffff PA 027fdf6000~027fdf7fff 4KB [510:511]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(3)
+====> GZ (0)[    0.346479]Addr 0008000000~003fffffff PA ----------~---------- 2MB [064:511]
+====> GZ (0)[    0.347471]===============================================================================
+====> GZ (0)[    0.348634]appid ====> 4
+====> GZ (0)[    0.349065]app:is_vmm=0, vmm_id=0x4
+trusty_app 3: code: start 0x00008000 end 0x00012d60
+trusty_app 3: data: start 0x00013000 end 0x00015000
+trusty_app 3: bss:                end 0x000148d8
+trusty_app 3: brk:  start 0x00015000 end 0x0003d000
+trusty_app 3: entry 0x000097a8
+====> GZ (0)[    0.352309][Kernel-server] 1219: start kernel service main
+====> GZ (0)[    0.353103][mtee-server] 174: Init services!!!
+====> GZ (0)[    0.353782]rebuild_hset_all:261: Rebuilding all handles set
+====> GZ (0)[    0.354602]===============================================================================
+====> GZ (0)[    0.355748] APP 4 table root va=0x38201000, pa=0x27fe01000 num_entries=1
+====> GZ (0)[    0.356706]===============================================================================
+====> GZ (0)[    0.357858]Addr 0000000000~003fffffff table(PA=027fe04000)     1GB [000:000]
+====> GZ (0)[    0.358860]Addr 0000000000~00001fffff table(PA=027fe08000)     2MB [000:000]
+====> GZ (0)[    0.359861]Addr 0000000000~0000007fff PA ----------~---------- 4KB [000:007]
+====> GZ (0)[    0.360863]Addr 0000008000~0000012fff PA 027fca7000~027fcb1fff 4KB [008:018]        attr(0xf)  rw(1)  sh(3)  af(1)  xn(0) pxn(0) type(4)
+====> GZ (0)[    0.362510]Addr 0000013000~0000014fff PA 027fcb2000~027fcb3fff 4KB [019:020]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(4)
+====> GZ (0)[    0.364159]Addr 0000015000~000003cfff PA 027fe09000~027fe30fff 4KB [021:060]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(4)
+====> GZ (0)[    0.365815]Addr 000003d000~00001fffff PA ----------~---------- 4KB [061:511]
+====> GZ (0)[    0.366809]Addr 0000200000~0007dfffff PA ----------~---------- 2MB [001:062]
+====> GZ (0)[    0.367809]Addr 0007e00000~0007ffffff table(PA=027fe05000)     2MB [063:063]
+====> GZ (0)[    0.368821]Addr 0007e00000~0007ffdfff PA ----------~---------- 4KB [000:509]
+====> GZ (0)[    0.369812]Addr 0007ffe000~0007ffffff PA 027fe02000~027fe03fff 4KB [510:511]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(4)
+====> GZ (0)[    0.371469]Addr 0008000000~003fffffff PA ----------~---------- 2MB [064:511]
+====> GZ (0)[    0.372461]===============================================================================
+====> GZ (0)[    0.373631]appid ====> 5
+====> GZ (0)[    0.374055]app:is_vmm=0, vmm_id=0x5
+trusty_app 4: code: start 0x00008000 end 0x00028480
+trusty_app 4: data: start 0x00029000 end 0x0002b000
+trusty_app 4: bss:                end 0x0002ac44
+trusty_app 4: brk:  start 0x0002b000 end 0x00055200
+trusty_app 4: entry 0x000080b4
+====> GZ (0)[    0.377333]rebuild_hset_all:261: Rebuilding all handles set
+====> GZ (0)[    0.378128]===============================================================================
+====> GZ (0)[    0.379276] APP 5 table root va=0x38233000, pa=0x27fe33000 num_entries=1
+====> GZ (0)[    0.380234]===============================================================================
+====> GZ (0)[    0.381387]Addr 0000000000~003fffffff table(PA=027fe38000)     1GB [000:000]
+====> GZ (0)[    0.382388]Addr 0000000000~00001fffff table(PA=027fe3c000)     2MB [000:000]
+====> GZ (0)[    0.383390]Addr 0000000000~0000007fff PA ----------~---------- 4KB [000:007]
+====> GZ (0)[    0.384392]Addr 0000008000~0000028fff PA 027fcb5000~027fcd5fff 4KB [008:040]        attr(0xf)  rw(1)  sh(3)  af(1)  xn(0) pxn(0) type(5)
+====> GZ (0)[    0.386039]Addr 0000029000~000002afff PA 027fcd6000~027fcd7fff 4KB [041:042]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(5)
+====> GZ (0)[    0.387688]Addr 000002b000~0000055fff PA 027fe3d000~027fe67fff 4KB [043:085]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(5)
+====> GZ (0)[    0.389343]Addr 0000056000~00001fffff PA ----------~---------- 4KB [086:511]
+====> GZ (0)[    0.390337]Addr 0000200000~0007dfffff PA ----------~---------- 2MB [001:062]
+====> GZ (0)[    0.391337]Addr 0007e00000~0007ffffff table(PA=027fe39000)     2MB [063:063]
+====> GZ (0)[    0.392349]Addr 0007e00000~0007ffbfff PA ----------~---------- 4KB [000:507]
+====> GZ (0)[    0.393340]Addr 0007ffc000~0007ffffff PA 027fe34000~027fe37fff 4KB [508:511]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(5)
+====> GZ (0)[    0.394997]Addr 0008000000~003fffffff PA ----------~---------- 2MB [064:511]
+====> GZ (0)[    0.395989]===============================================================================
+====> GZ (0)[    0.397160]appid ====> 6
+====> GZ (0)[    0.397583]app:is_vmm=0, vmm_id=0x6
+trusty_app 5: code: start 0x00008000 end 0x0001b102
+trusty_app 5: data: start 0x0001c000 end 0x0001d000
+trusty_app 5: bss:                end 0x0001c67c
+trusty_app 5: brk:  start 0x0001d000 end 0x0002d000
+trusty_app 5: entry 0x00008284
+====> GZ (0)[    0.400801]rebuild_hset_all:261: Rebuilding all handles set
+====> GZ (0)[    0.401607]===============================================================================
+====> GZ (0)[    0.402757] APP 6 table root va=0x3826a000, pa=0x27fe6a000 num_entries=1
+====> GZ (0)[    0.403715]===============================================================================
+====> GZ (0)[    0.404868]Addr 0000000000~003fffffff table(PA=027fe6d000)     1GB [000:000]
+====> GZ (0)[    0.405869]Addr 0000000000~00001fffff table(PA=027fe71000)     2MB [000:000]
+====> GZ (0)[    0.406871]Addr 0000000000~0000007fff PA ----------~---------- 4KB [000:007]
+====> GZ (0)[    0.407873]Addr 0000008000~000001bfff PA 027fcd9000~027fcecfff 4KB [008:027]        attr(0xf)  rw(1)  sh(3)  af(1)  xn(0) pxn(0) type(6)
+====> GZ (0)[    0.409520]Addr 000001c000~000001cfff PA 027fced000~027fcedfff 4KB [028:028]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(6)
+====> GZ (0)[    0.411168]Addr 000001d000~000002cfff PA 027fe72000~027fe81fff 4KB [029:044]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(6)
+====> GZ (0)[    0.412824]Addr 000002d000~00001fffff PA ----------~---------- 4KB [045:511]
+====> GZ (0)[    0.413818]Addr 0000200000~0007dfffff PA ----------~---------- 2MB [001:062]
+====> GZ (0)[    0.414818]Addr 0007e00000~0007ffffff table(PA=027fe6e000)     2MB [063:063]
+====> GZ (0)[    0.415829]Addr 0007e00000~0007ffdfff PA ----------~---------- 4KB [000:509]
+====> GZ (0)[    0.416822]Addr 0007ffe000~0007ffffff PA 027fe6b000~027fe6cfff 4KB [510:511]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(6)
+====> GZ (0)[    0.418478]Addr 0008000000~003fffffff PA ----------~---------- 2MB [064:511]
+====> GZ (0)[    0.419471]===============================================================================
+====> GZ (0)[    0.420642]appid ====> 7
+====> GZ (0)[    0.421065]app:is_vmm=0, vmm_id=0x7
+trusty_app 6: code: start 0x00008000 end 0x00015210
+trusty_app 6: data: start 0x00016000 end 0x00019000
+trusty_app 6: bss:                end 0x00018d7c
+trusty_app 6: brk:  start 0x00019000 end 0x0001d000
+trusty_app 6: entry 0x000080fc
+====> GZ (0)[    0.424273][mtee-server] 174: Init services!!!
+====> GZ (0)[    0.424937]rebuild_hset_all:261: Rebuilding all handles set
+====> GZ (0)[    0.425755][MTEE_APP_MGMT] 60: <com.mediatek.geniezone.srv.DL> service init
+====> GZ (0)[    0.426742]===============================================================================
+====> GZ (0)[    0.427891] APP 7 table root va=0x38284000, pa=0x27fe84000 num_entries=1
+====> GZ (0)[    0.428849]===============================================================================
+====> GZ (0)[    0.430002]Addr 0000000000~003fffffff table(PA=027fe87000)     1GB [000:000]
+====> GZ (0)[    0.431003]Addr 0000000000~00001fffff table(PA=027fe8b000)     2MB [000:000]
+====> GZ (0)[    0.432005]Addr 0000000000~0000007fff PA ----------~---------- 4KB [000:007]
+====> GZ (0)[    0.433007]Addr 0000008000~0000015fff PA 027fcef000~027fcfcfff 4KB [008:021]        attr(0xf)  rw(1)  sh(3)  af(1)  xn(0) pxn(0) type(7)
+====> GZ (0)[    0.434654]Addr 0000016000~0000018fff PA 027fcfd000~027fcfffff 4KB [022:024]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(7)
+====> GZ (0)[    0.436302]Addr 0000019000~000001cfff PA 027fe8c000~027fe8ffff 4KB [025:028]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(7)
+====> GZ (0)[    0.437958]Addr 000001d000~00001fffff PA ----------~---------- 4KB [029:511]
+====> GZ (0)[    0.438952]Addr 0000200000~0007dfffff PA ----------~---------- 2MB [001:062]
+====> GZ (0)[    0.439953]Addr 0007e00000~0007ffffff table(PA=027fe88000)     2MB [063:063]
+====> GZ (0)[    0.440964]Addr 0007e00000~0007ffdfff PA ----------~---------- 4KB [000:509]
+====> GZ (0)[    0.441956]Addr 0007ffe000~0007ffffff PA 027fe85000~027fe86fff 4KB [510:511]        attr(0xf)  rw(3)  sh(3)  af(1)  xn(0) pxn(0) type(7)
+====> GZ (0)[    0.443612]Addr 0008000000~003fffffff PA ----------~---------- 2MB [064:511]
+====> GZ (0)[    0.444605]===============================================================================
+====> GZ (0)[    4.285424]for launch linux, route smc to el3, cmd=0x82000115
+====> GZ (0)[    4.288964]back to gz, launch linux
+====> GZ (0)[    4.289512]trap lk2linux smc back!
+====> GZ (0)[    4.290062]boot linux-64 via EL2, pc=0x40080000, x0=0x47880000, x1=0x0, mode=0x3c5
+Successfully open fdt at 0x42000
+====> GZ (0)[    4.291496][SMVPU] 122: smvpu_fdt_hook: --> ver = 0x766
+====> GZ (0)[    4.292269][SMVPU] 125: ver 1894 not support mvpu
+====> GZ (1)[    1.808797]sm_get_api_version:262: lock api version 5, MTEE 0
+====> GZ (1)[    1.808809]tipc_dev_probe:991: tipc_dev_probe: Multiple vqueue support:1, txvq num:1, rxvq num:8
