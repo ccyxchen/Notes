@@ -48,7 +48,7 @@ sudo pip install --upgrade genpac
 
 最后，进入设置：Settings –> Network –> Network Proxy。方法选择 Automatic ，Configuration URL 填写刚刚生成的 pac 文件路径，格式如下：
 `file:///home/ts/shell/autoproxy.pac`
-![设置选择](2022-04-12-12-51-01.png)
+![设置选择](/tmpimage/2022-04-12-12-51-01.png)
 
 ## chrome使用代理
 

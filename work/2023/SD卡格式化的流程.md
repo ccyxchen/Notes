@@ -50,4 +50,3 @@ MediaStore: Examining volume emulated:179,98;0 with name external_primary and st
 Examining volume stub_primary with name external_primary and state removed
 Examining volume public:179,97 with name 2a30-0df0 and state mounted
 Examining volume emulated;0 with name external_primary and state mounted
-
