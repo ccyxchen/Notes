@@ -1,4 +1,5 @@
 # MTK DDR时序合入注意事项
+
 合入时需要注意某些平台有DDR数量的限制，在合入T302的DDR时序时编译报错了
 
 [Error]CustCS_CustemChips(12) > 10
