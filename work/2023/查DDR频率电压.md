@@ -16,6 +16,8 @@ echo %d  > /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_force_vcore
 代码定频方式如下：
 1）定义MTK_FIXDDR1600_SUPPORT这个宏。
 2）修改preloader中dramc_pi_main.c
+
+```C
 DRAMC_CTX_T DramCtx_LPDDR4 =
 {
     CHANNEL_DUAL, /* Channel number */
@@ -24,7 +26,7 @@ DRAMC_CTX_T DramCtx_LPDDR4 =
     RANK_0, /* DRAM_RANK_T */
 
 #ifdef MTK_FIXDDR1600_SUPPORT
-    LP4_DDR1600, => 修改为想定的频点，如LP4_DDR2400
+    LP4_DDR1600, //=> 修改为想定的频点，如LP4_DDR2400
 #else
 #if DUAL_FREQ_K
     LP4_LOWEST_FREQSEL, /* Darren: it will be overwritten by gFreqTbl[DRAM_DFS_SHUFFLE_3].freq_sel (Init_DRAM) */
@@ -32,6 +34,7 @@ DRAMC_CTX_T DramCtx_LPDDR4 =
 #if __FLASH_TOOL_DA__
     LP4_DDR1600,
 #else
+```
 
 3）重新编译烧录后，可以按以下方式确认：
 echo 0 > /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_force_vcore_dvfs_opp//定频最高
