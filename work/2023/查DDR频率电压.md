@@ -1,12 +1,19 @@
 # 查DDR频率电压
 
 查看当前频率
- cat /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_dump | grep -e uv -e khz
-
-cat /sys/bus/platform/drivers/emi_clk_test/read_dram_data_rate
+kernel-4.19:
+cat /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_dump | grep -e uv -e khz
 
 查看支持的频率和电压
+kernel-4.19:
 cat /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_opp_table
+
+kernel-5.10：
+cat /sys/devices/platform/soc/10012000.dvfsrc/helio-dvfsrc/dvfsrc_dump | grep -e uv -e khz
+cat /sys/devices/platform/soc/10012000.dvfsrc/helio-dvfsrc/dvfsrc_opp_table
+
+kernel 4.19 查看当前ddr频率
+cat /sys/bus/platform/drivers/emi_clk_test/read_dram_data_rate
 
 设置定频
 echo %d  > /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_force_vcore_dvfs_opp
@@ -26,7 +33,7 @@ DRAMC_CTX_T DramCtx_LPDDR4 =
     RANK_0, /* DRAM_RANK_T */
 
 #ifdef MTK_FIXDDR1600_SUPPORT
-    LP4_DDR1600, //=> 修改为想定的频点，如LP4_DDR2400
+    LP4_DDR1600, => 修改为想定的频点，如LP4_DDR2400
 #else
 #if DUAL_FREQ_K
     LP4_LOWEST_FREQSEL, /* Darren: it will be overwritten by gFreqTbl[DRAM_DFS_SHUFFLE_3].freq_sel (Init_DRAM) */
@@ -40,3 +47,6 @@ DRAMC_CTX_T DramCtx_LPDDR4 =
 echo 0 > /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_force_vcore_dvfs_opp//定频最高
 cat /sys/bus/platform/drivers/emi_clk_test/read_dram_data_rate//确认运行频率
 看第二个cmd是否打印DRAM data rate=2400
+
+抓trace
+adb shell atrace gfx input view webview wm am sm audio video camera hal res dalvik rs bionic power pm ss database network adb aidl nnapi rro sched irq i2c freq idle disk mmc sync workq memreclaim regulators binder_driver binder_lock pagecache thermal > trace.txt

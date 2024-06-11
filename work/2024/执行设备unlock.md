@@ -7,6 +7,6 @@
 3、执行 fastboot flashing unlock
 长按音量上键
 fastboot reboot
-adb disable-verity
 adb root
+adb disable-verity
 adb remount
