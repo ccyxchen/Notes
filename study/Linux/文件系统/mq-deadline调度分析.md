@@ -115,7 +115,7 @@ static struct elevator_type mq_deadline = {
 };
 ```
 
-### dd_init_sched 
+### dd_init_sched
 
 dd_init_sched 分配并初始化struct elevator_queue，然后分配struct deadline_data，初始化每个IO优先级的调度队列（rbtree, fifo,dispatch）,最后初始化spinlock.
 
