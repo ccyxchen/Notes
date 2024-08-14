@@ -4,7 +4,48 @@
 
 ### 非GKI项目
 
+非GKI使用的是MTK split build 1.0编译体系。
+split build 1.0编译分为 sys和vnd两部分
+以T402为例，下面是实际编译各部分以及打包的命令。
+各个部分的项目名可以如下确认：
+system部分
+查看 vendor/device/tinno/t402aa/full_t402aa.mk 中定义了 
+`SYS_TARGET_PROJECT := mssi_t_64_cn_wifi` 就是system的项目名。
 
+vendor部分：
+查看 vendor/device/tinno/t402aa/full_t402aa.mk 中定义了
+`MTK_TARGET_PROJECT := t402aa` 就是vendor的项目名。
+
+```Shell
+# 编译命令
+# system编译：
+cd system
+source build/envsetup.sh
+export OUT_DIR=out_sys && lunch sys_mssi_t_64_cn_wifi-userdebug && make sys_images
+
+# vendor部分：
+cd vendor
+source build/envsetup.sh
+export OUT_DIR=out && lunch vnd_t402aa-userdebug && make vnd_images krn_images
+
+# 单编
+cd vendor
+source build/envsetup.sh
+export OUT_DIR=out && lunch vnd_t402aa-userdebug 
+## 编译 kernel 
+make bootimage
+## 编译 vendor boot
+make vendorbootimage
+## 编译 dtb
+make dtboimage
+## 编译preloader
+make pl
+## 编译lk
+make lk
+
+# 签名和打包
+python system/out_sys/target/product/mssi_t_64_cn_wifi/images/split_build.py --system-dir system/out_sys/target/product/mssi_t_64_cn_wifi/images --vendor-dir vendor/out/target/product/t402aa/images --kernel-dir vendor/out/target/product/t402aa/images --output-dir vendor/out/target/product/t402aa/merged
+```
 
 ### GKI项目
 
@@ -88,6 +129,4 @@ make bootimage
 make vendorbootimage
 make lk
 make preloader
-
-
 ```
