@@ -9,7 +9,7 @@ split build 1.0编译分为 sys和vnd两部分
 以T402为例，下面是实际编译各部分以及打包的命令。
 各个部分的项目名可以如下确认：
 system部分
-查看 vendor/device/tinno/t402aa/full_t402aa.mk 中定义了 
+查看 vendor/device/tinno/t402aa/full_t402aa.mk 中定义了
 `SYS_TARGET_PROJECT := mssi_t_64_cn_wifi` 就是system的项目名。
 
 vendor部分：
