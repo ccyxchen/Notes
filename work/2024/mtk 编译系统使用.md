@@ -124,7 +124,7 @@ gunzip -c ramdisk | cpio -i
 #### 单编
 
 ```Shell
-export OUT_DIR=out && lunch vnd_p528-userdebug 
+export OUT_DIR=out && lunch vext_p528-userdebug 
 make bootimage
 make vendorbootimage
 make lk
