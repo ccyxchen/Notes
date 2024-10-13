@@ -18,6 +18,9 @@ cat /sys/bus/platform/drivers/emi_clk_test/read_dram_data_rate
 设置定频
 echo %d  > /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_force_vcore_dvfs_opp
 
+O+项目需要执行命令来使能修改
+echo 9595 > /sys/devices/platform/soc/10012000.dvfsrc/10012000.dvfsrc:dvfsrc-helper/dvfsrc_enable_force_mode
+
 8786代码中定频
 
 代码定频方式如下：
@@ -50,3 +53,14 @@ cat /sys/bus/platform/drivers/emi_clk_test/read_dram_data_rate//确认运行频�
 
 抓trace
 adb shell atrace gfx input view webview wm am sm audio video camera hal res dalvik rs bionic power pm ss database network adb aidl nnapi rro sched irq i2c freq idle disk mmc sync workq memreclaim regulators binder_driver binder_lock pagecache thermal > trace.txt
+
+## 展锐平台
+
+1、查可用频率
+cat  /sys/class/devfreq/scene-frequency/sprd-governor/ddrinfo_freq_table
+
+2、定频
+echo 768 > /sys/class/devfreq/scene-frequency/sprd-governor/scaling_force_ddr_freq
+
+3、查看当前DDR 运行频点
+cat /sys/class/devfreq/scene-frequency/sprd-governor/ddrinfo_cur_freq
