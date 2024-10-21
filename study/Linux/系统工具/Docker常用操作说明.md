@@ -53,6 +53,8 @@ docker run -it -d -p 9999:9999 --name battery-historian runcare/battery-historia
 docker exec -it 容器名或容器id 进入后执行的第一个命令
 # 如
 docker exec -it ubuntu1404 /bin/bash
+# 指定以用户进入
+docker exec -it -u cyx ubuntu1404 /bin/bash
 
 # 开始本地容器
 docker start (docker name or docker ID)
@@ -96,4 +98,23 @@ docker save -o ./ubuntu.tar ubuntu
 
 # 在拿到镜像文件后，可以通过load方法，将镜像加载到本地
 docker load -i ./ubuntu.tar
+```
+
+## Docker设置代理
+
+```Shell
+# 基于已有容器制作镜像
+docker commit 容器名 镜像名
+
+# 创建新容器，需要指定--net=host
+docker run -it -d --net=host -v /mnt/:/home/workspace --name ubuntu1604 ubuntu1604_my
+
+# 进入新容器
+docker exec -it ubuntu1604 /bin/bash
+
+# 设置代理
+export http_proxy=http://127.0.0.1:10809
+export https_proxy=http://127.0.0.1:10809
+export all_proxy=http://127.0.0.1:10809
+
 ```
