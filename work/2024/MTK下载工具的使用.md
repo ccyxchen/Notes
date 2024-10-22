@@ -9,13 +9,12 @@
 #### Bootrom comport
 
 >* 手机在bootrom阶段枚举出的usb port，其PID/VID default 为0003/0E8D
->* 手机flash没有preloader的情况或者在手机有preloader的情况下通过KCOL0 pin接地的方式会枚举出该com port
+>* 手机flash没有preloader的情况或者在手机有preloader的情况下通过KPCOL0 pin接地的方式会枚举出该com port
 
 #### Preloader comport
 
 >* 手机在preloader阶段枚举出的usb port，其PID/VID default为2000/0E8D
 >* 手机flash上有preloader的情况，默认枚举出该com port，而不会枚举出bootrom usb port
->
 
 #### DA（download agent）
 
@@ -42,10 +41,10 @@ MTK 的soc芯片内运行有一个Boot rom 系统，该系统保存在片内rom�
 1. 对于MTK默认的软硬件设计
 
    * 在机器关机或下电情况下，直接插USB线，会跑到preloader中，则电脑中端口就是preloader的枚举端口。
-   * 按住音量- 再接入USB线，会跑BROM程序，电脑中端口是BROM枚举的端口。
+   * 按住power + 音量- 再接入USB线，会跑BROM程序，电脑中端口是BROM枚举的端口。
 
 2. 对于Oplus的设计
 
    * 在机器关机或下电情况下，直接插USB线，会直接开机，不会枚举出下载端口。
-   * 按住音量+- 再接入USB线，会跑到preloader中，电脑中端口是preloader枚举的端口。
+   * 按住power + 音量+- 再接入USB线，会跑到preloader中，电脑中端口是preloader枚举的端口。
    * 强制下载点接地，会跑BROM程序，电脑中端口是BROM枚举的端口。
