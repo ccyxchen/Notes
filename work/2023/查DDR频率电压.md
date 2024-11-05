@@ -1,4 +1,6 @@
-# 查DDR频率电压
+# 查看和设置DDR频率电压
+
+## MTK
 
 查看当前频率
 kernel-4.19:
@@ -64,3 +66,26 @@ echo 768 > /sys/class/devfreq/scene-frequency/sprd-governor/scaling_force_ddr_fr
 
 3、查看当前DDR 运行频点
 cat /sys/class/devfreq/scene-frequency/sprd-governor/ddrinfo_cur_freq
+
+## 高通
+
+高通不同芯片平台差异很大，可以通过QMVS去查，qmvs的node_modules\swsys-qmvs\
+node_modules\swsys-clk-switch\bin\bimc_clock.sh脚本有列出对应的命令。
+
+sm6225
+查当前频率
+`cat /sys/kernel/debug/clk/measure_only_mccc_clk/clk_measure`
+
+调频率
+
+```Shell
+echo 1 >  /sys/kernel/debug/interconnect-test/src_port
+echo 512  >  /sys/kernel/debug/interconnect-test/dst_port
+echo 1 > /sys/kernel/debug/interconnect-test/get
+echo 8367636 > /sys/kernel/debug/interconnect-test/peak_bw
+echo 1 > /sys/kernel/debug/interconnect-test/commit
+echo "active clk2 0 1 max ${REQ_KHZ}" > /d/rpm_send_msg/message
+```
+
+可用频率
+`"frequencies": [200000, 547200, 1017600,1555200, 1804800,2092800]`
