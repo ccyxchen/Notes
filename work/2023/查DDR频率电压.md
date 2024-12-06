@@ -89,3 +89,61 @@ echo "active clk2 0 1 max ${REQ_KHZ}" > /d/rpm_send_msg/message
 
 可用频率
 `"frequencies": [200000, 547200, 1017600,1555200, 1804800,2092800]`
+
+qm8909
+查当前频率
+`adb shell cat /sys/kernel/debug/clk/bimc_clk/measure`
+
+调频率
+
+```Shell
+adb shell "echo 1 > /d/msm-bus-dbg/shell-client/mas"
+adb shell "echo 512 > /d/msm-bus-dbg/shell-client/slv"
+#这条要设置你要的频率，有效值：9600，50000，100000，200000，400000，533000
+adb shell 'echo "active clk2 0 1 max 这里填频率" > /d/rpm_send_msg/message'   
+adb shell "echo 7200000000 > /d/msm-bus-dbg/shell-client/ib"
+adb shell "echo 1 > /d/msm-bus-dbg/shell-client/update_request"
+
+# For 533 MHz, CLOCK_FREQ_REQUIRED = 533 and for 400 MHz, CLOCK_FREQ_REQUIRED = 400.
+```
+
+可用频率
+
+```C
+//rpm_proc/core/systemdrivers/clock/config/msm8909/ClockBSP.c
+
+ const ClockMuxConfigType BIMCClockConfig[] =
+ {
+   {   9600000, { HAL_CLK_SOURCE_XO,     1, 1,  1, 1 }, CLOCK_VREG_LEVEL_LOW },
+   {  50000000, { HAL_CLK_SOURCE_GPLL0, 16, 1,  1, 1 }, CLOCK_VREG_LEVEL_LOW },
+   { 100000000, { HAL_CLK_SOURCE_GPLL0,  8, 1,  1, 1 }, CLOCK_VREG_LEVEL_LOW },
+   { 200000000, { HAL_CLK_SOURCE_GPLL0,  4, 1,  1, 1 }, CLOCK_VREG_LEVEL_LOW },
+   { 400000000, { HAL_CLK_SOURCE_GPLL0,  2, 1,  1, 1 }, CLOCK_VREG_LEVEL_NOMINAL },
+   { 533000000, { HAL_CLK_SOURCE_BIMCPLL,  2, 1,  1, 1 }, CLOCK_VREG_LEVEL_HIGH },
+   { 0 }
+ };
+
+代码定频
+
+//rpm_proc/core/systemdrivers/clock/hw/msm8909/ClockRPM.c 
+
+void Clock_BusSetMinMax( Clock_NPAResourcesType  *pNPAResources )
+{
+...
+
+   /* Default setting for BIMC clock */
+   //这里定义最小频率，值为BIMCClockConfig数组的下标
+   pNPAResources->BIMCClockResource.nMinLevel = 0;
+ 
+   hal_part_num = HAL_clk_GetHWParNum();
+   if( hal_part_num == part_num_8208)
+    //这里定义最大频率，值为BIMCClockConfig数组的下标
+     pNPAResources->BIMCClockResource.nMaxLevel = 4;
+   else
+     pNPAResources->BIMCClockResource.nMaxLevel = MAX_LEVEL;
+
+```
+
+通用的查询方法：
+根据安装的QMVS下如下脚本查询定频命令：
+npm_3.0.3\node_modules\swsys-qmvs\node_modules\swsys-clk-switch\bin\bimc_clock.sh
