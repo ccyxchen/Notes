@@ -90,3 +90,94 @@ ct-ng build.32 V=2
 ### ctng 的入口
 
 bin/ct-ng 是一个makefile 脚本， 当执行ct-ng 命令时，其实是调用 gmake 去运行这个脚本。
+
+当执行完menuconfig配置.config后，执行ct-ng build开始编译。
+
+build需要执行的内容如下所示：
+
+build最终执行scripts/crosstool-NG.sh去编译工具链。如果未开启ct-steps分步调试功能时
+，crosstool-NG.sh会一次性完整执行整个编译过程，如果已设置ct-steps，则可以通过STOP和
+RESTART变量控制需要执行的步骤，crosstool-NG.sh中除了编译相关步骤是在分步时执行，其他
+步骤都是预备工作，包括：
+
+1.CT_LoadConfig，解析config文件定义环境变量
+2.根据环境变量下载所有需要的源码
+3.根据环境变量解压源码并打补丁
+
+分步执行的步骤如下定义：
+
+```shell
+CT_STEPS := \
+            companion_tools_for_build  \
+            companion_libs_for_build   \
+            binutils_for_build         \
+            companion_tools_for_host   \
+            companion_libs_for_host    \
+            binutils_for_host          \
+            linker                     \
+            libc_headers               \
+            kernel_headers             \
+            cc_core                    \
+            libc_main                  \
+            cc_for_build               \
+            cc_for_host                \
+            libc_post_cc               \
+            companion_libs_for_target  \
+            binutils_for_target        \
+            debug                      \
+            test_suite                 \
+            finish                     \
+
+# 对应解析代码
+if [ "${CT_ONLY_DOWNLOAD}" != "y" -a "${CT_ONLY_EXTRACT}" != "y" ]; then
+    # Because of CT_RESTART, this becomes quite complex
+    do_stop=0
+    prev_step=
+    [ -n "${CT_RESTART}" ] && do_it=0 || do_it=1
+    for step in ${CT_STEPS}; do
+        if [ ${do_it} -eq 0 ]; then
+            if [ "${CT_RESTART}" = "${step}" ]; then
+                CT_DoLoadState "${step}"
+                do_it=1
+                do_stop=0
+            fi
+        else
+            CT_DoSaveState ${step}
+            if [ ${do_stop} -eq 1 ]; then
+                CT_DoLog INFO "Stopping just after step '${prev_step}', as requested."
+                exit 0
+            fi
+        fi
+        if [ ${do_it} -eq 1 ]; then
+            ( do_${step} )
+            # POSIX 1003.1-2008 does not say if "set -e" should catch a
+            # sub-shell ending with !0. bash-3 does not, while bash-4 does,
+            # so the following line is for bash-3; bash-4 would choke above.
+            [ $? -eq 0 ]
+            # Pick up environment changes.
+            if [ -r "${CT_BUILD_DIR}/env.modify.sh" ]; then
+                CT_DoLog DEBUG "Step '${step}' modified the environment:"
+                CT_DoExecLog DEBUG cat "${CT_BUILD_DIR}/env.modify.sh"
+                . "${CT_BUILD_DIR}/env.modify.sh"
+                CT_DoExecLog DEBUG rm -f "${CT_BUILD_DIR}/env.modify.sh"
+
+            fi
+            if [ "${CT_STOP}" = "${step}" ]; then
+                do_stop=1
+            fi
+            if [ "${CT_DEBUG_PAUSE_STEPS}" = "y" ]; then
+                CT_DoPause "Step '${step}' finished"
+            fi
+        fi
+        prev_step="${step}"
+    done
+fi
+
+# 可以看到是根据CT_RESTART和CT_STOP的值去执行CT_STEPS 中的函数do_${step}
+```
+
+![1](/tmpimage/ctng的实现原理2024-10-19-22-00-04.png)
+
+## do_companion_tools_for_build执行过程
+
+
