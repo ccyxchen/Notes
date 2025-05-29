@@ -29,11 +29,7 @@ pip3 install pyelftools
 安装 gdb,dtc,nm,objdump
 
 ```Shell
-sudo apt install gdb-multiarch
-sudo apt install dtc
-sudo apt install gcc-aarch64-linux-gnu
-sudo apt install gcc-arm-linux-gnueabihf
-sudo apt install device-tree-compiler
+sudo apt install gdb-multiarch gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf dtc device-tree-compiler
 ```
 
 1. 设置local_setting.py,指定gdb,nm,objdump,dtc工具的路径
