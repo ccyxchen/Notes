@@ -6,7 +6,8 @@
 
 #### 使用平台工具linux-ramdump-parser-v2
 
-1. 获取linux-ramdump-parser-v2工具
+##### 获取linux-ramdump-parser-v2工具
+
 工具位于源代码根目录下的 `vendor/vendor/qcom/opensource/tools/linux-ramdump-parser-v2/`,各平台的参数文件位于`vendor/vendor/qcom/proprietary/ramdump-parser/`,需要把参数文件拷贝到工具目录下的extensions目录下。
 
 ```Shell
@@ -14,7 +15,8 @@ cp -r vendor/vendor/qcom/proprietary/ramdump-parser/*
 vendor/vendor/qcom/opensource/tools/linux-ramdump-parser-v2/extensions
 ```
 
-2. 安装依赖软件
+##### 安装依赖软件
+
 需要安装python3,以及相关模块
 
 ```Shell
@@ -34,7 +36,7 @@ sudo apt install gcc-arm-linux-gnueabihf
 sudo apt install device-tree-compiler
 ```
 
-3. 设置local_setting.py,指定gdb,nm,objdump,dtc工具的路径
+1. 设置local_setting.py,指定gdb,nm,objdump,dtc工具的路径
 在工具目录下新建local_setting.py文件，内容如下
 
 ```python
@@ -56,8 +58,6 @@ else:
     gdb64_path = "D:\\Program Files\\msys64\\mingw64\\bin\\gdb-multiarch.exe"
     objdump64_path = "D:\\Direct\\bin\\gcc-arm-10.3-2021.07-mingw-w64-i686-aarch64-none-linux-gnu\\bin\\aarch64-none-linux-gnu-objdump.exe"
 ```
-
-4. 解析ramdump
 
 从`linux-ramdump-parser-v2/extensions/board_def.py` 文件查找对应的平台，其中 elf.board_num 就是平台名字
 
@@ -127,3 +127,11 @@ hexdump  -e '16/4 "%08x " "\n"' -s 0x0256d4 -n 8 OCIMEM.BIN
 #该值为self.kaslr_addr-self.imem_start+0x4=0x0256d4
 
 ```
+
+### 加载 KO
+
+crash工具分析wlan ko文件
+由于wlan驱动是以ko形式添加到系统中，所以还需要在crash命令行手动加载wlan.ko
+根据第二步进入crash交互后，输入wlan.ko文件的路径
+
+`crash> mod -s wlan  /home/xxx/disk/main/test/log/0708/wifi/debug/wlan/qca_cld3_wlan.ko.unstripped`
