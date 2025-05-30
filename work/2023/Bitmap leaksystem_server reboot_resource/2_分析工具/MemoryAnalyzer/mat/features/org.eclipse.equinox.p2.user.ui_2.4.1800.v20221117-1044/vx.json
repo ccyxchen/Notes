@@ -1,0 +1,54 @@
+{
+    "created_time": "2025-05-30T02:36:42Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:42Z",
+            "id": "977",
+            "modified_time": "2025-05-30T02:36:42Z",
+            "name": "epl-2.0.html",
+            "signature": "10882292771452426682",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:42Z",
+            "id": "978",
+            "modified_time": "2025-05-30T02:36:42Z",
+            "name": "feature.properties",
+            "signature": "11190483531370928570",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:42Z",
+            "id": "979",
+            "modified_time": "2025-05-30T02:36:42Z",
+            "name": "feature.xml",
+            "signature": "11898647432876595642",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:42Z",
+            "id": "980",
+            "modified_time": "2025-05-30T02:36:42Z",
+            "name": "license.html",
+            "signature": "12735876329987709370",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+        {
+            "name": "META-INF"
+        }
+    ],
+    "id": "976",
+    "modified_time": "2025-05-30T02:36:42Z",
+    "signature": "5349690766043716026",
+    "version": 3
+}

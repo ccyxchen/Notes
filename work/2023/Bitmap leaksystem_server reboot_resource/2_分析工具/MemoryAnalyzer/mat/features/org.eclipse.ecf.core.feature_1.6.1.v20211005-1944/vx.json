@@ -1,0 +1,64 @@
+{
+    "created_time": "2025-05-30T02:36:41Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:41Z",
+            "id": "840",
+            "modified_time": "2025-05-30T02:36:41Z",
+            "name": "about.html",
+            "signature": "12824960931028605369",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:41Z",
+            "id": "841",
+            "modified_time": "2025-05-30T02:36:41Z",
+            "name": "epl-2.0.html",
+            "signature": "6579922833029798329",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:41Z",
+            "id": "842",
+            "modified_time": "2025-05-30T02:36:41Z",
+            "name": "feature.properties",
+            "signature": "12696668432535984569",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:41Z",
+            "id": "843",
+            "modified_time": "2025-05-30T02:36:41Z",
+            "name": "feature.xml",
+            "signature": "5104188283625740729",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:41Z",
+            "id": "844",
+            "modified_time": "2025-05-30T02:36:41Z",
+            "name": "license.html",
+            "signature": "5029171663279299001",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+        {
+            "name": "META-INF"
+        }
+    ],
+    "id": "839",
+    "modified_time": "2025-05-30T02:36:41Z",
+    "signature": "4007649344449223097",
+    "version": 3
+}

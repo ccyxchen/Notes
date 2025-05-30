@@ -1,0 +1,30 @@
+{
+    "created_time": "2025-05-30T02:36:40Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:47Z",
+            "id": "1426",
+            "modified_time": "2025-05-30T02:36:47Z",
+            "name": "AppWidgetProvider.txt",
+            "signature": "10032185148616284607",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+        {
+            "name": "0_分析总结文档"
+        },
+        {
+            "name": "1_问题log"
+        },
+        {
+            "name": "2_分析工具"
+        }
+    ],
+    "id": "728",
+    "modified_time": "2025-05-30T02:36:40Z",
+    "signature": "3568576487046584760",
+    "version": 3
+}

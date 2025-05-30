@@ -1,0 +1,56 @@
+{
+    "created_time": "2025-05-30T02:36:41Z",
+    "files": [
+    ],
+    "folders": [
+        {
+            "name": "org.eclipse.e4.rcp_4.26.0.v20221123-2302"
+        },
+        {
+            "name": "org.eclipse.ecf.core.feature_1.6.1.v20211005-1944"
+        },
+        {
+            "name": "org.eclipse.ecf.core.ssl.feature_1.1.501.v20210409-2301"
+        },
+        {
+            "name": "org.eclipse.ecf.filetransfer.feature_3.14.1800.v20220215-0126"
+        },
+        {
+            "name": "org.eclipse.ecf.filetransfer.httpclient5.feature_1.1.701.v20221112-0806"
+        },
+        {
+            "name": "org.eclipse.ecf.filetransfer.ssl.feature_1.1.401.v20210409-2301"
+        },
+        {
+            "name": "org.eclipse.emf.common_2.28.0.v20221121-1400"
+        },
+        {
+            "name": "org.eclipse.emf.ecore_2.30.0.v20221121-1400"
+        },
+        {
+            "name": "org.eclipse.equinox.p2.core.feature_1.6.1600.v20221117-1044"
+        },
+        {
+            "name": "org.eclipse.equinox.p2.extras.feature_1.4.1800.v20221117-1044"
+        },
+        {
+            "name": "org.eclipse.equinox.p2.rcp.feature_1.4.1800.v20221117-1044"
+        },
+        {
+            "name": "org.eclipse.equinox.p2.user.ui_2.4.1800.v20221117-1044"
+        },
+        {
+            "name": "org.eclipse.help_2.3.1200.v20221123-1800"
+        },
+        {
+            "name": "org.eclipse.mat.ui.rcp.feature_1.14.0.202302232114"
+        },
+        {
+            "name": "org.eclipse.rcp_4.26.0.v20221123-2302"
+        }
+    ],
+    "id": "826",
+    "modified_time": "2025-05-30T02:36:41Z",
+    "signature": "410036466458630585",
+    "version": 3
+}

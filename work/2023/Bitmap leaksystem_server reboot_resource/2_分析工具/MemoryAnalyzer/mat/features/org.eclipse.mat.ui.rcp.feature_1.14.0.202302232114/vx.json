@@ -1,0 +1,74 @@
+{
+    "created_time": "2025-05-30T02:36:42Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:42Z",
+            "id": "996",
+            "modified_time": "2025-05-30T02:36:42Z",
+            "name": "about.html",
+            "signature": "12151833689096526266",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:42Z",
+            "id": "998",
+            "modified_time": "2025-05-30T02:36:42Z",
+            "name": "epl-2.0.html",
+            "signature": "9573215640466561466",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:42Z",
+            "id": "1000",
+            "modified_time": "2025-05-30T02:36:42Z",
+            "name": "feature.properties",
+            "signature": "4648830456424896954",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:42Z",
+            "id": "1002",
+            "modified_time": "2025-05-30T02:36:42Z",
+            "name": "feature.xml",
+            "signature": "6572688467425827258",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:42Z",
+            "id": "1004",
+            "modified_time": "2025-05-30T02:36:42Z",
+            "name": "license.html",
+            "signature": "15773232650023147962",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-05-30T02:36:42Z",
+            "id": "1011",
+            "modified_time": "2025-05-30T02:36:42Z",
+            "name": "p2.inf",
+            "signature": "13560917948158777787",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+        {
+            "name": "META-INF"
+        }
+    ],
+    "id": "1010",
+    "modified_time": "2025-05-30T02:36:42Z",
+    "signature": "10368737518915492282",
+    "version": 3
+}
