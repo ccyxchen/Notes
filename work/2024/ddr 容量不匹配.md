@@ -15,11 +15,15 @@ mblock[0] start=0000000040000000 size=0000000080000000
 
 对DDR rank的解析：
 AI生成///
-在 DDR（Double Data Rate）内存中，一个 rank 是一个逻辑组合，由一个或多个存储芯片组成。每个存储芯片都有自己的数据引脚和控制引脚。在 DDR内存中，rank 是指一组存储芯片，它们同时响应内存控制器的请求，从而提供更大的内存容量和更高的带宽。
+在 DDR（Double Data Rate）内存中，一个 rank 是一个逻辑组合，由一个或多个存储芯片组成。
+每个存储芯片都有自己的数据引脚和控制引脚。在 DDR内存中，rank 是指一组存储芯片，它们同
+时响应内存控制器的请求，从而提供更大的内存容量和更高的带宽。
 
-举例来说，一个 DDR内存条可能包含多个存储 rank，每个 rank 由一组存储芯片组成。每个 rank 可以被看作是一个独立的内存模块，它们可以同时响应内存控制器的读写请求，从而提高内存访问的并行度和带宽。
+举例来说，一个 DDR内存条可能包含多个存储 rank，每个 rank 由一组存储芯片组成。每个 rank 
+可以被看作是一个独立的内存模块，它们可以同时响应内存控制器的读写请求，从而提高内存访问的并行度和带宽。
 
-在实际的内存配置中，您可能会看到术语 "single-rank"、"dual-rank" 或 "quad-rank"，它们分别表示内存模块包含一个、两个或四个 rank。这些术语通常用于描述内存模块的性能和配置。
+在实际的内存配置中，您可能会看到术语 "single-rank"、"dual-rank" 或 "quad-rank"，它们分别
+表示内存模块包含一个、两个或四个 rank。这些术语通常用于描述内存模块的性能和配置。
 
 当前使用的LPDDR4X内存一般有1个或2个rank.
 
@@ -102,7 +106,8 @@ AI生成///
 218   return max_dram_size;
 219  }
 
-//bootarg.orig_dram_info是在vendor/mediatek/proprietary/bootable/bootloader/preloader/platform/mt6739/src/drivers/platform.c的platform_init函数中初始化的
+//bootarg.orig_dram_info是在vendor/mediatek/proprietary/bootable/bootloader/preloader
+   /platform/mt6739/src/drivers/platform.c的platform_init函数中初始化的
 #if !CFG_FPGA_PLATFORM
 1490  /*In FPGA phase, dram related function should by pass*/
 1491      bootarg.dram_rank_num = get_dram_rank_nr();
@@ -169,7 +174,8 @@ AI生成///
 3217  
 3218  }
 
-通过get_dram_rank_nr 函数获取rank 的数量，然后通过get_dram_rank_size 得到每个rank 的size，所有rank 的大小加起来就是ddr 实际容量。
+//通过get_dram_rank_nr 函数获取rank 的数量，然后通过get_dram_rank_size 得到每个rank 的
+size，所有rank 的大小加起来就是ddr 实际容量。
 
 3257  void get_dram_rank_size (u64 dram_rank_size[])
 3258  {
@@ -246,8 +252,10 @@ AI生成///
 
 ddr mblock 的进一步划分
 preloader中mblock_alloc_range函数解析
-mblock_alloc_range用于分配reserve mblock,分配后的reserve mblock存放在bootarg.mblock_info.reserved中，此时有三种情况：
-1、如果reserve mblock的起始地址等于当前mblock起始地址,或者reserve mblock结束地址等于当前mblock结束地址，则只需要修改当前mblock的start addr和size
+mblock_alloc_range用于分配reserve mblock,分配后的reserve mblock存放在bootarg.mblock
+_info.reserved中，此时有三种情况：
+1、如果reserve mblock的起始地址等于当前mblock起始地址,或者reserve mblock结束地址等于
+当前mblock结束地址，则只需要修改当前mblock的start addr和size
 2、如果reserve mblock 是在当前mblock之间，此时会把当前mblock拆分为2部分，需要增加一个mblock。
 
 MT6739平台在preloader阶段分配了以下reserve mblock
@@ -263,13 +271,17 @@ Line  453: mblock_alloc_range: start: 0x00000000BFFFF000, sz: 0x0000000000001000
 
 lk中对mblock的划分
 //vendor/mediatek/proprietary/bootable/bootloader/lk/lib/mblock/mblock_v2.c
-lk中也是通过mblock模块实现mblock的分配，preloader通过bootarg将已经分配的reserve mblock传给lk,lk中会额外再分配更多的reserve mblock，普通的mblock就是reserve mblock未使用的区域，mblock的addr和size会通过bootarg传递给kernel。
+lk中也是通过mblock模块实现mblock的分配，preloader通过bootarg将已经分配的reserve mblock
+传给lk,lk中会额外再分配更多的reserve mblock，普通的mblock就是reserve mblock未使用的区域，
+mblock的addr和size会通过bootarg传递给kernel。
 
 ddr 时序的选择以及最终初始化流程
 //vendor/mediatek/proprietary/bootable/bootloader/preloader/platform/mt6739/src/drivers/emi.c
 通过mt_get_mdl_number函数获取匹配的DDR时序
-如果配置了 mcp_dram，则通过emmc或nand匹配时序，否则如果配置了discrete_dram_num，则通过 DDR的MR5匹配时序。
-对于通过DDR匹配的情况，该函数中先调用mt_get_dram_type_for_dis函数通过 GPIO判断DDR类型，然后调用对应的DDR初始化函数进行初始化，并通过DRAM_MRR函数读取MR5，然后通过和表格的MR5对比得到index。
+如果配置了 mcp_dram，则通过emmc或nand匹配时序，否则如果配置了discrete_dram_num，则通过 
+DDR的MR5匹配时序。
+对于通过DDR匹配的情况，该函数中先调用mt_get_dram_type_for_dis函数通过 GPIO判断DDR类型，
+然后调用对应的DDR初始化函数进行初始化，并通过DRAM_MRR函数读取MR5，然后通过和表格的MR5对比得到index。
 
 ## MT8786/MT6768机制
 

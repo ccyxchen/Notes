@@ -169,13 +169,23 @@ gdb vmlinux
 target remote /dev/pts/4
 ```
 
+### 使用blkio
+Enable Block IO controller:
+CONFIG_BLK_CGROUP=y
+Enable throttling in block layer:
+CONFIG_BLK_DEV_THROTTLING=y
+Mount blkio controller (see Control Groups, Why are cgroups needed?):
+mount -t cgroup -o blkio none /sys/fs/cgroup/blkio
+Specify a bandwidth rate on particular device for root group. The format for policy is “<major>:<minor> <bytes_per_second>”:
+echo "8:16  1048576" > /sys/fs/cgroup/blkio/blkio.throttle.read_bps_device
+
 最终的命令
 `sudo qemu-system-x86_64  -M pc -smp 4  -m 4096 -kernel /home/cyx/work_open/opensource/linux_stable/linux/arch/x86/boot/bzImage -append "root=/dev/sda rw rootfstype=ext4 console=ttyS0,921600n8 loglevel=7 tce=sda home=sda opt=sda" -drive file=/home/cyx/work_open/opensource/tinycore/x86_64/myimg/rootfs.img,format=raw -device virtio-blk-pci,drive=ufs_disk  -drive if=none,id=ufs_disk,file=/home/cyx/work_open/opensource/tinycore/x86_64/myimg/disk_f2fs.img,format=raw -serial chardev:serial0 -chardev pty,id=serial0 -net nic -net tap,ifname=tap0 -nographic`
 
 ## qemu中运行 linux aarch64
 
 ### 交叉编译内核
-
+[ufs 电源控制.png](file:///E:/workspace/流程图/ufs%20电源控制.png)
 ```Shell
 export ARCH=arm64
 export CROSS_COMPILE=aarch64-linux-gnu-
