@@ -307,7 +307,8 @@ qemu参数设置：
 
 ```Shell
 # SCSI磁盘：
-sudo qemu-system-aarch64 -M virt   -cpu cortex-a57  -smp 4  -m 4096 -kernel /home/cyx/work_open/opensource/linux_6.6.34/arch/arm64/boot/Image -append "console=ttyAMA0  root=/dev/sda rw  loglevel=7 tce=sda home=sda opt=sda"  -net nic  -net tap,ifname=tap0 -serial chardev:serial0 -chardev pty,id=serial0 -nographic  -device virtio-scsi-device,id=scsi0 -device scsi-hd,drive=hd0 -drive file=rootfs.img,format=raw,if=none,id=hd0
+sudo qemu-system-aarch64 -M virt   -cpu cortex-a57  -smp 4  -m 4096 -kernel /home/cyx/work_open/opensource/linux_6.6.34/arch/arm64/boot/Image -append "console=ttyAMA0  root=/dev/sda rw  loglevel=7 tce=sda home=sda opt=sda"  -net nic  -net tap,ifname=tap0 -serial chardev:serial0 -chardev pty,id=serial0 -nographic  -device virtio-scsi-device,id=scsi0 -device scsi-hd,drive=hd0 -d
+rive file=/home/cyx/work_open/opensource/tinycore/aarch64/myimg/rootfs.img,format=raw,if=none,id=hd0
 
 # Virtio PCI:
 sudo qemu-system-aarch64 -M virt   -cpu cortex-a57  -smp 4  -m 2048 -kernel /home/cyx/work_open/opensource/linux_6.6.34/arch/arm64/boot/Image -append "console=ttyAMA0  root=/dev/vda  loglevel=7 "  -net nic  -net  tap,ifname=tap0 -serial chardev:serial0 -chardev pty,id=serial0 -nographic   -device virtio-blk-pci,drive=myhd -drive id=myhd,file=rootfs.img,if=none,format=raw
