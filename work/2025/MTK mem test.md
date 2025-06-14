@@ -105,9 +105,7 @@ emi_complex_cpu_mem_test
 # DRAM calib data will be stored to storage device to enhance DRAM init speed.
 CFG_DRAM_CALIB_OPTIMIZATION :=1
 ```
-
 可以看到在打开traing 存储到磁盘的功能时，full k 会执行该测试，fast k 不执行。
-
 ## emi_simple_cpu_mem_test 函数执行条件
 ![](vx_images/77712295183796.png =1107x)
 emi_simple_cpu_mem_test
