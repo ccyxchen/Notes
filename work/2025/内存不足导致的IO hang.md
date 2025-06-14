@@ -69,6 +69,3 @@ https://docs.kernel.org/translations/zh_CN/accounting/psi.html
 
 /proc/pressure/io这个节点写入 "full 250000 1000000"
 /* 监控IO部分阻塞，监控时间窗口为1秒、阻塞门限为250毫秒。*/
-
-
-
