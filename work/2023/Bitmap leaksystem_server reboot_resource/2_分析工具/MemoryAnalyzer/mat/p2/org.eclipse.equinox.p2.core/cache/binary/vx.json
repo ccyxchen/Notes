@@ -1,51 +1,11 @@
 {
-    "created_time": "2025-05-30T02:36:43Z",
+    "created_time": "2025-06-14T09:00:53Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "created_time": "2025-05-30T02:36:43Z",
-            "id": "1036",
-            "modified_time": "2025-05-30T02:36:43Z",
-            "name": "org.eclipse.mat.ui.rcp.feature_root.win32.win32.x86_64_1.14.0.202302232114",
-            "signature": "1876160085940050363",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-05-30T02:36:43Z",
-            "id": "1038",
-            "modified_time": "2025-05-30T02:36:43Z",
-            "name": "org.eclipse.mat.ui.rcp.feature_root_1.14.0.202302232114",
-            "signature": "16580038979516701115",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-05-30T02:36:43Z",
-            "id": "1040",
-            "modified_time": "2025-05-30T02:36:43Z",
-            "name": "org.eclipse.mat.ui.rcp.MemoryAnalyzer.executable.win32.win32.x86_64_1.14.0.202303151743",
-            "signature": "10332365330671278523",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-05-30T02:36:43Z",
-            "id": "1042",
-            "modified_time": "2025-05-30T02:36:43Z",
-            "name": "org.eclipse.rcp_root_4.26.0.v20221123-2302",
-            "signature": "8904206782545074619",
-            "tags": [
-            ]
-        }
     ],
     "folders": [
     ],
-    "id": "1041",
-    "modified_time": "2025-05-30T02:36:43Z",
-    "signature": "15012731960675604923",
+    "id": "570",
+    "modified_time": "2025-06-14T09:00:53Z",
+    "signature": "9401988428386351685",
     "version": 3
 }

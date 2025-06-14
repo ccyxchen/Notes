@@ -1,43 +1,23 @@
 {
-    "created_time": "2025-05-30T02:36:42Z",
+    "created_time": "2025-06-14T09:00:52Z",
     "files": [
         {
             "attachment_folder": "",
-            "created_time": "2025-05-30T02:36:42Z",
-            "id": "964",
-            "modified_time": "2025-05-30T02:36:42Z",
+            "created_time": "2025-06-14T09:00:52Z",
+            "id": "533",
+            "modified_time": "2025-06-14T09:00:52Z",
             "name": "epl-2.0.html",
-            "signature": "8046647348500699578",
+            "signature": "11233280505359972932",
             "tags": [
             ]
         },
         {
             "attachment_folder": "",
-            "created_time": "2025-05-30T02:36:42Z",
-            "id": "966",
-            "modified_time": "2025-05-30T02:36:42Z",
-            "name": "feature.properties",
-            "signature": "2823731236960803258",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-05-30T02:36:42Z",
-            "id": "968",
-            "modified_time": "2025-05-30T02:36:42Z",
-            "name": "feature.xml",
-            "signature": "9613677956131527098",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-05-30T02:36:42Z",
-            "id": "970",
-            "modified_time": "2025-05-30T02:36:42Z",
+            "created_time": "2025-06-14T09:00:52Z",
+            "id": "535",
+            "modified_time": "2025-06-14T09:00:52Z",
             "name": "license.html",
-            "signature": "6951121347296172474",
+            "signature": "3535280216942131780",
             "tags": [
             ]
         }
@@ -47,8 +27,8 @@
             "name": "META-INF"
         }
     ],
-    "id": "971",
-    "modified_time": "2025-05-30T02:36:42Z",
-    "signature": "14161649869889542586",
+    "id": "531",
+    "modified_time": "2025-06-14T09:00:52Z",
+    "signature": "17812947498324277828",
     "version": 3
 }

@@ -1,41 +1,11 @@
 {
-    "created_time": "2025-05-30T02:36:42Z",
+    "created_time": "2025-06-14T09:00:52Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "created_time": "2025-05-30T02:36:42Z",
-            "id": "957",
-            "modified_time": "2025-05-30T02:36:42Z",
-            "name": "ECLIPSE_.RSA",
-            "signature": "2613607980707944890",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-05-30T02:36:42Z",
-            "id": "959",
-            "modified_time": "2025-05-30T02:36:42Z",
-            "name": "ECLIPSE_.SF",
-            "signature": "4574381025164597690",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-05-30T02:36:42Z",
-            "id": "961",
-            "modified_time": "2025-05-30T02:36:42Z",
-            "name": "MANIFEST.MF",
-            "signature": "14939949324618504634",
-            "tags": [
-            ]
-        }
     ],
     "folders": [
     ],
-    "id": "955",
-    "modified_time": "2025-05-30T02:36:42Z",
-    "signature": "17891579871247276474",
+    "id": "529",
+    "modified_time": "2025-06-14T09:00:52Z",
+    "signature": "16667114665440787012",
     "version": 3
 }
