@@ -7,4 +7,4 @@ Length:0x2000
 Region：EMMC_USER
 回读的内容有DL_CK_DONE则说明下载完成，并下载正确，如下图是下载完整的，如果下载不完整不会有DL_CK_DONE。
 
-![1](/tmpimage/MTK%20判断下载是否完成2024-03-02-10-59-31.png)
+![1](../../tmpimage/MTK%20判断下载是否完成2024-03-02-10-59-31.png)

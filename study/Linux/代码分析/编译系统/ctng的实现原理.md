@@ -176,7 +176,7 @@ fi
 # 可以看到是根据CT_RESTART和CT_STOP的值去执行CT_STEPS 中的函数do_${step}
 ```
 
-![1](/tmpimage/ctng的实现原理2024-10-19-22-00-04.png)
+![1](../../tmpimage/ctng的实现原理2024-10-19-22-00-04.png)
 
 ## do_companion_tools_for_build执行过程
 

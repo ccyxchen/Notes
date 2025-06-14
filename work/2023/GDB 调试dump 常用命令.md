@@ -22,31 +22,31 @@ h表示双字节，
 w表示四字节，
 g表示八字节
 例：
-![Alt text](/tmpimage/image-17.png)
+![Alt text](../../tmpimage/image-17.png)
 2、查看代码行号
 A)查看函数
-![Alt text](/tmpimage/image-18.png)
+![Alt text](../../tmpimage/image-18.png)
 B) 通过Call trace的堆栈查看卡死在哪一行
-![Alt text](/tmpimage/image-19.png)
-![Alt text](/tmpimage/image-20.png)
+![Alt text](../../tmpimage/image-19.png)
+![Alt text](../../tmpimage/image-20.png)
 3、查看堆栈
 a)查看所有栈帧
-![Alt text](/tmpimage/image-21.png)
+![Alt text](../../tmpimage/image-21.png)
 Bt 或backtrace
 b)查看栈帧信息
 1、选择特定栈帧，如栈帧1
-![Alt text](/tmpimage/image-22.png)
+![Alt text](../../tmpimage/image-22.png)
 2、栈帧详细信息
-![Alt text](/tmpimage/image-23.png)
+![Alt text](../../tmpimage/image-23.png)
 3、查看函数参数值
-![Alt text](/tmpimage/image-24.png)
+![Alt text](../../tmpimage/image-24.png)
 4、查看变量值
-![Alt text](/tmpimage/image-25.png)
+![Alt text](../../tmpimage/image-25.png)
 或者
-![Alt text](/tmpimage/image-26.png)
+![Alt text](../../tmpimage/image-26.png)
 5、查变量类型
-![Alt text](/tmpimage/image-27.png)
+![Alt text](../../tmpimage/image-27.png)
 显示的更详细
-![Alt text](/tmpimage/image-28.png)
+![Alt text](../../tmpimage/image-28.png)
 6、查寄存器
-![Alt text](/tmpimage/image-29.png)
+![Alt text](../../tmpimage/image-29.png)
