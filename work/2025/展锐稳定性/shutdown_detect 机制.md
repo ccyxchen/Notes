@@ -26,6 +26,218 @@ MeizuNote16:/ # cat /proc/shutdown_detect
 2、调用系统关机接口
 3、设置sys.powerctl这个prop触发关机或重启
 
+### 调用系统关机接口
+有几种不同的情况会调用关机接口
+1、上层应用或按电源键关机
+发送关机 Intent
+```java
+Intent intent = new Intent(Intent.ACTION_REQUEST_SHUTDOWN);
+intent.putExtra(Intent.EXTRA_KEY_CONFIRM, true); // 显示确认对话框
+startActivity(intent);
+```
+![应用实现关机的流程](vx_images/328444944298500.png =1186x)
+默认处理者：ShutdownActivity（系统应用，位于 
+frameworks/base/packages/SystemUI/src/com/android/systemui/shutdown/ShutdownActivity.java）。
+
+调用链：
+ShutdownActivity 接收 ACTION_REQUEST_SHUTDOWN Intent。
+根据 EXTRA_KEY_CONFIRM 决定是否显示用户确认对话框。
+用户确认后，调用 ShutdownThread.run()。
+```java
+//system/frameworks/base/core/java/com/android/internal/app/ShutdownActivity.java
+//接收Intent，判断是关机还是重启，并获取reason值
+Intent intent = getIntent();
+        mReboot = Intent.ACTION_REBOOT.equals(intent.getAction());
+        mConfirm = intent.getBooleanExtra(Intent.EXTRA_KEY_CONFIRM, false);
+        mUserRequested = intent.getBooleanExtra(Intent.EXTRA_USER_REQUESTED_SHUTDOWN, false);
+        final String reason = mUserRequested
+                ? PowerManager.SHUTDOWN_USER_REQUESTED
+                : intent.getStringExtra(Intent.EXTRA_REASON);
+
+ Thread thr = new Thread("ShutdownActivity") {
+            @Override
+            public void run() {
+            //获取PowerManagerService的接口类
+                IPowerManager pm = IPowerManager.Stub.asInterface(
+                        ServiceManager.getService(Context.POWER_SERVICE));
+                try {
+                    if (mReboot) {
+                      //调用PowerManagerService的reboot 和 shutdown函数
+                        pm.reboot(mConfirm, "ShutdownActivity reboot device.", false);
+                        /* @}*/
+                    } else {
+                        pm.shutdown(mConfirm, reason, false);
+                    }
+                } catch (RemoteException e) {
+                }
+            }
+        };               
+
+//system/frameworks/base/services/core/java/com/android/server/power/PowerManagerService.java
+public void reboot(boolean confirm, @Nullable String reason, boolean wait) {
+            try {
+                shutdownOrRebootInternal(HALT_MODE_REBOOT, confirm, reason, wait);
+            } finally {
+                Binder.restoreCallingIdentity(ident);
+            }
+}
+
+public void shutdown(boolean confirm, String reason, boolean wait) {
+    try {
+                shutdownOrRebootInternal(HALT_MODE_SHUTDOWN, confirm, reason, wait);
+            } finally {
+                Binder.restoreCallingIdentity(ident);
+            }
+}
+
+private void shutdownOrRebootInternal(final @HaltMode int haltMode, final boolean conf
+    Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                synchronized (this) {
+                    if (haltMode == HALT_MODE_REBOOT_SAFE_MODE) {
+                        ShutdownThread.rebootSafeMode(getUiContext(), confirm);
+                    } else if (haltMode == HALT_MODE_REBOOT) {
+                    //调用ShutdownThread的接口
+                        ShutdownThread.reboot(getUiContext(), reason, confirm);
+                    } else {
+                        ShutdownThread.shutdown(getUiContext(), reason, confirm);
+                    }
+                }
+            }
+        };
+
+```
+执行流：
+startActivity(intent)->ShutdownActivity.run()->PowerManagerService.reboot/shutdown->
+ShutdownThread.reboot/shutdown->ShutdownThread.shutdownInner
+->ShutdownThread.beginShutdownSequence->ShutdownThread.run-> 
+ShutdownThread.rebootOrShutdown->PowerManagerService.lowLevelReboot/lowLevelShutdown->
+SystemProperties.set("sys.powerctl", "reboot," + reason)/
+SystemProperties.set("sys.powerctl", "shutdown," + reason + chargeTypeString);
+
+可以看到这种方式最终是通过设置sys.powerctl来执行重启/关机的。
+
+### 设置sys.powerctl实现的关机重启
+
+在系统开机init 进程的SecondStage中，执行SecondStageMain函数会进入死循环，该循环会
+检测shutdown_command 是否被设置，shutdown_command 就是在sys.powerctl设置后会初始化。
+```c++
+//system/system/core\init\init.cpp
+int SecondStageMain(int argc, char** argv) {
+
+    //设置了trigger_shutdown函数变量
+    trigger_shutdown = [](const std::string& command) { shutdown_state.TriggerShutdown(command); };
+
+    while (true) {
+        auto shutdown_command = shutdown_state.CheckShutdown();
+        if (shutdown_command) {
+            LOG(INFO) << "Got shutdown_command '" << *shutdown_command
+                      << "' Calling HandlePowerctlMessage()";
+            HandlePowerctlMessage(*shutdown_command);
+        }
+      }
+}
+//检查do_shutdown_判断是否关机/重启
+std::optional<std::string> CheckShutdown() __attribute__((warn_unused_result)) {
+    if (do_shutdown_ && !IsShuttingDown()) {
+            do_shutdown_ = false;
+            return shutdown_command_;
+        }
+        return {};
+}
+
+//设置shutdown_command_
+//ShutdownState.TriggerShutdown
+void TriggerShutdown(const std::string& command) {
+ shutdown_command_ = command;
+        do_shutdown_ = true;
+        WakeMainInitThread();
+}
+   
+/*
+ * 在 Property属性被改变后，会调用PropertyChanged，当判断Property是sys.powerctl，就会设置
+ * shutdown_command_
+ */
+void PropertyChanged(const std::string& name, const std::string& value) {
+     // If the property is sys.powerctl, we bypass the event queue and immediately handle it.
+    // This is to ensure that init will always and immediately shutdown/reboot, regardless of
+    // if there are other pending events to process or if init is waiting on an exec service or
+    // waiting on a property.
+    // In non-thermal-shutdown case, 'shutdown' trigger will be fired to let device specific
+    // commands to be executed.
+    if (name == "sys.powerctl") {
+        trigger_shutdown(value);
+    }
+}
+
+//core\init\reboot.cpp
+//关机重启的最终实现是在HandlePowerctlMessage中
+void HandlePowerctlMessage(const std::string& command) {
+    
+    if (userspace_reboot) {
+        HandleUserspaceReboot();
+        return;
+    }
+     ActionManager::GetInstance().ClearQueue();
+    // Queue shutdown trigger first
+    //这里会发送shutdown事件，触发init.rc 中定义的shutdown动作。
+    //在shutdown执行完后就会执行shutdown_handler中的DoReboot完成最终的重启/关机
+    ActionManager::GetInstance().QueueEventTrigger("shutdown");
+    // Queue built-in shutdown_done
+    auto shutdown_handler = [cmd, command, reboot_target, run_fsck](const BuiltinArguments&) {
+        DoReboot(cmd, command, reboot_target, run_fsck);
+        return Result<void>{};
+    };
+    ActionManager::GetInstance().QueueBuiltinAction(shutdown_handler, "shutdown_done");
+
+    EnterShutdown();
+}
+
+static void DoReboot(unsigned int cmd, const std::string& reason, const std::string& reboot_target,
+                     bool run_fsck) {
+    RebootSystem(cmd, reboot_target, reason);
+    abort();
+}
+
+//core\init\reboot_utils.cpp
+//这个函数实现系统最终的关机或重启，通过调用c库函数 reboot(RB_POWER_OFF); 实现关机，
+//该函数会调用Linux下的kernel_power_off函数关机。
+//调用 __NR_reboot系统调用实现重启。
+void __attribute__((noreturn))
+RebootSystem(unsigned int cmd, const std::string& rebootTarget, const std::string& reboot_reason) {
+     switch (cmd) {
+        case ANDROID_RB_POWEROFF:
+            reboot(RB_POWER_OFF);
+            break;
+
+        case ANDROID_RB_RESTART2:
+            syscall(__NR_reboot, LINUX_REBOOT_MAGIC1, LINUX_REBOOT_MAGIC2,
+                    LINUX_REBOOT_CMD_RESTART2, rebootTarget.c_str());
+            break;
+
+        case ANDROID_RB_THERMOFF:
+            if (android::base::GetBoolProperty("ro.thermal_warmreset", false)) {
+                std::string reason = "shutdown,thermal";
+                if (!reboot_reason.empty()) reason = reboot_reason;
+
+                LOG(INFO) << "Try to trigger a warm reset for thermal shutdown";
+                syscall(__NR_reboot, LINUX_REBOOT_MAGIC1, LINUX_REBOOT_MAGIC2,
+                        LINUX_REBOOT_CMD_RESTART2, reason.c_str());
+            } else {
+                reboot(RB_POWER_OFF);
+            }
+            break;
+    }
+    // In normal case, reboot should not return.
+    PLOG(ERROR) << "reboot call returned";
+    abort();
+}
+```
+执行流：
+PropertyChanged->TriggerShutdown->SecondStageMain->shutdown_state.CheckShutdown
+->HandlePowerctlMessage->DoReboot->RebootSystem->reboot(关机)/__NR_reboot(重启)
+
 ## 上层控制
 
 ### shutdown_detect的开关控制
