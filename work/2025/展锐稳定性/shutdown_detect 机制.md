@@ -275,3 +275,132 @@ int main(void)
 ### 重启超时的检测
 `system/system/core/init/reboot.cpp`
 `system/frameworks/base/services/core/java/com/android/server/power/ShutdownThread.java`
+目前上层对/proc/shutdown_detect的写入都是在上面2个文件中，其中reboot.cpp中都是在
+DoReboot 函数，而ShutdownThread.java 是ShutdownThread.run().
+
+从前面的关机流程可以知道，整个完整的执行过程是：
+startActivity(intent)->ShutdownActivity.run()->PowerManagerService.reboot/shutdown->
+ShutdownThread.reboot/shutdown->ShutdownThread.shutdownInner
+->ShutdownThread.beginShutdownSequence->ShutdownThread.run-> 
+ShutdownThread.rebootOrShutdown->PowerManagerService.lowLevelReboot/lowLevelShutdown->
+SystemProperties.set("sys.powerctl", "reboot," + reason)/
+SystemProperties.set("sys.powerctl", "shutdown," + reason + chargeTypeString);->
+PropertyChanged->TriggerShutdown->SecondStageMain->shutdown_state.CheckShutdown
+->HandlePowerctlMessage->DoReboot->RebootSystem->reboot(关机)/__NR_reboot(重启).
+
+ShutdownThread.run会在DoReboot之前完成。
+
+#### ShutdownThread.run中设置shutdown_detect的过程
+```java
+    public void run() {
+    //run 运行时先直接设置为40
+         if (sShutdownDetectEnabled && sUnisocShutdownThreadService != null) {
+            //40:shutdown stage start, systemserver id
+            sUnisocShutdownThreadService.doShutdownDetect("40");
+        }
+   /*
+   *发送ACTION_SHUTDOWN广播，用于通知应用程序设备即将关机或重启。
+   *当用户关机、重启或系统因某些原因（如低    电量）触发关闭时，系统会发送此广播。
+   *Intent Action: Intent.ACTION_SHUTDOWN
+   *发送时机: 在系统实际关闭之前发送，允许应用进行清理操作（如保存数据、关闭服务等）。
+   *类型: 有序广播（Ordered Broadcast），系统会按优先级顺序传递给接收器。
+   应用可以监听 ACTION_SHUTDOWN 广播，以执行以下操作：
+保存用户数据（如未提交的编辑内容）。
+关闭后台服务或释放资源。
+记录日志或上报设备状态。
+取消未完成的任务（如网络请求）。
+*/
+ Intent intent = new Intent(Intent.ACTION_SHUTDOWN);
+        intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND | Intent.FLAG_RECEIVER_REGISTERED_ONLY);
+        new IIntentReceiver.Stub() {
+                    @Override
+                    public void performReceive(Intent intent, int resultCode, String data,
+                            Bundle extras, boolean ordered, boolean sticky, int sendingUser) {
+                        Log.i(TAG, "receive shutdown broadcast, resultCode is " + resultCode
+                                + ", ordered is " + ordered + ", sticky is " + sticky
+                                + ", sendingUser is " + sendingUser);
+                    //当广播被所有接收器处理完毕后，系统回调 performReceive()。    
+                    mHandler.post(ShutdownThread.this::actionDone);
+                    }
+                }, null, UserHandle.USER_ALL, null, null, opts);
+                
+        synchronized (mActionDoneSync) {
+            while (!mActionDone) {
+                long delay = endTime - SystemClock.elapsedRealtime();
+                if (delay <= 0) {
+                   //shutdown广播的超时时间是10S，超时后就写入47 通知广播完成超时
+                    if (sShutdownDetectEnabled && sUnisocShutdownThreadService != null) {
+                        // 47:shutdown stage, shutdown broadcast timeout id
+                        sUnisocShutdownThreadService.doShutdownDetect("47");
+                    }
+                    break;
+                } else if (mRebootHasProgressBar) {
+                    int status = (int)((MAX_BROADCAST_TIME - delay) * 1.0 *
+                            BROADCAST_STOP_PERCENT / MAX_BROADCAST_TIME);
+                    sInstance.setRebootProgress(status, null);
+                }
+                try {
+                //设置wait 时间是500ms
+                    mActionDoneSync.wait(Math.min(delay, ACTION_DONE_POLL_WAIT_MS));
+                } catch (InterruptedException e) {
+                }
+            }
+        }
+        
+    //执行activity manager的关机流程，am的关机超时是10S，超时会发送46
+     long startAmDetectTime = SystemClock.elapsedRealtime();
+
+        final IActivityManager am =
+                IActivityManager.Stub.asInterface(ServiceManager.checkService("activity"));
+       try {
+                am.shutdown(MAX_BROADCAST_TIME);
+        } catch (RemoteException e) {
+        }
+        ////执行package  manager的关机流程，am的关机超时是10S，超时会发送45
+final PackageManagerInternal pm = LocalServices.getService(PackageManagerInternal.class);
+        if (pm != null) {
+            pm.shutdown();
+        }
+```
+
+#### DoReboot中设置shutdown_detect 的过程
+```C++
+//* Reboot / shutdown the system.
+// cmd ANDROID_RB_* as defined in android_reboot.h
+// reason Reason string like "reboot", "shutdown,userrequested"
+// reboot_target Reboot target string like "bootloader". Otherwise, it should be an empty string.
+// run_fsck Whether to run fsck after umount is done.
+//
+static void DoReboot(unsigned int cmd, const std::string& reason, const std::string& reboot_target,
+                     bool run_fsck) {
+//开始执行时先解析reason,并根据cmd 类型判断是关机或重启
+ if((cmd == ANDROID_RB_RESTART) || (cmd == ANDROID_RB_RESTART2)) {
+        android::base::WriteStringToFile("30", "/proc/shutdown_detect");
+    }else {
+        android::base::WriteStringToFile("70", "/proc/shutdown_detect");
+    }
+    
+//执行vold 关机流程，超时时间5S，超时发送32
+ // 3. send volume abort_fuse and volume shutdown to vold
+    Service* vold_service = ServiceList::GetInstance().FindService("vold");
+    if (vold_service != nullptr && vold_service->IsRunning()) {
+        // Manually abort FUSE connections, since the FUSE daemon is already dead
+        // at this point, and unmounting it might hang.
+        CallVdc("volume", "abort_fuse");
+        CallVdc("volume", "shutdown");
+        vold_service->Stop();
+    } else {
+        LOG(INFO) << "vold not running, skipping vold shutdown";
+    }
+
+//执行umount和fsck，超时5S，超时发送31
+    UmountStat stat =
+            TryUmountAndFsck(cmd, run_fsck, shutdown_timeout - t.duration(), &reboot_semaphore);
+#ifdef SPRD_FEATURE_SHUTDOWN_DETECT
+    android::base::WriteStringToFile("20", "/proc/shutdown_detect");
+#endif
+
+    RebootSystem(cmd, reboot_target, reason);
+    abort();
+}
+```
