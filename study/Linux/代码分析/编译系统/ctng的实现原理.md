@@ -63,7 +63,7 @@ Use action "version" to see the version
 See "man 1 ct-ng" for some help as well
 ```
 
-使用ctng的基本步骤：
+### 使用ctng的基本步骤：
 
 ```Shell
 # 1、 选择sample用例
@@ -73,6 +73,25 @@ ct-ng aarch64-unknown-linux-gnu
 ct-ng menuconfig
 # 3、编译并安装
 ct-ng build.32
+```
+
+### ct-ng 编译x86-64 gcc
+```Shell
+ct-ng x86_64-multilib-linux-gnu
+ct-ng menuconfig 
+# 修改路径,调试log等级
+--> (${CT_TOP_DIR}/src) Local tarballs directory
+--> (${CT_PREFIX:-${CT_TOP_DIR}/install}/${CT_HOST:+HOST-${CT_HOST}/}${CT_TARGET}) P│
+--> (32) Number of parallel jobs
+--> Maximum log level to see: (DEBUG)
+--> [*] Debug crosstool-NG                                                   
+       [ ]   Pause between every steps (NEW)                              
+       [*]   Save intermediate steps                                         
+       [*]     gzip saved states   
+# 下载完源码后暂停,方便打补丁
+ct-ng +companion_tools_for_build
+cd .build/src/gcc-15.2.0/
+
 ```
 
 ## ctng打印所有log进行debug

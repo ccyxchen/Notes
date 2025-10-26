@@ -364,3 +364,80 @@ qemu-system-x86_64: -device virtio-blk-pci,drive=vvmm: Device needs media, but d
 `-drive file=disk.qcow2,format=qcow2,if=virtio`
 
 ## 通过cuttlefish运行
+
+### 拉取最新的aosp
+使用的是 android-latest-release 分支，因为main分支已经不再维护。
+`repo init -u https://android.googlesource.com/platform/manifest -b android-latest-release`
+
+### 编译cuttlefish
+目前代码有问题，运行list_product会报错，从网上找到了可用的项目名。
+
+```Shell
+lunch aosp_cf_x86_64_phone-bp2a-eng
+m
+```
+
+### 运行cuttlefish
+`launch_cvd --vm_manager=qemu_cli`
+i7-12700 无法使用默认的crosvm虚拟机后端运行，所以强制使用qemu运行。
+通过web网页打开的虚拟机是黑屏，可能是qemu的兼容性问题，需要改用vnc显示。
+`vncviewer localhost:6444`
+
+## aosp 编译报错解决
+### Ubuntu 24.04 命名空间限制
+在旧的aosp 源码上，如果sandbox 编译出错就会禁用沙箱继续编译，但是新源码修改为必须启用sandbox。
+但是新Ubuntu 24.04 启用了非特权用户命名空间限制。导致编译报错：
+```txt
+[ 87% 172932/197824] //trusty/vendor/google/aosp/scripts:trusty_security_vm_x86_64.elf generate (pri
+FAILED: out/soong/.intermediates/trusty/vendor/google/aosp/scripts/trusty_security_vm_x86_64.elf/gen
+/trusty_security_vm_x86_64.elf
+mkdir -p out/soong/.intermediates/trusty/vendor/google/aosp/scripts/trusty_security_vm_x86_64.elf/ns
+jail_build_sandbox out/soong/.intermediates/trusty/vendor/google/aosp/scripts/trusty_security_vm_x86
+_64.elf/gen && prebuilts/build-tools/linux-x86/bin/nsjail -B $PWD/out/soong/.intermediates/trusty/ve
+ndor/google/aosp/scripts/trusty_security_vm_x86_64.elf/nsjail_build_sandbox:nsjail_build_sandbox -B 
+$PWD/out/soong/.intermediates/trusty/vendor/google/aosp/scripts/trusty_security_vm_x86_64.elf/gen:ns
+jail_build_sandbox/out -R $PWD/external/libcxx/LICENSE.TXT:nsjail_build_sandbox/external/libcxx/LICE
+NSE.TXT -R $PWD/external/boringssl:nsjail_build_sandbox/external/boringssl -R $PWD/external/dtc:nsja
+il_build_sandbox/external/dtc linux_glibc_common/icud
+t76l.dat:nsjail_build_sandbox/tools/out/com.android.i18n/etc/icu/icudt76l.dat -R $PWD/out/soong/.int
+ermediates/prebuilts/clang/host/linux-x86/libc++/linux_glibc_x86_64_shared/libc++.so:nsjail_build_sa
+ndbox/tools/out/lib64/libc++.so -R /bin -R /lib -R /lib64 -R /dev -R /usr -m none:/tmp:tmpfs:size=10
+73741824 -D nsjail_build_sandbox --disable_rlimits --skip_setsid -q -- /bin/bash -c 'PROJECT_NAME=vm
+-x86_64-security-placeholder-trusted-hal-userdebug; OUT_EXT=elf;(mkdir -p out/build-root && cp -t . 
+external/trusty/lk/makefile trusty/vendor/google/aosp/lk_inc.mk && AIDL_RUST_GLUE_TOOL=tools/out/bin
+/aidl_rust_glue PROTOC_TOOL=tools/out/bin/aprotoc PROTOC_PLUGIN_BINARY=tools/out/bin/trusty_metrics_
+atoms_protoc_plugin TRUSTY_SKIP_DOCS=true tools/out/bin/build_trusty --script-dir trusty/vendor/goog
+le/aosp/scripts --buildid AVF_BUILTIN --verbose $PROJECT_NAME --build-root out/build-root 1>out/stdo
+ut.log 2>out/stderr.log || (echo Trusty build FAILED; echo stdout:; cat out/stdout.log; echo stderr:
+; cat out/stderr.log; false)) && cp -f out/build-root/build-$PROJECT_NAME/lk.$OUT_EXT out/trusty_sec
+urity_vm_x86_64.elf # hash of input list: 6c89141a7bcfddef1264dcddf275d9c3c761b2e9b02f30607b879eb00d
+25be2a'
+[E][2025-09-26T00:30:16+0800][1] initCloneNs():379 mount('/', '/', NULL, MS_REC|MS_PRIVATE, NULL): P
+ermission denied
+[F][2025-09-26T00:30:16+0800][1] runChild():469 Launching child process failed
+```
+
+在[ubuntu-24-04-lts-noble-numbat-release-notes/](https://discourse.ubuntu.com/t/ubuntu-24-04-lts-noble-numbat-release-notes/39890) 下的Security Improvements章节有说明禁用该限制的方法：
+* Confine your applications with an AppArmor profile. Because this can be potentially onerous, a new unconfined profile mode/flag has been added to AppArmor. This designates the profile to essentially act like the unconfined mode for AppArmor where an application is not restricted, and it allows additional permissions to be added, such as the userns, permission. Such profile for, e.g. Google Chrome 261, would look like the following, and it would be located within the /etc/apparmor.d/chrome file:
+```
+abi <abi/4.0>,
+
+include <tunables/global>
+
+/opt/google/chrome/chrome flags=(unconfined) {
+  userns,
+
+  # Site-specific additions and overrides. See local/README for details.
+  include if exists <local/chrome>
+}
+```
+Alternatively, a complete AppArmor profile for the application can be created (see the AppArmor 602 documentation).
+
+* Launch your application in a way that doesn’t use unprivileged user namespaces, e.g. google-chrome-stable --no-sandbox. However, since this disables the use of an internal security feature within the application, this is not recommended. Instead, use the unconfined profile mode described above instead.
+
+* Disable this restriction on the entire system for one boot by executing echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns. This setting is lost on reboot. This similar to the previous behaviour, but it does not mitigate against kernel exploits that abuse the unprivileged user namespaces feature.
+
+* Disable this restriction using a persistent setting by adding a new file (/etc/sysctl.d/60-apparmor-namespace.conf) with the following contents:
+
+`kernel.apparmor_restrict_unprivileged_userns=0`
+Reboot. This is similar to the previous behaviour, but it does not mitigate against kernel exploits that abuse the unprivileged user namespaces feature.

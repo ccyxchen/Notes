@@ -13,7 +13,7 @@ sed -i -e 's/:\/\/(archive.ubuntu.com\|security.ubuntu.com)/old-releases.ubuntu.
 ```Shell
 apt-get install make vim git gcc build-essential  libgmp-dev 
 libmpfr-dev libmpc-dev gcc-multilib perl graphviz libncurses5-dev 
-libncursesw5-dev  bash-completion
+libncursesw5-dev  bash-completion texi2html valgrind
 ```
 
 ### 将codeviz的库安装到系统
