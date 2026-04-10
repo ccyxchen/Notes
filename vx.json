@@ -13,9 +13,6 @@
             "name": "study"
         },
         {
-            "name": "tmp"
-        },
-        {
             "name": "tmpimage"
         },
         {
@@ -25,7 +22,7 @@
             "name": "work"
         }
     ],
-    "id": "780",
+    "id": "793",
     "modified_time": "2025-06-14T09:00:45Z",
     "signature": "11160057948687645245",
     "version": 3

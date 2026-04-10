@@ -85,7 +85,7 @@ java \
     -U http://localhost:8080/${Proj}
 
 更新的命令，解决jvm outofmemory问题
-java -Xms512m -Xmx8g -DOPENGROK_THREADS=8 -XX:ActiveProcessorCount=8  -Djava.util.logging.config.file=opengrok/etc/logging.properties -jar opengrok/dist/lib/opengrok.jar -c /usr/local/bin/ctags -s /home/cyx/work_fast/m2521/ -d opengrok/data/${Proj} -P -i d:'out*' -i d:'*release*' -W opengrok/etc/configuration_${Proj}.xml -U http://localhost:8080/${Proj}
+java -Xms512m -Xmx8g -DOPENGROK_THREADS=8 -XX:ActiveProcessorCount=8  -Djava.util.logging.config.file=opengrok/etc/logging.properties -jar opengrok/dist/lib/opengrok.jar -c /usr/local/bin/ctags -s /home/cyx/work_fast/m2521/ -d opengrok/data/${Proj} -P -i d:'out*' -i d:'*release*' -W opengrok/etc/configuration_${Proj}.xml -U http://localhost:8080/${Proj} 
 ```
 
 最后需要修改 tomcat/webapps/${Proj}/WEB-INF/web.xml

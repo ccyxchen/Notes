@@ -33,7 +33,7 @@ make -j32
 ```
 
 编译完成后，会在out 目录生成镜像，其中的kernel 和 ko 是预编译的，从代码如
-下路径cp过程：
+下路径cp过去：
 `prebuilts/qemu-kernel/x86_64/6.6/`
 
 ### 编译自己的kernel镜像
@@ -194,7 +194,7 @@ index 492da0c..555f008 100644
 emulator是aosp 中的模拟器程序，其源码位于：[qemu.git](https://android.googlesource.com/platform/external/qemu.git)
 该仓库中默认的master分支并不是模拟器代码，带emu 的分支才是模拟器代码，最新的代码位于`emu-master-dev`分支。
 
-当aosp 编译sdk_phone64_x86_64 工程时，其编译出x86_64的qemu2 Android模拟器系统镜像。 在执行lunch再执行emulator，
+当aosp 编译sdk_phone64_x86_64 工程时，其编译出x86_64的qemu2 Android模拟器系统镜像。 先执行lunch，再执行emulator，
 就会运行x86_64的模拟器。其中lunch会设置一系列的变量，emulator 程序会根据这些变量运行模拟器。
 shell中查看设置的变量和函数：
 ```Shell
