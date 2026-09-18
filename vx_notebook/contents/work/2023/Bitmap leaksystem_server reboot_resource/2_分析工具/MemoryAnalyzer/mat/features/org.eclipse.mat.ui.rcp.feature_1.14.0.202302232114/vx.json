@@ -1,0 +1,36 @@
+{
+  "createdUtc": 1749891652000,
+  "files": [
+    {
+      "createdUtc": 1749891652000,
+      "id": "d02de7b9-a230-4ef9-b55f-e1dac33ed7c1",
+      "metadata": {},
+      "modifiedUtc": 1749891652000,
+      "name": "about.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891653000,
+      "id": "f3740d2c-e1ed-4de3-8626-c9644a05c440",
+      "metadata": {},
+      "modifiedUtc": 1749891653000,
+      "name": "epl-2.0.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891653000,
+      "id": "bf62e134-5cc0-4d3d-93a3-2d28e4ace19a",
+      "metadata": {},
+      "modifiedUtc": 1749891653000,
+      "name": "license.html",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "META-INF"
+  ],
+  "id": "e2b78ec2-bd7a-4b01-9eba-6ad8713d37c6",
+  "metadata": {},
+  "modifiedUtc": 1789657019454,
+  "name": "org.eclipse.mat.ui.rcp.feature_1.14.0.202302232114"
+}

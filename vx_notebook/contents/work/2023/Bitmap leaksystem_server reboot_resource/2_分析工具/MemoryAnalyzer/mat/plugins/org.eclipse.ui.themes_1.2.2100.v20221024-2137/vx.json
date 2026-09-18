@@ -1,0 +1,21 @@
+{
+  "createdUtc": 1749891655000,
+  "files": [
+    {
+      "createdUtc": 1749891655000,
+      "id": "ff3717e4-3482-4ad8-b22b-ac8813f96124",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "about.html",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "css",
+    "META-INF"
+  ],
+  "id": "a799e636-cc8c-443c-b845-701da4b5da78",
+  "metadata": {},
+  "modifiedUtc": 1789657019716,
+  "name": "org.eclipse.ui.themes_1.2.2100.v20221024-2137"
+}

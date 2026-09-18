@@ -1,0 +1,26 @@
+{
+  "createdUtc": 1749891648000,
+  "files": [
+    {
+      "createdUtc": 1749891648000,
+      "id": "6408089b-99d2-464d-9349-2aca033a2c0d",
+      "metadata": {},
+      "modifiedUtc": 1749891648000,
+      "name": "字符编码.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789725141749,
+      "id": "6f2b3c5f-2174-49f9-9dc5-0c4c8d248425",
+      "metadata": {},
+      "modifiedUtc": 1789725141749,
+      "name": "GB 2312-1980 信息交换用汉字编码字符集 基本集.pdf",
+      "tags": []
+    }
+  ],
+  "folders": [],
+  "id": "91b2a1b6-c652-4cd8-8dd3-96e3e79091d8",
+  "metadata": {},
+  "modifiedUtc": 1789725141749,
+  "name": "字符编码"
+}

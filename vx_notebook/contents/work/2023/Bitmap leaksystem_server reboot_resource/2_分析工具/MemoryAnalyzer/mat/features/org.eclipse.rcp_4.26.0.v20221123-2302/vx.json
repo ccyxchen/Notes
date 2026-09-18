@@ -1,0 +1,28 @@
+{
+  "createdUtc": 1749891653000,
+  "files": [
+    {
+      "createdUtc": 1749891653000,
+      "id": "00f1ee8d-4849-4afa-939f-9b24fe6366fc",
+      "metadata": {},
+      "modifiedUtc": 1749891653000,
+      "name": "epl-2.0.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891653000,
+      "id": "5aa70817-8c4c-4571-b366-0884715b1fc7",
+      "metadata": {},
+      "modifiedUtc": 1749891653000,
+      "name": "license.html",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "META-INF"
+  ],
+  "id": "dbc04b57-c2a6-4d6a-b888-34d5e85728bf",
+  "metadata": {},
+  "modifiedUtc": 1789657019470,
+  "name": "org.eclipse.rcp_4.26.0.v20221123-2302"
+}

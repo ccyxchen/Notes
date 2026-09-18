@@ -1,0 +1,31 @@
+{
+  "createdUtc": 1749891650000,
+  "files": [
+    {
+      "createdUtc": 1749891650000,
+      "id": "d7dade21-baaf-4133-ba56-e72adf36c55f",
+      "metadata": {},
+      "modifiedUtc": 1749891650000,
+      "name": "epl-2.0.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891653000,
+      "id": "bc6bb19f-c3ab-4fac-846e-94d553716dce",
+      "metadata": {},
+      "modifiedUtc": 1749891653000,
+      "name": "notice.html",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "configuration",
+    "features",
+    "p2",
+    "plugins"
+  ],
+  "id": "cf37a2fb-3286-4a78-a2fd-7b1e922c90b5",
+  "metadata": {},
+  "modifiedUtc": 1789657019522,
+  "name": "mat"
+}

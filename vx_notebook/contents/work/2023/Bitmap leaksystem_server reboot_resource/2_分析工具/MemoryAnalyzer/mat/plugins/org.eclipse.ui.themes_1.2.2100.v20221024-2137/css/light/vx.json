@@ -1,0 +1,50 @@
+{
+  "createdUtc": 1749891656000,
+  "files": [
+    {
+      "createdUtc": 1749891656000,
+      "id": "b712ef25-b3f4-44db-86bf-1e0502ea23d5",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "e4-light-drag-styling.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "8ae35643-5838-4754-a76c-1a0e5c0c7afe",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "e4-light_globalstyle.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "49fdf11d-edbf-491b-9d5f-d91471aafcf1",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "e4-light_ide_colorextensions.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "597dc933-e0c3-4e32-82bd-c999f6f0b044",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "e4-light_partstyle.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "f84d0165-8321-42f0-8d14-880c6d8c5260",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "e4-light_tabstyle.css",
+      "tags": []
+    }
+  ],
+  "folders": [],
+  "id": "6c8772b5-0ba0-4971-8996-16485cda0f2d",
+  "metadata": {},
+  "modifiedUtc": 1789657019712,
+  "name": "light"
+}

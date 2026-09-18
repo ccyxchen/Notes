@@ -1,0 +1,28 @@
+{
+  "createdUtc": 1749891648000,
+  "files": [
+    {
+      "createdUtc": 1789720124734,
+      "id": "944bdf39-ac86-49ca-90aa-6409e6946568",
+      "metadata": {},
+      "modifiedUtc": 1789720124734,
+      "name": "【CPU】 C-State, C-模式 是什么？ - apnpc - 博客园.mhtml",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789725129986,
+      "id": "534bb618-daff-41b1-b6a0-de939e905516",
+      "metadata": {},
+      "modifiedUtc": 1789725129986,
+      "name": "[嵌入式er笔记]大端小端详解(含代码及详细注释) - 知乎.mhtml",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "字符编码"
+  ],
+  "id": "ecc55971-c974-49de-8ccc-53618c20704e",
+  "metadata": {},
+  "modifiedUtc": 1789725129986,
+  "name": "Computer_Base"
+}

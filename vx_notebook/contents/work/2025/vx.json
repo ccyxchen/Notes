@@ -1,0 +1,188 @@
+{
+  "createdUtc": 1749891656000,
+  "files": [
+    {
+      "createdUtc": 1749891656000,
+      "id": "18b9f939-66d5-48b9-b301-7d740c0f6b4e",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "crash工具的使用.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "bbd76158-e806-4fbb-8f9f-ee4f6689f364",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "i2c 超时的案例分析.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "16fb0ff6-a4fc-45b0-b1a3-5c5760af4020",
+      "metadata": {},
+      "modifiedUtc": 1749894852000,
+      "name": "MTK mem test.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "da86cc6d-a673-4dac-b9ee-d2c1545c0603",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "Qcom Pmic初始化值设定.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "e8fc5401-0666-47e3-8b83-8b4f6bfdfdf1",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "Qcom 抓log.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "aa5bbadd-7ee4-45f9-b7b4-c4d915caad3a",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "V871 强制重启出现文件丢失问题排查.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "03c562ac-f839-4859-8cfc-bdb7e3a3d8e8",
+      "metadata": {},
+      "modifiedUtc": 1749893796000,
+      "name": "内存不足导致的IO hang.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891657000,
+      "id": "5cc2c5b8-ae0a-4ebf-a63d-129a74f6803c",
+      "metadata": {},
+      "modifiedUtc": 1749891657000,
+      "name": "内核trace 使用.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891657000,
+      "id": "8e8501f8-7dd1-431a-bfd5-24004f4f1fd9",
+      "metadata": {},
+      "modifiedUtc": 1749891657000,
+      "name": "展锐CPU&DDR调试方法.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891657000,
+      "id": "b2e6d9fc-d12f-41ef-ac9e-102cd6fe007d",
+      "metadata": {},
+      "modifiedUtc": 1749891657000,
+      "name": "展锐dump中看 ddr freq.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891657000,
+      "id": "a4a22cb3-0d42-4c07-8f83-ff7341c19e12",
+      "metadata": {},
+      "modifiedUtc": 1749891657000,
+      "name": "展锐刷机判断失败原因.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891657000,
+      "id": "ec7122cc-d497-4ed6-9b51-0729030b1f15",
+      "metadata": {},
+      "modifiedUtc": 1749891657000,
+      "name": "查看dma memory 内存泄漏分析.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1750132139000,
+      "id": "0cd6b876-4f74-46a6-89d1-ebc782321ccf",
+      "metadata": {},
+      "modifiedUtc": 1750133770000,
+      "name": "展锐高温关机调整.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1750754694000,
+      "id": "2ba9adb7-5e01-4f7c-bd74-7b7b2585192e",
+      "metadata": {},
+      "modifiedUtc": 1752062553000,
+      "name": "导出coredump.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1765027442000,
+      "id": "5a65cff4-c693-480e-97b2-bcbeb966c16a",
+      "metadata": {},
+      "modifiedUtc": 1770562248000,
+      "name": "mtk ddr 校准训练详解.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1768743991000,
+      "id": "177f983a-9474-4ce1-b381-2ee0e21b4bda",
+      "metadata": {},
+      "modifiedUtc": 1768744014000,
+      "name": "ddr测试工具.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789657247412,
+      "id": "7c5ace6f-3c91-4fa6-bab3-dfb69d4094f4",
+      "metadata": {},
+      "modifiedUtc": 1789657247412,
+      "name": "lk中的dump流程图.drawio",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789724725889,
+      "id": "18b8ff13-5226-41f8-967d-81514b76c0e5",
+      "metadata": {},
+      "modifiedUtc": 1789724725889,
+      "name": "高通新平台DDR配置方法.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789724734533,
+      "id": "d6db2ffe-bcc2-441a-9ed6-da6ff5a0a323",
+      "metadata": {},
+      "modifiedUtc": 1789724734533,
+      "name": "marmind.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789724786358,
+      "id": "208ffc97-fae1-4c93-be4e-f0c8c0475577",
+      "metadata": {},
+      "modifiedUtc": 1789724786358,
+      "name": "高通DDR training.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789724791191,
+      "id": "7c79f71a-dab8-4400-92f7-f10d9dca48fb",
+      "metadata": {},
+      "modifiedUtc": 1789724791191,
+      "name": "展锐DDR分析.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789724800370,
+      "id": "8e2a6256-e30d-476f-aa2a-3d14ba367c2b",
+      "metadata": {},
+      "modifiedUtc": 1789724800370,
+      "name": "mtk DDR驱动详解.md",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "展锐稳定性"
+  ],
+  "id": "f14019f5-6177-4bc0-9f8c-5e0f2a678beb",
+  "metadata": {},
+  "modifiedUtc": 1789724800370,
+  "name": "2025"
+}

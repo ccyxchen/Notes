@@ -1,0 +1,36 @@
+{
+  "createdUtc": 1749891651000,
+  "files": [
+    {
+      "createdUtc": 1749891651000,
+      "id": "16e3d945-2c1f-44f8-bc24-7a595ff842b4",
+      "metadata": {},
+      "modifiedUtc": 1749891651000,
+      "name": "about.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891651000,
+      "id": "3713f25c-5266-4a98-b514-958d5e4dc0f7",
+      "metadata": {},
+      "modifiedUtc": 1749891651000,
+      "name": "epl-2.0.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891651000,
+      "id": "8dc8a6b5-f101-418d-a872-46c27bf194a4",
+      "metadata": {},
+      "modifiedUtc": 1749891651000,
+      "name": "license.html",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "META-INF"
+  ],
+  "id": "c87a4df3-09df-4bce-851b-4c826756b36e",
+  "metadata": {},
+  "modifiedUtc": 1789657019320,
+  "name": "org.eclipse.ecf.filetransfer.ssl.feature_1.1.401.v20210409-2301"
+}

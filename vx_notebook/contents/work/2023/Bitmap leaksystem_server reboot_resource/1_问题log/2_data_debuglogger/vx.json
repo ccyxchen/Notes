@@ -1,0 +1,20 @@
+{
+  "createdUtc": 1749891650000,
+  "files": [
+    {
+      "createdUtc": 1749891650000,
+      "id": "ba2a89d4-38e6-4847-8402-5287a45f6398",
+      "metadata": {},
+      "modifiedUtc": 1749891650000,
+      "name": "file_tree.txt",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "mobilelog"
+  ],
+  "id": "4114c91b-f677-47fe-ab8f-e227f805b0e0",
+  "metadata": {},
+  "modifiedUtc": 1789657019112,
+  "name": "2_data_debuglogger"
+}

@@ -1,0 +1,12 @@
+{
+  "createdUtc": 1749891653000,
+  "files": [],
+  "folders": [
+    "org.eclipse.equinox.p2.core",
+    "org.eclipse.equinox.p2.engine"
+  ],
+  "id": "c825c7a8-33ca-401e-8838-65ef86ff5f7c",
+  "metadata": {},
+  "modifiedUtc": 1789657019492,
+  "name": "p2"
+}

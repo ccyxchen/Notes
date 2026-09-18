@@ -1,0 +1,34 @@
+{
+  "createdUtc": 1749891647000,
+  "files": [
+    {
+      "createdUtc": 1789720037270,
+      "id": "fc5d3cad-caad-4625-b13b-a0f41bd3594c",
+      "metadata": {},
+      "modifiedUtc": 1789720037270,
+      "name": "JESD79-4 DDR4 SDRAM.pdf",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789725123697,
+      "id": "76bf40f5-2cd0-4c80-91ad-5bfef1efddf8",
+      "metadata": {},
+      "modifiedUtc": 1789725123697,
+      "name": "Universal Flash Storage (UFS) Version 2.2 JESD220C-2_2.pdf",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789725125645,
+      "id": "fafcff50-8622-4470-a527-6f08987199d1",
+      "metadata": {},
+      "modifiedUtc": 1789725125645,
+      "name": "Universal Flash Storage (UFS) Version 3.1 JESD220.pdf",
+      "tags": []
+    }
+  ],
+  "folders": [],
+  "id": "bcbf842a-09b2-4654-857f-12e44964e770",
+  "metadata": {},
+  "modifiedUtc": 1789725125645,
+  "name": "Protocol"
+}

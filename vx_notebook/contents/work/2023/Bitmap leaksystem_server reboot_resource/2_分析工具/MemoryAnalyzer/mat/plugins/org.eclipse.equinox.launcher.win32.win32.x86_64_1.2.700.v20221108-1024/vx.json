@@ -1,0 +1,20 @@
+{
+  "createdUtc": 1749891653000,
+  "files": [
+    {
+      "createdUtc": 1749891653000,
+      "id": "f1ef5e0a-9bde-41b9-a4d7-24a1b8ed0df0",
+      "metadata": {},
+      "modifiedUtc": 1749891653000,
+      "name": "about.html",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "META-INF"
+  ],
+  "id": "58cf9029-c8b1-4d7c-8092-f8e7546834a8",
+  "metadata": {},
+  "modifiedUtc": 1789657019538,
+  "name": "org.eclipse.equinox.launcher.win32.win32.x86_64_1.2.700.v20221108-1024"
+}

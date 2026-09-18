@@ -1,0 +1,13 @@
+{
+  "createdUtc": 1749891653000,
+  "files": [],
+  "folders": [
+    "org.eclipse.equinox.launcher.win32.win32.x86_64_1.2.700.v20221108-1024",
+    "org.eclipse.platform_4.26.0.v20221123-1800",
+    "org.eclipse.ui.themes_1.2.2100.v20221024-2137"
+  ],
+  "id": "f9dffa75-82c4-4a28-b5ea-ca3be895da0b",
+  "metadata": {},
+  "modifiedUtc": 1789657019603,
+  "name": "plugins"
+}

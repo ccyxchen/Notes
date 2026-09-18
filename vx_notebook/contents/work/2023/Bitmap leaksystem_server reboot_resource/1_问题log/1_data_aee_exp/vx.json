@@ -1,0 +1,21 @@
+{
+  "createdUtc": 1749891650000,
+  "files": [
+    {
+      "createdUtc": 1749891650000,
+      "id": "c850ca96-fb79-4718-8f52-b8c3a1408a65",
+      "metadata": {},
+      "modifiedUtc": 1749891650000,
+      "name": "file_tree.txt",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "db.00.JE",
+    "db.01.JE"
+  ],
+  "id": "d30c9358-ef58-4dd8-892c-459b48ed83ac",
+  "metadata": {},
+  "modifiedUtc": 1789657019100,
+  "name": "1_data_aee_exp"
+}

@@ -1,0 +1,42 @@
+{
+  "createdUtc": 1749891650000,
+  "files": [
+    {
+      "createdUtc": 1749891650000,
+      "id": "7188e227-6699-4004-b8da-c4d7a8450525",
+      "metadata": {},
+      "modifiedUtc": 1749891650000,
+      "name": "awk的使用.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891650000,
+      "id": "20f2fcee-0536-487f-bc42-9f96dc308646",
+      "metadata": {},
+      "modifiedUtc": 1749891650000,
+      "name": "各种语法.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789725039796,
+      "id": "153ebed3-a37f-4b99-95b0-3bfdca3a5064",
+      "metadata": {},
+      "modifiedUtc": 1789725039796,
+      "name": "shell 编程：冒号 后面跟 等号，加号，减号，问号的意义 - 笨鸟教程的博客 _ BY BenderFly.mhtml",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789725041431,
+      "id": "7705f3b5-1ae7-454f-80b3-00a9c1194543",
+      "metadata": {},
+      "modifiedUtc": 1789725041431,
+      "name": "(172条消息) shell 数组遍历的3种方法_「已注销」的博客-CSDN博客_shell 数组遍历.mhtml",
+      "tags": []
+    }
+  ],
+  "folders": [],
+  "id": "b938399e-e7e9-4001-903e-7c08a38749bc",
+  "metadata": {},
+  "modifiedUtc": 1789725041431,
+  "name": "Shell"
+}

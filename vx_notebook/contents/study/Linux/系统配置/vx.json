@@ -1,0 +1,186 @@
+{
+  "createdUtc": 1749891648000,
+  "files": [
+    {
+      "createdUtc": 1749891648000,
+      "id": "29fa3d14-6dbb-43bf-811e-a390cd92258e",
+      "metadata": {},
+      "modifiedUtc": 1749891648000,
+      "name": "[EDIT] 如何在Ubuntu 20.04上安装NFS客户端和服务器.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "d7efc70b-300d-4eff-ba3a-a725ed50d91e",
+      "metadata": {},
+      "modifiedUtc": 1749891648000,
+      "name": "opencore建立linux引导.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "0f54673e-612b-460c-93d4-878fe8559ccd",
+      "metadata": {},
+      "modifiedUtc": 1749891648000,
+      "name": "Ubuntu adb增加端口.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "d8eba13a-3a79-44f7-bc60-6abbadfc3df2",
+      "metadata": {},
+      "modifiedUtc": 1749891648000,
+      "name": "ubuntu_set_proxy.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "5f18cf69-45f7-4f89-803c-82299d9d80f5",
+      "metadata": {},
+      "modifiedUtc": 1749891648000,
+      "name": "ubuntu安装battery-historian.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "9553df96-4246-4183-a2fb-e9ee8f7732ab",
+      "metadata": {},
+      "modifiedUtc": 1749891648000,
+      "name": "ubuntu新增应用启动图标.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "882cccf3-7703-486a-956f-1e5f243ff3bb",
+      "metadata": {},
+      "modifiedUtc": 1759109264000,
+      "name": "ubuntu编译codeviz.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "a003398c-c0f1-4989-a70d-6fdcf5301781",
+      "metadata": {},
+      "modifiedUtc": 1756483203000,
+      "name": "ubuntu设置V2ray.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "bf8bb4c9-7bd6-4e84-8ca8-41b9cd249f22",
+      "metadata": {},
+      "modifiedUtc": 1749891648000,
+      "name": "wsl 设置代理.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "76bbaa0a-d5b4-48a5-90f5-9446243e464a",
+      "metadata": {},
+      "modifiedUtc": 1749891648000,
+      "name": "wsl设置并挂载虚拟磁盘.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "7001b807-358d-4aa3-96bb-2cb6a988c5e8",
+      "metadata": {},
+      "modifiedUtc": 1749891648000,
+      "name": "串口终端.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "3189915d-e02f-4d30-8944-0de11b5ef9d6",
+      "metadata": {},
+      "modifiedUtc": 1766238093000,
+      "name": "使用opengrok.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "a9d681a3-8b4b-4708-a7a2-bc08226c0c67",
+      "metadata": {},
+      "modifiedUtc": 1749891648000,
+      "name": "更改Ubuntu默认python版本的方法.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891648000,
+      "id": "433245cd-a119-46f8-b40c-b2f48eb43a6b",
+      "metadata": {},
+      "modifiedUtc": 1749891648000,
+      "name": "更新 repo仓库中的repo 版本.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891649000,
+      "id": "bc47e049-aa3b-4e55-8ac9-82fc708b8c00",
+      "metadata": {},
+      "modifiedUtc": 1749891649000,
+      "name": "设置tftp 服务器.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1758675837000,
+      "id": "fbd025a6-3a8c-42cc-8314-a1a04a05b10e",
+      "metadata": {},
+      "modifiedUtc": 1759567046000,
+      "name": "配置vs code代码开发环境.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1759159916000,
+      "id": "18bdecd2-80d2-4501-b345-c44f4159bb27",
+      "metadata": {},
+      "modifiedUtc": 1759159916000,
+      "name": "(130条消息) Ubuntu高版本如何安装低版本GCC (以Ubuntu 20安装GCC5为例)_Charlie's-CSDN博客_ubuntu安装低版本gcc.mhtml",
+      "tags": []
+    },
+    {
+      "createdUtc": 1766101301000,
+      "id": "06797f13-5edb-4b8c-8b2c-db7d20156b71",
+      "metadata": {},
+      "modifiedUtc": 1766101398000,
+      "name": "ubuntu设置开机自启动服务.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1769012161000,
+      "id": "041d5414-1b93-420f-af89-11f64ab8bf53",
+      "metadata": {},
+      "modifiedUtc": 1769012163000,
+      "name": "部署perffeto.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789725093123,
+      "id": "fbfed042-25d5-4483-bd69-b15f34df5303",
+      "metadata": {},
+      "modifiedUtc": 1789725093123,
+      "name": "Linux中pkg-config的使用 _ Ivanzz.mhtml",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789725094699,
+      "id": "1108f35e-eb63-420b-bb45-916368f6d1fb",
+      "metadata": {},
+      "modifiedUtc": 1789725094699,
+      "name": "利用Privoxy设置终端http代理🚀.mhtml",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789725097681,
+      "id": "59b2c458-3603-4541-be97-358464991a46",
+      "metadata": {},
+      "modifiedUtc": 1789725097681,
+      "name": "Ubuntu 18.04 如何添加或删除 SWAP 交换分区 - 系统极客.mhtml",
+      "tags": []
+    }
+  ],
+  "folders": [],
+  "id": "73e98937-2d8d-421b-a6f1-3ca0dbea253e",
+  "metadata": {},
+  "modifiedUtc": 1789725097681,
+  "name": "系统配置"
+}

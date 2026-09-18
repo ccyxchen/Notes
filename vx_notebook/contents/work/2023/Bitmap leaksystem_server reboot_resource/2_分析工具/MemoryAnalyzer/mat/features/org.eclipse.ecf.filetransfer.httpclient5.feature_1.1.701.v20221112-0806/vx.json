@@ -1,0 +1,44 @@
+{
+  "createdUtc": 1749891651000,
+  "files": [
+    {
+      "createdUtc": 1749891651000,
+      "id": "3be1199c-f96b-47e2-b843-04565f78bac0",
+      "metadata": {},
+      "modifiedUtc": 1749891651000,
+      "name": "about.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891651000,
+      "id": "176d01c3-2ca3-427f-974e-a733bb9a58ee",
+      "metadata": {},
+      "modifiedUtc": 1749891651000,
+      "name": "asl-v20.txt",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891651000,
+      "id": "8baddc98-d87d-43e9-aca0-3f18e70916cb",
+      "metadata": {},
+      "modifiedUtc": 1749891651000,
+      "name": "epl-2.0.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891651000,
+      "id": "f8078735-b5f2-40ba-af3e-f3087ca3fcdc",
+      "metadata": {},
+      "modifiedUtc": 1749891651000,
+      "name": "license.html",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "META-INF"
+  ],
+  "id": "974d8724-9cae-4233-9b4e-e1cdb786d9d1",
+  "metadata": {},
+  "modifiedUtc": 1789657019298,
+  "name": "org.eclipse.ecf.filetransfer.httpclient5.feature_1.1.701.v20221112-0806"
+}

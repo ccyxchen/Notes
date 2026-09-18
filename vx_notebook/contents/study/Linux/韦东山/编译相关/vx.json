@@ -1,0 +1,42 @@
+{
+  "createdUtc": 1749891649000,
+  "files": [
+    {
+      "createdUtc": 1749891649000,
+      "id": "dccb054e-9a21-4b66-8565-4b5189d292b0",
+      "metadata": {},
+      "modifiedUtc": 1749891649000,
+      "name": "kernel编译学习.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891649000,
+      "id": "bf3b97ea-3d51-4c6c-8265-7ae3f7fd8cd0",
+      "metadata": {},
+      "modifiedUtc": 1749891649000,
+      "name": "Tiny4412_Android编译.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891649000,
+      "id": "5f7e283d-7dfd-44fc-9652-959c8b8c285f",
+      "metadata": {},
+      "modifiedUtc": 1749891649000,
+      "name": "uboot编译.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891649000,
+      "id": "59bf73c8-eb87-41e7-9733-7208ee6cdde0",
+      "metadata": {},
+      "modifiedUtc": 1749891649000,
+      "name": "根文件系统.md",
+      "tags": []
+    }
+  ],
+  "folders": [],
+  "id": "8a631724-15ee-434d-955e-203ccad16b3b",
+  "metadata": {},
+  "modifiedUtc": 1789657018778,
+  "name": "编译相关"
+}

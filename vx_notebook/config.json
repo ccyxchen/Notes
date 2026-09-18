@@ -1,0 +1,15 @@
+{
+  "assetsFolder": "vx_assets",
+  "autoSyncEnabled": true,
+  "description": "",
+  "id": "981db901-1ae1-4658-a974-98c6f405169a",
+  "ignored": [],
+  "metadata": {},
+  "name": "Notes",
+  "recycleBinFolder": "vx_notebook/recycle_bin",
+  "syncBackend": "",
+  "syncEnabled": false,
+  "syncRemoteUrl": "",
+  "tags": [],
+  "tagsModifiedUtc": 0
+}

@@ -1,0 +1,55 @@
+{
+  "createdUtc": 1749891653000,
+  "files": [
+    {
+      "createdUtc": 1749891653000,
+      "id": "bdbbf989-a169-4602-96c3-54a275c04a7e",
+      "metadata": {},
+      "modifiedUtc": 1749891653000,
+      "name": "about.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891653000,
+      "id": "76ea2c69-7bfe-4bb5-b8df-7af6eb535a99",
+      "metadata": {},
+      "modifiedUtc": 1749891653000,
+      "name": "book.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891654000,
+      "id": "50a507ce-d387-42cc-b6cf-184194cfb6d6",
+      "metadata": {},
+      "modifiedUtc": 1749891654000,
+      "name": "disabled_book.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891654000,
+      "id": "a92caa91-a5ee-4517-a913-a6ec3eb2f750",
+      "metadata": {},
+      "modifiedUtc": 1749891654000,
+      "name": "macosx_narrow_book.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891654000,
+      "id": "b1ca8b11-4b34-4b95-873a-e1fb6a0d19d2",
+      "metadata": {},
+      "modifiedUtc": 1749891654000,
+      "name": "narrow_book.css",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "images",
+    "intro",
+    "META-INF",
+    "org.eclipse.ui.intro.universal.solstice"
+  ],
+  "id": "47c00c3d-4b5f-4355-a543-c77283b91fbe",
+  "metadata": {},
+  "modifiedUtc": 1789657019598,
+  "name": "org.eclipse.platform_4.26.0.v20221123-1800"
+}

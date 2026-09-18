@@ -185,7 +185,7 @@ echo "8:16  1048576" > /sys/fs/cgroup/blkio/blkio.throttle.read_bps_device
 ## qemu中运行 linux aarch64
 
 ### 交叉编译内核
-[ufs 电源控制.png](file:///E:/workspace/流程图/ufs%20电源控制.png)
+
 ```Shell
 export ARCH=arm64
 export CROSS_COMPILE=aarch64-linux-gnu-

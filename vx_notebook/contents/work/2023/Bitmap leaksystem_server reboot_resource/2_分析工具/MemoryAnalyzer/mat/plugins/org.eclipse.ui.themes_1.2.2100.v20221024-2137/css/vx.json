@@ -1,0 +1,94 @@
+{
+  "createdUtc": 1749891655000,
+  "files": [
+    {
+      "createdUtc": 1749891655000,
+      "id": "1b1fb7eb-31f6-4dae-bb8d-33ffa6beb96b",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4-dark_linux.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891655000,
+      "id": "5e5cdf74-48bf-4e8a-b0e2-2001e310bf46",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4-dark_mac.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891655000,
+      "id": "771adef2-d2e8-406d-a3b3-c08c296cb5c6",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4-dark_mac1013.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891655000,
+      "id": "c35515f1-26a2-48ed-b3b5-c8f4851d4fa3",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4-dark_win.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891655000,
+      "id": "45b56820-b0d7-406f-adf9-c8cb35d79fb4",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4_basestyle.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891655000,
+      "id": "90748184-1db8-497b-ac7f-be5bd67b42fc",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4_classic.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891655000,
+      "id": "5ebce858-73db-4fdb-89ae-8bcd74e36ef5",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4_default_gtk.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "d4795ced-012e-46c7-bee6-e3ae54a53d42",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "e4_default_mac.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "dff9dde8-08a3-4fd6-83e2-446032f27b2f",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "e4_default_win.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "1a55f995-3b6f-4f7f-84ab-7d584431026c",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "high-contrast.css",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "common",
+    "dark",
+    "light"
+  ],
+  "id": "b64fe33d-2a70-404b-821e-11337acb747d",
+  "metadata": {},
+  "modifiedUtc": 1789657019692,
+  "name": "css"
+}

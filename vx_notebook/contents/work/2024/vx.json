@@ -1,0 +1,122 @@
+{
+  "createdUtc": 1749891656000,
+  "files": [
+    {
+      "createdUtc": 1749891656000,
+      "id": "cddb14f6-fd3e-4e3a-9ac0-e602c003c5a1",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "ddr 容量不匹配.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "e5365b90-4f7d-48b3-8138-83628113ecdf",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "GPIO配置.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "d040a7af-8ede-4488-9ddd-c9b274d23f7b",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "linux设置和挂载debugfs.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "a9e817fb-8d8a-4f5c-8aaf-0f6292f856b7",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "lk中查看开机和重启原因.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "75b37122-4cac-4349-8254-041fef4915e9",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "MTK 判断下载是否完成.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "f63507a4-1cf9-4e77-9670-3f9406494e6d",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "mtk 编译系统使用.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "54efb9ce-a309-4e98-a4f6-b83f4de5e724",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "MTK下载工具的使用.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "939efb83-ca9a-4b5e-aaef-18412f06cee8",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "super.img解析.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "9131c1bf-d4de-4857-8f2d-92edcbf5aaa9",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "UFS错误码.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "61734fcd-8447-4ff5-9972-d39756ac47b0",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "各平台各类log.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "8c224947-eb30-4ff6-b529-8e3c510f0c7a",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "各平台强制下载说明.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "1af759b0-5ffb-4bc8-a0fa-fae16619d554",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "各平台解析dump.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "e8855770-ff26-49c2-9818-82ae69a9a1ce",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "执行设备unlock.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891656000,
+      "id": "455af3a6-bbca-429f-a969-e4f2abee6e22",
+      "metadata": {},
+      "modifiedUtc": 1749891656000,
+      "name": "按键失效问题分析.md",
+      "tags": []
+    }
+  ],
+  "folders": [],
+  "id": "b8e65be4-d068-4874-a827-8c6f1438e957",
+  "metadata": {},
+  "modifiedUtc": 1789657019786,
+  "name": "2024"
+}

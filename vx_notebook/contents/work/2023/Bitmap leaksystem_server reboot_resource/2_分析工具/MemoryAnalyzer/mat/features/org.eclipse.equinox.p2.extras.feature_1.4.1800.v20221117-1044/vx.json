@@ -1,0 +1,28 @@
+{
+  "createdUtc": 1749891652000,
+  "files": [
+    {
+      "createdUtc": 1749891652000,
+      "id": "33b429e2-46db-4640-843a-be34496e517b",
+      "metadata": {},
+      "modifiedUtc": 1749891652000,
+      "name": "epl-2.0.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891652000,
+      "id": "344fcab2-e319-483a-9e3c-164406b4bcd2",
+      "metadata": {},
+      "modifiedUtc": 1749891652000,
+      "name": "license.html",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "META-INF"
+  ],
+  "id": "43843a55-4a95-4701-a9d8-72edaeb52b77",
+  "metadata": {},
+  "modifiedUtc": 1789657019386,
+  "name": "org.eclipse.equinox.p2.extras.feature_1.4.1800.v20221117-1044"
+}

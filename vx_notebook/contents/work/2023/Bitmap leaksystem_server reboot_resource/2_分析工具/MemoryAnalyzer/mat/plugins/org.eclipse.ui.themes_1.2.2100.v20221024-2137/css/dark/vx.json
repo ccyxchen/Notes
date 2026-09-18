@@ -1,0 +1,58 @@
+{
+  "createdUtc": 1749891655000,
+  "files": [
+    {
+      "createdUtc": 1749891655000,
+      "id": "da1eb1e3-4563-4c90-ae4a-32eef35d4ba8",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4-dark-drag-styling.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891655000,
+      "id": "2565aa14-aedd-4f35-9aab-77c18fcc9199",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4-dark_globalstyle.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891655000,
+      "id": "b7743fbe-c4ef-4d30-9ef8-827d3d9d59b1",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4-dark_ide_colorextensions.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891655000,
+      "id": "1c87b5be-30ae-4cc2-9818-f444cec77080",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4-dark_partstyle.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891655000,
+      "id": "42f340c7-5d83-451f-b39f-115c4bd8c760",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4-dark_preferencestyle.css",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891655000,
+      "id": "c4f8b539-3dd7-449a-9c31-774fb10a9623",
+      "metadata": {},
+      "modifiedUtc": 1749891655000,
+      "name": "e4-dark_tabstyle.css",
+      "tags": []
+    }
+  ],
+  "folders": [],
+  "id": "6e453535-1a81-4755-bf67-eb7740bd633d",
+  "metadata": {},
+  "modifiedUtc": 1789657019688,
+  "name": "dark"
+}

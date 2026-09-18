@@ -127,3 +127,26 @@ kernel log
 
 [   28.268881] <6>.[2](123:irq/277-mt6358-)battery_get_boot_mode: boot mode=8
 [   28.268883] <6>.[2](123:irq/277-mt6358-)mtk_battery boot mode =8
+
+
+## 确认HALT异常
+
+typedef enum {
+    HALT_ACTION_HALT = 0,       // Spin forever.
+    HALT_ACTION_REBOOT,         // Reset the CPU.
+    HALT_ACTION_SHUTDOWN,       // Shutdown and power off.
+} platform_halt_action;
+
+typedef enum {
+    HALT_REASON_UNKNOWN = 0,
+    HALT_REASON_POR,            // Cold-boot
+    HALT_REASON_HW_WATCHDOG,    // HW watchdog timer
+    HALT_REASON_LOWVOLTAGE,     // LV/Brownout condition
+    HALT_REASON_HIGHVOLTAGE,    // High voltage condition.
+    HALT_REASON_THERMAL,        // Thermal reason (probably overtemp)
+    HALT_REASON_OTHER_HW,       // Other hardware (platform) specific reason
+    HALT_REASON_SW_RESET,       // Generic Software Initiated Reboot
+    HALT_REASON_SW_WATCHDOG,    // Reboot triggered by a SW watchdog timer
+    HALT_REASON_SW_PANIC,       // Reboot triggered by a SW panic or ASSERT
+    HALT_REASON_SW_UPDATE,      // SW triggered reboot in order to begin firmware update
+} platform_halt_reason;

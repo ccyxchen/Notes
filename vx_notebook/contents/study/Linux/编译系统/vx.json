@@ -1,0 +1,44 @@
+{
+  "createdUtc": 1749891649000,
+  "files": [
+    {
+      "createdUtc": 1749891649000,
+      "id": "dd54bb6f-f165-4f05-8e8f-58d5192ad200",
+      "metadata": {},
+      "modifiedUtc": 1749891649000,
+      "name": "[EDIT] Linux 内核配置机制（make menuconfig、Kconfig、makefile.html",
+      "tags": []
+    },
+    {
+      "createdUtc": 1749891649000,
+      "id": "8ac54a31-99e8-46b5-882c-114f03ccd9b0",
+      "metadata": {},
+      "modifiedUtc": 1749891649000,
+      "name": "使用crosstool-NG制作工具链.md",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789725079386,
+      "id": "c2c7bcca-f88a-4084-a4f4-fdb9f1e2b243",
+      "metadata": {},
+      "modifiedUtc": 1789725079386,
+      "name": "arm交叉编译器gnueabi、none-eabi、arm-eabi、gnueabihf、gnueabi区别 - 骏骏 - 博客园.mht",
+      "tags": []
+    },
+    {
+      "createdUtc": 1789725082028,
+      "id": "0fc80a06-ac7b-48cf-a9bc-4d73d5948965",
+      "metadata": {},
+      "modifiedUtc": 1789725082028,
+      "name": "使用CMake交叉编译Arm Linux程序_whahu1989的专栏-CSDN博客_cmake 交叉编译.mhtml",
+      "tags": []
+    }
+  ],
+  "folders": [
+    "制作交叉编译工具链"
+  ],
+  "id": "817d62e7-961d-4363-8da5-24392a4d0df9",
+  "metadata": {},
+  "modifiedUtc": 1789725082028,
+  "name": "编译系统"
+}
