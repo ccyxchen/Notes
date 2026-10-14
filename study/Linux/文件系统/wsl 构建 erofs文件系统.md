@@ -17,4 +17,4 @@ sudo mount -t erofs erofs_test.img /home/chenyx/erofs_mount/
 
 可以看到已经成功挂载镜像到erofs_mount，并且该分区是只读的。
 
-![测试erofs系统](../../tmpimage/20221120223943.png)
+<img src="vx_assets/bb7265cc-a9ab-4763-b427-28fdcb782a34/20221120223943.png" alt="20221120223943" width="900" />

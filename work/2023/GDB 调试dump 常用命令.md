@@ -22,31 +22,31 @@ h表示双字节，
 w表示四字节，
 g表示八字节
 例：
-![Alt text](../../tmpimage/image-17.png)
+<img src="vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/172e.png" width="900" />
 2、查看代码行号
 A)查看函数
-![Alt text](../../tmpimage/image-18.png)
+<img src="vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/c320.png" width="900" />
 B) 通过Call trace的堆栈查看卡死在哪一行
-![Alt text](../../tmpimage/image-19.png)
-![Alt text](../../tmpimage/image-20.png)
+<img src="vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/4b37.png" width="900" />
+<img src="vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/d5d7.png" width="900" />
 3、查看堆栈
 a)查看所有栈帧
-![Alt text](../../tmpimage/image-21.png)
+<img src="vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/b1e0.png" width="900" />
 Bt 或backtrace
 b)查看栈帧信息
 1、选择特定栈帧，如栈帧1
-![Alt text](../../tmpimage/image-22.png)
+<img src="vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/fab0.png" width="900" />
 2、栈帧详细信息
-![Alt text](../../tmpimage/image-23.png)
+<img src="vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/3036.png" width="900" />
 3、查看函数参数值
-![Alt text](../../tmpimage/image-24.png)
+<img src="vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/9712.png" width="900" />
 4、查看变量值
-![Alt text](../../tmpimage/image-25.png)
+<img src="vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/51b2.png" width="900" />
 或者
-![Alt text](../../tmpimage/image-26.png)
+![](vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/2f65.png)
 5、查变量类型
-![Alt text](../../tmpimage/image-27.png)
+![](vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/efaf.png)
 显示的更详细
-![Alt text](../../tmpimage/image-28.png)
+<img src="vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/58ce.png" width="900" />
 6、查寄存器
-![Alt text](../../tmpimage/image-29.png)
+<img src="vx_assets/feceaac5-6acf-430a-9fb7-a56cb92cc001/f845.png" width="900" />

@@ -40,7 +40,7 @@ CS0 11, RS1G32LX4D4BNR
 make: *** [tools/emigen/emigen.mk:54: /home/android/work/code/T302AA_U_FTM/vendor/out/target/product/t302aa/obj/PRELOADER_OBJ/inc/custom_emi.h] Error 255
 
 这里的报错主要是因为编译DDR时序代码时用的是Python脚本，会对DDR总数做判断：
-![Alt text](../../tmpimage/image-14.png)
+<img src="vx_assets/88284461-03dc-40f7-ba1c-4e405844eadf/a1d5.png" width="900" />
 
 合入DDR时序后无法刷机或开机
 

@@ -225,14 +225,6 @@ Virtio 是一种用于虚拟化环境的半虚拟化 I/O 标准，旨在为虚�
 * 在根文件系统中创建 dev 块设备文件
   `sudo mknod /dev/vda b 254 0`
 
-内核中的配置
-相关配置项
-CONFIG_VIRTIO
-
-Device Drivers
-  ->Block devices
-    ->Virtio block driver
-
 ##### 通过MMIO方式
 
  配置项
@@ -240,6 +232,13 @@ Location:                                                                       
   │     -> Device Drivers                                                                                                     │
   │       -> Virtio drivers (VIRTIO_MENU [=y])                                                                                │
   │ (1)     -> Platform bus driver for memory mapped virtio devices (VIRTIO_MMIO [=y])
+
+相关配置项
+CONFIG_VIRTIO
+
+Device Drivers
+  ->Block devices
+    ->Virtio block driver
 
 Qemu 启动参数
  -device virtio-blk-device,drive=myhd  -drive id=myhd,file=rootfs.img,if=none,format=raw

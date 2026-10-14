@@ -30,7 +30,7 @@
 >DA先对手机硬件做初始化，然后循环接收PC cmd执行download等相关操作
 
 下图为bootrom方式下载的框图
-![1](../../tmpimage/MTK下载工具的使用2024-08-05-10-26-50.png)
+<img src="vx_assets/b3d7bdb6-3b5d-4169-a1a2-c65016865344/7584.png" width="900" />
 
 ## MTK USB驱动枚举的端口
 

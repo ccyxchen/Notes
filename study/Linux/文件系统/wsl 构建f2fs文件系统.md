@@ -31,7 +31,7 @@ WSL官方代码仓库路径：<https://github.com/microsoft/WSL2-Linux-Kernel>
 
 config按如下配置：
 
-![f2fs config 配置选项](../../tmpimage/20221120220323.png)  
+<img src="vx_assets/3a0625e2-8642-4a9a-ac16-dc897c85ec3c/20221120220323.png" alt="20221120220323" width="1000" />
 
 这里把f2fs编译为模块，并打开压缩特性支持。最后把生成的模块ko文件安装到系统中，并将生成的内核镜像拷贝到C盘。
 
@@ -66,6 +66,6 @@ sudo mount -t f2fs /dev/loop1 /home/chenyx/f2fs_mount
 
 可以看到已经成功挂载，并且可以正常写入：
 
-![挂载成功](../../tmpimage/20221120222914.png)  
+<img src="vx_assets/3a0625e2-8642-4a9a-ac16-dc897c85ec3c/20221120222914.png" alt="20221120222914" width="900" />
 
-![写入4G内容](../../tmpimage/20221120223058.png)
+<img src="vx_assets/3a0625e2-8642-4a9a-ac16-dc897c85ec3c/20221120223058.png" alt="20221120223058" width="900" />

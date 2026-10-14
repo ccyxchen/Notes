@@ -1,7 +1,7 @@
 # 内存不足导致的IO hang
-![](vx_images/42416144837065.png =695x)
+![](vx_assets/9d8786c1-d61e-4514-aa89-e89a014ec11a/42416144837065.png =695x)
 T302上遇到SWT/hang的集中报，MMC的请求量远超过平均吞吐量，看下这类问题要怎么排查
-![](vx_images/130675882488755.png =1129x)
+![](vx_assets/9d8786c1-d61e-4514-aa89-e89a014ec11a/130675882488755.png =1129x)
 
  T302项目SWT的DB里平台新增了一个文件SYS_PERFETTO，之前的SYS_FTRACE内容是空的了
 
@@ -19,11 +19,11 @@ on init
 注意：必须开启fulldump，必须保存vmlinux，fulldump +vmlinux才能有效提取block trace，如何从fulldump中提取出trace请参考`[FAQ34807] [debug][ftrace] 如何从fulldump中提取trace`。
 
 memory report里看，zram用完了，swapfree最少的时候用到0了
-![](vx_images/509153846512766.png =940x)
-![](vx_images/23596729240532.png =961x)
+![](vx_assets/9d8786c1-d61e-4514-aa89-e89a014ec11a/509153846512766.png =940x)
+![](vx_assets/9d8786c1-d61e-4514-aa89-e89a014ec11a/23596729240532.png =961x)
 
 pgsteal_kswapd/s,pgsteal_file/s的曲线
-![](vx_images/113493600130050.png =961x)
+![](vx_assets/9d8786c1-d61e-4514-aa89-e89a014ec11a/113493600130050.png =961x)
 
  com.topwar.gp起来后，突然占用了大量的内存
 
@@ -47,8 +47,8 @@ swt发生的时间是   03-08 03:34:13
 03-08 03:36:26.881   375   375 E lowmemorykiller: ymx add lmkd-whitelist:pkgname=com.tinno.autotesttool
 
 梦鑫改的代码影响到lmkd继续找别的进程查杀了
-![](vx_images/293704062871603.png =961x)
-![](vx_images/360145152942785.png =768x)
+![](vx_assets/9d8786c1-d61e-4514-aa89-e89a014ec11a/293704062871603.png =961x)
+![](vx_assets/9d8786c1-d61e-4514-aa89-e89a014ec11a/360145152942785.png =768x)
 hang的kernel堆栈跟SWT里kernel日志Show block status打出来的状态一致，大量的进程阻塞在filemap_fault->folio_wait_bit_common里了
  [21403.291088] [ T1228]  io_schedule+0x38/0x78
 [21403.291098] [ T1228]  folio_wait_bit_common+0x2b4/0x408
@@ -60,7 +60,7 @@ hang的kernel堆栈跟SWT里kernel日志Show block status打出来的状态一�
 [21403.291167] [ T1228]  do_mem_abort+0x58/0x118
 
 这个pgsteal_kswapd/pgsteal_file是比较典型的Lmkd不工作，纯靠kernel机制回收内存的攀升曲线
-![](vx_images/444246897442304.png =912x)
+![](vx_assets/9d8786c1-d61e-4514-aa89-e89a014ec11a/444246897442304.png =912x)
 
 active/inactive的曲线相背的剧烈变动
 

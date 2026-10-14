@@ -30,11 +30,11 @@ MOD_SRC += \
 	lz4.c
 endif
 ```
-![](vx_images/419841563267205.png =930x)
+![](vx_assets/aae3a790-1663-4ab5-96cf-57d55a1780a2/419841563267205.png =930x)
 
 ## emi_complex_cpu_mem_test 函数执行条件
-![](vx_images/372626372788656.png =983x)
-![](vx_images/47134415166875.png =1003x)
+![](vx_assets/aae3a790-1663-4ab5-96cf-57d55a1780a2/372626372788656.png =983x)
+![](vx_assets/aae3a790-1663-4ab5-96cf-57d55a1780a2/47134415166875.png =1003x)
 只有mt6991和mt6899会执行emi_complex_cpu_mem_test，以mt6899说明执行条件
 
 emi_complex_cpu_mem_test
@@ -107,7 +107,7 @@ CFG_DRAM_CALIB_OPTIMIZATION :=1
 ```
 可以看到在打开traing 存储到磁盘的功能时，full k 会执行该测试，fast k 不执行。
 ## emi_simple_cpu_mem_test 函数执行条件
-![](vx_images/77712295183796.png =1107x)
+![](vx_assets/aae3a790-1663-4ab5-96cf-57d55a1780a2/77712295183796.png =1107x)
 emi_simple_cpu_mem_test
     --> mem_test
         --> mt_mem_init(void)

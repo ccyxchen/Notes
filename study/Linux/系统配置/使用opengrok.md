@@ -67,6 +67,9 @@ opengrok 常用参数：
 
 -H
     Enable history.
+    
+--depth
+  检索的目录深度
 
 -Xms2g -Xmx2g 
 通过调整 JVM 参数 -Xms（初始堆大小）和 -Xmx（最大堆大小）来增加可用内存。
@@ -75,20 +78,16 @@ opengrok 常用参数：
 
 export OPENGROK_THREADS=4
 
-java \
-    -Djava.util.logging.config.file=opengrok/etc/logging.properties \
-    -jar opengrok/dist/lib/opengrok.jar \
-    -c /usr/local/bin/ctags \
-    -s /home/cyx/work_fast/p528/ \
-    -d opengrok/data/${Proj} -P \
-    -W opengrok/etc/configuration_${Proj}.xml \
-    -U http://localhost:8080/${Proj}
-
-更新的命令，解决jvm outofmemory问题
-java -Xms512m -Xmx8g -DOPENGROK_THREADS=8 -XX:ActiveProcessorCount=8  -Djava.util.logging.config.file=opengrok/etc/logging.properties -jar opengrok/dist/lib/opengrok.jar -c /usr/local/bin/ctags -s /home/cyx/work_fast/m2521/ -d opengrok/data/${Proj} -P -i d:'out*' -i d:'*release*' -W opengrok/etc/configuration_${Proj}.xml -U http://localhost:8080/${Proj} 
 ```
+更新的命令，解决jvm outofmemory问题
 
-最后需要修改 tomcat/webapps/${Proj}/WEB-INF/web.xml
-下的<param-name>CONFIGURATION</param-name> 值为
-opengrok/etc/configuration_\${Proj}.xml
+`java -Xms512m -Xmx8g -DOPENGROK_THREADS=8 -XX:ActiveProcessorCount=8 \
+    -Djava.util.logging.config.file=opengrok/etc/logging.properties \
+    -jar opengrok/dist/lib/opengrok.jar -c /usr/bin/ctags \
+    -s /home/cyx/work_fast/m2521/ -d opengrok/data/${Proj} -P -H\
+    -i d:'out*' -i d:'*release*' -W opengrok/etc/configuration_${Proj}.xml`
+
+最后需要修改 tomcat/webapps/${Proj}/WEB-INF/web.xml下的
+<param-name>CONFIGURATION</param-name> 值为opengrok/etc/configuration_\${Proj}.xml
+文件的绝对路径。
 

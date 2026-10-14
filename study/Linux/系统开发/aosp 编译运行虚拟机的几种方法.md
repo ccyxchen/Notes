@@ -441,3 +441,43 @@ Alternatively, a complete AppArmor profile for the application can be created (s
 
 `kernel.apparmor_restrict_unprivileged_userns=0`
 Reboot. This is similar to the previous behaviour, but it does not mitigate against kernel exploits that abuse the unprivileged user namespaces feature.
+
+### Ubuntu 26.04 命名空间限制
+ 在26.04 上用上面的方法无法生效，使用下面方法可行。
+ 
+#### 步骤 1：一键修复 Ubuntu 26.04 的非特权用户命名空间限制
+Ubuntu 26.04 LTS 默认拦截了非特权用户命名空间，必须通过 sysctl 放开。请在全新系统上执行
+以下命令（将其写入持久化配置文件）：
+```bash
+# 创建持久化配置文件，关闭 AppArmor 对非特权用户命名空间的限制，并放大最大容量
+sudo bash -c 'cat <<EOF > /etc/sysctl.d/60-aosp-namespace.conf
+kernel.apparmor_restrict_unprivileged_userns = 0
+user.max_user_namespaces = 65535
+EOF'
+
+# 立即应用配置（无需重启）
+sudo sysctl -p /etc/sysctl.d/60-aosp-namespace.conf
+```
+#### 步骤 2：确保当前用户的 Sub-UID/GID 映射存在
+AOSP 的沙箱工具需要识别当前用户在系统中的下属 ID 区间。请检查并确保映射存在（通常
+ Ubuntu 在新建普通用户时会自动生成）：
+```bash
+# 检查是否有你的用户名对应的记录
+cat /etc/subuid
+cat /etc/subgid
+```
+如果文件为空或没有你的用户名，执行以下命令补充（将 你的用户名 替换为实际名称）：
+```bash
+sudo usermod -v 100000-165535 -w 100000-165535 你的用户名
+```
+#### 步骤 3：使用单组（Single Group）清洁环境启动编译
+为了防止当前用户加入的各种附加组（如 docker, sudo, kvm 等）导致内核在沙箱内写 setgroups 
+时报 Permission denied，请始终使用 sg 命令包裹你的编译指令：
+```bash
+# 正常的初始化步骤
+source build/envsetup.sh
+lunch aosp_cf_x86_64_phone-trunk_staging-userdebug
+
+# 用 sg 命令把多余的用户组剥离，直接拉起安全、干净的 ninja 编译进程
+sg $(id -gn) -c "m"
+```

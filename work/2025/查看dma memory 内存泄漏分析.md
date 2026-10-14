@@ -23,7 +23,7 @@ adb shell cat /proc/dma_heap/all_heaps
 
 
 @李帅(Shuai1 Li)    有，每个进程占用多少都能大概看出来。类似这样
-![](vx_images/221105806123039.png =1145x)
+![](vx_assets/f47c393d-62b6-4063-8f59-2d5878cfe796/221105806123039.png =1145x)
 
 
 
